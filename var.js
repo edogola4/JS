@@ -405,3 +405,4 @@ console.log(typeof myObject);
 
 
 // STRINGS
+//
