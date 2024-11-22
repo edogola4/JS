@@ -573,3 +573,66 @@ console.log(reverseString('Bran don $'));
 console.log(reverseString('string'));
 console.log(reverseString('stackoverflow'));
 console.log(reverseString([1, 2, 3]));
+
+
+/* custom reverse() fuction
+function reverse(string){
+    var strRev = "";
+    for (var i = string.length - 1; i >= 0; i++ ){
+        strRev += string[i];
+    }
+    return strRev;
+}
+
+ reverse('zebra')
+console.log(reverse('zebra'));
+*/
+
+
+// comparing strings Lexicographically
+var myString = "Hello World";
+var myOtherString = "Hello World";
+console.log(myString.localeCompare(myOtherString));
+var myString = "Hello World";
+var myOtherString = "Hello World!";
+console.log(myString.localeCompare(myOtherString));
+var myString = "Hello World";
+var myOtherString = "Hello World!";
+console.log(myString.localeCompare(myOtherString));
+var myString = "Hello World!";
+var myOtherString = "Hello World";
+
+console.log(myString.localeCompare(myOtherString));
+
+var myName = "Bran";
+var myOtherName = "Bran";
+console.log(myName.localeCompare(myOtherName));
+
+var myName = "Bran";
+var myOtherName = "Don";
+console.log(myName.localeCompare(myOtherName));
+
+var myName = "Bran";
+var myOtherName = "Bran Don";
+console.log(myName.localeCompare(myOtherName));
+
+// using the < and > operators to compare strings Lexicographically
+var myString = "Hello World";
+var myOtherString = "Hello World";
+console.log(myString < myOtherString);
+
+var myName = "Bran";
+var myOtherName = "Don";
+console.log(myName < myOtherName);
+console.log(myName > myOtherName);
+
+
+// Access characters in a string using the charAt() method
+var myString = "Hello World";
+console.log(myString.charAt(0));
+
+var myName = "Ogola"
+console.log(myName.charAt(1));
+
+var string = "Hello World";
+console.log( string[4] );
