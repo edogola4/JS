@@ -501,12 +501,75 @@ var myName = "Bran";
 myName = myName.concat("don");
 console.log(myName);
 
-// concatenating strings using the join() method in JavaScript
+// concatenating Strings using non-string Variables in JavaScript
 var myString = "Hello";
-myString = myString.join("World");
-myString = myString.join("World");
+var myNumber = 5;
+var myBoolean = true;
+var myNull = null;
+var myUndefined;
+var myObject = {};
+var myArray = [];
+myString += myNumber;
+console.log(myString);
+myString += myBoolean;
 console.log(myString);
 
- var myName = "Bran";
-myName = myName.join("don");
+var string = "string";
+var number = 32;
+var boolean = true;
+console.log(string + number + boolean);
+
+var string = "bran";
+var number = 24;
+var hasGirlFriend = false;
+console.log(string + number + hasGirlFriend);
+
+
+// conctenating Stings in JavaScript using the template literals
+var myName = "Bran";
+myName = `${myName}don`;
 console.log(myName);
+
+var myString = "Hello";
+myString = `${myString} World`;
+console.log(myString);
+
+var myName = "Bran";
+myName = `${myName} don`;
+console.log(myName);
+
+
+
+
+// REVERSING A STRING IN JAVASCRIPT
+var myString = "Hello World";
+console.log(myString.split("").reverse().join(""));
+
+var myName = "Bran Don";
+console.log(myName.split("").reverse().join(""));
+
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+console.log(reverseString('string')); 
+
+
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+console.log(reverseString('Bran don $'));
+
+// using spread operator to reverse string in JavaScript
+var myString = "Hello World";
+console.log([...myString].reverse().join(("")));
+
+var myName = "Bran Don";
+console.log([...myName].reverse().join(("")));
+
+function reverseString(str){
+    return [...String(str)].reverse().join('');
+}
+console.log(reverseString('Bran don $'));
+console.log(reverseString('string'));
+console.log(reverseString('stackoverflow'));
+console.log(reverseString([1, 2, 3]));
