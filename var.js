@@ -405,4 +405,108 @@ console.log(typeof myObject);
 
 
 // STRINGS
-//
+var myString = "Hello World";
+console.log(myString);
+
+var myString = 'Hello World';
+console.log(myString);
+
+var myString = `Hello World`;
+console.log(myString);
+
+
+// strings can be created from other types using strings () function
+var intString = String(32);
+console.log(intString);
+
+var booleanString = String(true);
+console.log(booleanString);
+
+var nullString = String(null);
+console.log(nullString);
+
+var undefinedString = String(undefined);
+console.log(undefinedString);
+
+var myString = "Hello World";
+console.log(myString.length);
+
+
+// tostring() can also be used to Numbers, Booleans or Objects to Strings
+var intString = (1234).toString();
+console.log(intString);
+
+var booleanString = (true).toString();
+console.log(booleanString);
+
+var objectString = ({}).toString();
+console.log(objectString);
+
+var myString = "Hello World";
+console.log(myString.charAt(0));
+
+console.log(myString.charAt(1));
+console.log(myString.charAt(2));
+
+
+// creating Strings using String.fromCharCode method
+var myString = String.fromCharCode(65);
+console.log(myString);
+
+String.fromCharCode(104, 101, 108, 108, 111);   
+console.log(String.fromCharCode(104, 101, 108, 108, 111));
+
+var myString = "Hello World";
+console.log(myString.indexOf("o"));
+
+
+
+// creating a String using the new keyword
+var myString = new String("Hello World");
+console.log(myString);
+
+var objectString = new String("Yes, I am a string object");
+console.log(objectString);
+
+typeof objectString;
+console.log(typeof objectString);
+
+typeof objectString.valueOf();
+console.log(typeof objectString.valueOf());
+
+
+
+// concatenating strings
+var myString = "Hello" + " " + "World";
+console.log(myString);
+
+var myName = "Bran" + "" + "don";
+console.log(myName);
+
+// concatenating strings using the += operator
+var myString = "Hello";
+myString += " World";
+console.log(myString);
+
+var myName = "Bran";
+myName += "don";
+console.log(myName);
+
+// concatenating strings using the concat() method
+var myString = "Hello";
+myString = myString.concat(" World");
+console.log(myString);
+
+var myName = "Bran";
+myName = myName.concat("don");
+console.log(myName);
+
+// concatenating strings using the join() method in JavaScript
+var myString = "Hello";
+myString = myString.join("World");
+myString = myString.join("World");
+console.log(myString);
+
+ var myName = "Bran";
+myName = myName.join("don");
+console.log(myName);
