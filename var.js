@@ -636,3 +636,226 @@ console.log(myName.charAt(1));
 
 var string = "Hello World";
 console.log( string[4] );
+
+
+// Escaping Quotes in JavaScript
+var myString = "Hello \"World\"";
+console.log(myString);
+
+var text = "You feel \"high\"";
+console.log(text);
+
+
+// Word Counter in JavaScript
+function wordCount(str) {
+    return str.split(" ").length;
+}
+console.log(wordCount("Hello World"));
+
+
+// trim WhiteSpace in JavaScript
+var myString = " Hello World ";
+console.log(myString.trim());
+
+var myName = " Bran Don ";
+console.log(myName.trim());
+
+
+
+// Spliting a string into an array in JavaScript
+var myString = "Hello World";
+console.log(myString.split(" "));
+
+var s = "one, two, three, four, five";
+console.log(s.split(", "));
+
+
+
+// Strings are unicode
+var s = "some ∆≈ƒ unicode ¡™£¢¢¢";
+s.charCodeAt(5);
+console.log(s.split(""));
+
+
+// Spliting a string into an array substring
+var myString = "Hello World";
+console.log(myString.substring(0, 5));
+
+
+
+// Detecting a string in a string
+var myString = "Hello World";
+console.log(myString.includes("World"));
+
+// Detecting a string in JavaScript
+var myString = "Hello World";
+console.log(myString.indexOf("World") > -1);
+
+// Detecting a String in Javascript
+// using typeof to detect if a string is a primitive string
+var myString = "Hello World";
+console.log(typeof myString === "string");
+
+var myString = new String("Hello World");
+console.log(typeof myString === "string");
+
+var myString = new String("Hello World");
+console.log(typeof myString === "object");
+
+// use instanceof to detect if a string is a primitive string
+var myString = "Hello World";
+console.log(myString instanceof String);
+
+var myString = new String("Hello World");
+console.log(myString instanceof String);
+
+var myName = "Bran";
+console.log(myName instanceof String);
+
+var myName = new String("Bran");
+console.log(myName instanceof String);
+
+
+// Substrings with slice in JavaScript
+var myString = "Hello World";
+console.log(myString.slice(0, 5, 1));
+
+var myName = "Bran Don";
+console.log(myName.slice(0, 4));
+
+var hasGirlFriend = "Shartel Shantel";
+console.log(hasGirlFriend.slice(0, 5));
+
+var favouriteCar = "Dodge Challenger";
+console.log(favouriteCar.slice(0, 6));
+
+var firstCar = "Honda Civic";
+console.log(firstCar.slice(0, 3));
+
+
+
+// Character code
+var myString = "Hello World";
+console.log(myString.charCodeAt(0));
+
+var myName = "Bran Don";
+console.log(myName.charCodeAt(1));
+
+var myString = "Hello World";
+console.log(myString.codePointAt(0));
+
+var myName = "Bran Don";
+console.log(myName.codePointAt(1));
+
+
+// String Matching in JavaScript
+var myString = "Hello World";
+console.log(myString.match(/Hello/));
+
+var myName = "Bran Don";
+console.log(myName.match(/Don/));
+
+var favouriteFruits = "I love apples, pears and oranges";
+console.log(favouriteFruits.match(/apples/));
+
+
+// String Replacement in JavaScript
+var myString = "Hello World";
+console.log(myString.replace(/Hello/, "Hi"));
+
+var myName = "Bran Don";
+console.log(myName.replace(/Don/, "Ogola"));
+
+var girlFriend = "Daisy Atieno";
+console.log(girlFriend.replace(/Daisy/, "Shantel"));
+
+
+// String Search in JavaScript
+var myString = "Hello World";
+console.log(myString.search(/World/));
+
+var myName = "Bran Don";
+console.log(myName.search(/Don/));
+
+var girlFriend = "Daisy Atieno";
+console.log(girlFriend.search(/Atieno/));
+
+
+// String representation of Numbers in JavaScript
+var myNumber = 1234;
+console.log(myNumber.toString());
+
+var phoneNo = 1234567890;
+console.log(phoneNo.toString());
+
+var b16 = 'c';
+console.log(b16.toString());
+
+var b10 = parseInt(b16, 16);
+console.log(b10.toString(10));
+
+/*let b16 = '3.243f3e0370cdc';
+let [i16, f16] = b16.split('.');
+let b10 = parseInt(i16, 16);
+let f10 = parseInt(f16, 16);
+let num = b10 + (f10 / Math.pow(16, f16.length));
+console.log(num);
+console.log(num.toString());
+console.log(num.toString(10));
+console.log(num.toString(2));*/
+
+
+// String to Number Conversion in JavaScript
+var myString = "1234";
+console.log(Number(myString));
+
+
+// String Find and Replace functions in JavaScript
+var myString = "Hello World";
+console.log(myString.replace("World", "Universe"));
+
+var string = "Hello, World!";
+console.log( string.indexOf("o") );
+console.log( string.indexOf("foo") );
+
+var string = "Hello, World!";
+console.log( string.lastIndexOf("o") );
+console.log( string.lastIndexOf("foo") );
+
+
+// Find the index of a substring inside a string
+'Hellow World'.indexOf('Wor');
+console.log('Hellow World'.indexOf('Wor'));
+
+"harr dee harr dee harr".indexOf("dee", 10);
+console.log("harr dee harr dee harr".indexOf("dee", 10));
+
+'Hellow World'.indexOf('WOR');
+console.log('Hellow World'.indexOf('WOR'));
+
+// string to uppercase
+var myString = "Hello World";
+console.log(myString.toUpperCase());
+
+var myName = "Bran Don";
+console.log(myName.toUpperCase());  
+
+
+// string to lowercase
+var myString = "Hello World";
+console.log(myString.toLowerCase());
+
+var myName = "Bran Don";
+console.log(myName.toLowerCase());
+
+
+
+// Repeate a string
+var myString = "Hello World";
+console.log(myString.repeat(2));
+
+var myName = "Brandon ogola";
+console.log(myName.repeat(5));
+
+var letters = "abc, def, ghi, jkl, mno, pqr, stu, vwx, yz ";
+console.log(letters.repeat(5));
