@@ -906,3 +906,48 @@ console.log(myDate.toUTCString());
 // after the Unix Epoch
 var myDate = new Date(2012);
 console.log(myDate.toUTCString());
+
+// Creates a Date object with the first day of February of the year 2012
+// in the local timezone.
+var myDate = new Date(2012, 1);
+console.log(myDate.toUTCString());
+
+// If I was born in may 2000, create a date object with the date and time
+// 2,012 milliseconds after the Unix Epoch
+var myDate = new Date(2000, 4, 12);
+console.log(myDate.toUTCString());
+
+// If I was born in may 2000, create a date object with the date and time
+// 2,012 milliseconds in local time
+var myDate = new Date(2000, 4, 12, 12, 12, 12);
+console.log(myDate.toUTCString());
+
+
+// Creates a Date object with the first day of the year 2012 in the local
+// timezone.
+// (Months are zero-based)
+var myDate = new Date(2012, 0); 
+console.log(myDate.toUTCString());
+
+//Creates a Date object with the first day of the year 2025 in the local
+// timezone of East African Time.
+// (Months are zero-based)
+var myDate = new Date(2025, 0);
+console.log(myDate.toUTCString());
+
+// /Creates a Date object with the first and second and third day of the year 2025 in the local
+// timezone of East African Time.
+// (Months are zero-based)
+var myDate = new Date(2025, 0, 2);
+console.log(myDate.toUTCString());
+
+//Creates a Date object with the first week of the year 2025 in the local
+// timezone of East African Time.
+// (Months are zero-based)
+var myDate = new Date(2025, 0, 7);
+console.log(myDate.toUTCString());
+
+// // Parses a string into a Date object (ISO 8601 format added in ECMAScript 5.1)
+// Implementations should assumed UTC because of ISO 8601 format and Z designation
+var myDate = new Date("2012-01-01T12:00:00Z");
+console.log(myDate.toUTCString());
