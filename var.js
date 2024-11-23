@@ -854,7 +854,7 @@ console.log(myName.toLowerCase());
 var myString = "Hello World";
 console.log(myString.repeat(2));
 
-var myName = "Brandon ogola";
+var myName = "Brandon ogola.";
 console.log(myName.repeat(5));
 
 var letters = "abc, def, ghi, jkl, mno, pqr, stu, vwx, yz ";
