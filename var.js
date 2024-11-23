@@ -859,3 +859,37 @@ console.log(myName.repeat(5));
 
 var letters = "abc, def, ghi, jkl, mno, pqr, stu, vwx, yz ";
 console.log(letters.repeat(5));
+
+
+
+
+
+
+/// DATE IN JAVASCRIPT
+
+// to create a date object use the date () constructor
+var myDate = new Date();
+console.log(myDate);
+
+// create a new date object with no arguments
+var myDate = new Date();
+console.log(myDate.toString());
+
+// create a new date object with a date string
+var myDate = new Date("2020-01-01");
+console.log(myDate.toString());
+
+// create a new date object with one integer argument
+var myDate = new Date(2020);
+console.log(myDate.toString());
+
+// create a new date object with two integer arguments
+var myDate = new Date(2020, 0);
+console.log(myDate.toString());
+
+var myDate = new Date();
+console.log(myDate.toDateString());
+
+// create a date object with two or more integer arguments
+var myDate = new Date(2020, 0, 1);
+console.log(myDate.toString());
