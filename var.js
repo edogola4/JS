@@ -893,3 +893,16 @@ console.log(myDate.toDateString());
 // create a date object with two or more integer arguments
 var myDate = new Date(2020, 0, 1);
 console.log(myDate.toString());
+
+// create a Date Object with the current date and time
+var myDate = new Date();
+console.log(myDate.toISOString());
+
+// Create a Date object at the Unix Epoch
+var myDate = new Date(0);
+console.log(myDate.toUTCString());
+
+// Creates a Date object with the date and time 2,012 milliseconds
+// after the Unix Epoch
+var myDate = new Date(2012);
+console.log(myDate.toUTCString());
