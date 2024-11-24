@@ -956,3 +956,7 @@ console.log(myDate.toUTCString());
 // Implementations should assumed UTC because of ISO 8601 format and Z designation
 var myDate = new Date("2012-01-01T12:00:00Z");
 console.log(myDate.toUTCString());
+
+// convert to string format
+var myDate = new Date();
+console.log(myDate.toString());
