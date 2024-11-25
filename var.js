@@ -1222,3 +1222,27 @@ console.log("1" != true);
 console.log("1" !== true);
 
 console.log(NaN === NaN);
+
+
+
+// Logic Operators with Boolean
+console.log(true && true);
+
+console.log(true && false);
+console.log(false && true);
+console.log(false && false);
+console.log(true || true);
+console.log(true || false);
+console.log(false || true);
+console.log(false || false);
+
+console.log(!true);
+console.log(!false);
+console.log(!!true);
+console.log(!!false);
+console.log(!!"");
+console.log(!!"hello");
+console.log(!!0);
+console.log(!!1);
+console.log(!!-1);
+console.log(!!NaN);
