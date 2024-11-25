@@ -1122,3 +1122,30 @@ console.log("" != 0);
 console.log("" !== 0);
 console.log("1" == true);
 console.log("1" === true);
+
+
+
+// NaN property of the Global Object
+console.log(NaN === NaN);
+console.log((1 * "two") === NaN);
+console.log(NaN === 0);
+console.log(NaN === "0");
+console.log(NaN === "NaN");
+console.log(NaN === Number.NaN);
+console.log(isNaN(NaN));
+console.log(NaN < 0);
+console.log(NaN > 0);
+console.log(NaN <= 0);
+console.log(NaN >= 0);
+console.log(NaN !== 0);
+console.log(NaN !== "0");
+console.log(NaN !== "NaN");
+
+// checking if the number is NaN in JavaScript
+console.log(isNaN(1));
+console.log(isNaN(NaN));
+console.log(isNaN(1));
+console.log(isNaN("1"));
+console.log(isNaN("1a"));
+console.log(isNaN("a1"));   
+console.log(isNaN({}));
