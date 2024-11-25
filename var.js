@@ -1186,3 +1186,39 @@ function T() { // True
     console.log(F() && T());   
     console.log(T() || F()) ;
     console.log(F() || T()) ;
+
+
+// Null and Undefined in JavaScript
+console.log(null == undefined);
+console.log(null === undefined);
+console.log(null == 0);
+console.log(null === 0);
+console.log(null == false);
+console.log(null === false);    
+// false
+console.log(null == "");
+console.log(null === "");
+
+console.log(null == "0");
+console.log(null === "0");
+
+
+
+
+
+// ABSRACT EQUALITY OPERATOR
+console.log(1 == "1");
+console.log(1 != "1");
+console.log(1 === "1");
+console.log(false == 0);
+console.log("" == 0);
+console.log("" === 0);
+
+console.log("" != 0);
+console.log("" !== 0);
+console.log("1" == true);
+console.log("1" === true);
+console.log("1" != true);
+console.log("1" !== true);
+
+console.log(NaN === NaN);
