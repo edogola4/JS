@@ -1022,3 +1022,85 @@ var tomorrow = new Date().toString('en-GB', {
 
 });
 console.log(tomorrow);
+
+
+var DateObject = (function() {
+    var monthNames = [
+    "January", "February", "March",
+    "April", "May", "June", "July",
+    "August", "September", "October",
+    "November", "December"
+    ];
+    var date = function(str) {
+    this.set(str);
+    };
+    date.prototype = {
+    set : function(str) {
+    var dateDef = str ? new Date(str) : new Date();
+    this.day = dateDef.getDate();
+    this.dayPadded = (this.day < 10) ? ("0" + this.day) : "" + this.day;
+    this.month = dateDef.getMonth() + 1;
+    this.monthPadded = (this.month < 10) ? ("0" + this.month) : "" + this.month;
+    this.monthName = monthNames[this.month - 1];
+    this.year = dateDef.getFullYear();
+    },
+    get : function(properties, separator) {
+    var separator = separator ? separator : '-'
+    ret = [];
+    for(var i in properties) {
+    ret.push(this[properties[i]]);
+    }
+    return ret.join(separator);
+}
+};
+return date;
+})();
+console.log(new DateObject().get(['year', 'month', 'day']));
+
+
+// Get the current year
+var year = (new Date()).getFullYear();
+console.log(year);
+
+var month = (new Date()).getMonth();
+console.log(month);
+
+var day = (new Date()).getDate();   
+console.log(day);
+
+var hours = (new Date()).getHours();
+console.log(hours);
+
+var minutes = (new Date()).getMinutes();    
+console.log(minutes);
+
+var seconds = (new Date()).getSeconds();
+console.log(seconds);
+
+var milliseconds = (new Date()).getMilliseconds();
+console.log(milliseconds);
+
+
+
+// Convert the current time and date to a human-readable string
+var now = new Date();
+console.log(now.toString());
+
+
+// Date comparison in JavaScript
+var myDate = new Date();
+console.log(myDate > new Date(2024, 0, 1));
+
+// Date Difference Calculator in JavaScript
+var date1 = new Date("2024-01-01");
+var date2 = new Date("2024-01-02");
+var diff = date2 - date1;
+console.log(diff);
+console.log(diff / (1000 * 60 * 60 * 24));
+console.log(diff / (1000 * 60 * 60 * 24 * 365));
+
+
+var date1 = new Date("2024-01-01");
+var date2 = new Date("2024-01-02");
+var diff = date1 - date2;
+console.log(diff);
