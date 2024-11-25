@@ -1354,3 +1354,92 @@ if (canEnterMyRoom) {
 } else {
     console.log('You cannot my room');
 }
+
+
+// CONDITIONS IN JAVASCRIPT
+
+// Ternary Operator
+var age = 20;
+var status = (age >= 18) ? 'adult' : 'minor';
+console.log(status);
+var age = 16;
+var status = (age >= 18) ? 'adult' : 'minor';   
+console.log(status);
+
+var name = 'Brandon';
+var status = (name === 'Brandon') ? 'admin' : 'subscriber';
+console.log(status);
+
+var animal = 'kitty';
+var result = (animal === 'kitty') ? 'cute' : 'still nice';
+console.log(result);
+
+var Daisy = 'ugly';
+var result = (Daisy === 'ugly') ? 'cute' : 'still nice';
+console.log(result);
+
+var shantel = 'gorgeous';
+var result = (shantel === 'gorgeous') ? 'hardworker' : 'smart';
+console.log(result);
+
+// Switch statement
+var animal = 'kitty';
+switch (animal) {
+    case 'kitty':
+        console.log('cute');
+        break;
+    case 'doggy':
+        console.log('still nice');
+        break;
+    default:
+        console.log('unknown');
+        break;
+}
+var style = 'doggy';
+switch (style) {
+    case 'kitty':
+        console.log('cute');
+        break;
+    case 'doggy':
+        console.log('still nice');
+        break;
+    default:
+        console.log('unknown');
+        break;
+}
+var style = 'ugly';
+switch (style) {
+    case 'kitty':
+        console.log('cute');
+        break;
+    case 'doggy':
+        console.log('still nice');
+        break;
+    default:
+        console.log('unknown');
+        break;
+}
+var shantel = 'gorgeous';
+switch (shantel) {
+    case 'gorgeous':
+        console.log('cute');
+        break;
+    case 'doggy':
+        console.log('still nice');
+        break;
+    default:
+        console.log('unknown');
+        break;
+}
+var daisy = 'ugly';
+switch (daisy) {
+    case 'gorgeous':
+        console.log('cute');
+        break;
+    case 'ugly':
+        console.log('still nice');
+        break;
+    default:
+        console.log('unknown');
+        break;
+}
