@@ -978,3 +978,47 @@ console.log(myDate.toUTCString());
 //.setUTCMinutes() , .setUTCSeconds() and .setUTCMilliseconds() .
 var myDate = new Date(Date.UTC(2024, 11, 1, 12, 0, 0));
 console.log(myDate.toUTCString());
+
+// Formating JavaScript Dates
+var myDate = new Date();
+console.log(myDate.toISOString());
+
+var myDate = new Date();
+console.log(myDate.toUTCString());
+
+var myDate = new Date();
+console.log(myDate.toLocaleString());
+
+var myDate = new Date();
+console.log(myDate.toLocaleDateString());
+
+var myDate = new Date();
+console.log(myDate.toLocaleTimeString());
+
+var myDate = new Date();
+console.log(myDate.toTimeString());
+
+var myDate = new Date();
+console.log(myDate.toString());
+
+var today = new Date().toLocaleDateString('en-GB', {
+    day : 'numeric',
+    month : 'short',
+    year : 'numeric'
+    });
+    console.log(today);
+
+var tomorrow = new Date().toString('en-GB', {
+    day : 'numeric',
+    month : 'short',
+    year : 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    timeZone: 'UTC',
+    weekday: 'long',
+    era: 'numeric',
+    timeZoneName: 'short'
+
+});
+console.log(tomorrow);
