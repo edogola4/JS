@@ -1246,3 +1246,29 @@ console.log(!!0);
 console.log(!!1);
 console.log(!!-1);
 console.log(!!NaN);
+
+
+// Automatic type conversion in JavaScript
+console.log(1 + "2");
+console.log(1 + "2" + 3);
+console.log(1 + "2" + "3");
+console.log(1 + "2" + "3" + 4);
+
+
+//Boolean Coersion
+var a = 'hello' || '';
+console.log(a);
+var b = '' || 'world';
+console.log(b);
+var b = '' || [];
+console.log(b);
+var b = '' || 0;
+console.log(b);
+var b = '' || '0';
+console.log(b);
+var b = '' || 'false';
+console.log(b);
+
+
+
+// 
