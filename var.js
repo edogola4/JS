@@ -1443,3 +1443,67 @@ switch (daisy) {
         console.log('unknown');
         break;
 }
+
+var animal = 'Lion';
+switch (animal){
+    case 'Dog':
+        console.log('I will not run since animal !== "Dog"');
+        break;
+    case 'Cat':
+        console.log('I will not run since animal !== "Cat"');
+        break;
+    default:
+        console.log('I will run since animal does not match any other case');
+}
+
+var employed = 'marry';
+switch (employed){
+    case 'Tech':
+        console.log('I will marry since employed !== "Tech"');
+        break;
+    case 'white job':
+        console.log('I will not marry since employment !== "white job"');
+        break;
+    default:
+        console.log('I will marry when I want') ;   
+}
+
+
+
+
+// If/ Else If / Else control
+var animal = 'kitty';
+if (animal === 'kitty') {
+    console.log('cute');
+} else if (animal === 'doggy') {
+    console.log('still nice');
+} else {
+    console.log('unknown');
+}
+
+var style = 'ugly';
+if (style === 'kitty') {
+    console.log('cute');
+} else if (style === 'doggy') {
+    console.log('still nice');
+} else {
+    console.log('unknown');
+}
+
+var shantel = 'ugly';
+if (shantel === 'ugly') {
+    console.log('cute');
+} else if (style === 'doggy') {
+    console.log('still nice');
+} else {
+    console.log('unknown');
+}
+
+var daisy = 'ugly';
+if (daisy === 'cute') {
+    console.log('cute');
+} else if (style === 'doggy') {
+    console.log('still nice');
+} else {
+    console.log('unknown');
+}
