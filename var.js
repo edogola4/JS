@@ -960,3 +960,21 @@ console.log(myDate.toUTCString());
 // convert to string format
 var myDate = new Date();
 console.log(myDate.toString());
+
+var myDate = new Date();
+console.log(myDate.toDateString());
+
+
+// creatring Date from UTC
+var myDate = new Date(Date.UTC(2012, 0, 1));
+console.log(myDate.toUTCString());
+
+// use UTC-speciﬁc modiﬁers are .setUTCMonth() , .setUTCDate() (for the day of the month),
+//.setUTCMinutes() , .setUTCSeconds() and .setUTCMilliseconds() .
+var myDate = new Date(Date.UTC(2024, 11, 1, 12, 0, 0));
+console.log(myDate.toUTCString());
+
+// use UTC-speciﬁc modiﬁers are .setUTCMonth() , .setUTCDate() (for the day of the month),
+//.setUTCMinutes() , .setUTCSeconds() and .setUTCMilliseconds() .
+var myDate = new Date(Date.UTC(2024, 11, 1, 12, 0, 0));
+console.log(myDate.toUTCString());
