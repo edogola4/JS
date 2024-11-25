@@ -1104,3 +1104,21 @@ var date1 = new Date("2024-01-01");
 var date2 = new Date("2024-01-02");
 var diff = date1 - date2;
 console.log(diff);
+
+
+
+
+
+// COMPARISON OPERATIONS IN JAVASCRIPT
+
+// Abstract equality / inequality and type conversion
+console.log(1 == "1");
+console.log(1 != "1");
+console.log(1 === "1");
+console.log(false == 0);
+console.log("" == 0);
+console.log("" === 0);
+console.log("" != 0);
+console.log("" !== 0);
+console.log("1" == true);
+console.log("1" === true);
