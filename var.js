@@ -1149,3 +1149,40 @@ console.log(isNaN("1"));
 console.log(isNaN("1a"));
 console.log(isNaN("a1"));   
 console.log(isNaN({}));
+
+
+
+
+// Short circuiting in boolean Operators in JavaScript
+// In x && y , y will not be evaluated if x evaluates to false , because the whole expression is guaranteed to be false .
+// In x || y , y will not be evaluated if x evaluated to true , because the whole expression is guaranteed to be true .
+
+var x = 1;
+var y = 2;
+//var z = 3;
+console.log(x && y );
+
+//var x = 1;
+//var y = 2;
+
+function T() { // True
+    console.log("T");
+    return true;
+    }
+    function F() { // False
+    console.log("F");
+    return false;
+    }
+    console.log(T() && F());
+
+function T() { // True
+    console.log("T");
+    return true;
+    }
+    function F() { // False
+    console.log("F");
+    return false;
+    }
+    console.log(F() && T());   
+    console.log(T() || F()) ;
+    console.log(F() || T()) ;
