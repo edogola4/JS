@@ -1281,3 +1281,76 @@ console.log(1 <= 1);
 console.log(1 > 1);
 console.log(1 >= 1);
 console.log(1 < "1");
+
+
+
+// Grouping multiple logic statements
+// Declare and initialize necessary variables
+var age = 20; // Example value for age
+var height = 5.9; // Example value for height
+var status = 'royalty'; // Example value for status
+var hasInvitation = true; // Example value for invitation status
+
+// Grouping multiple logic statements
+var isLegal = age >= 18;
+var tall = height >= 5.11;
+var suitable = isLegal && tall;
+var isRoyalty = status === 'royalty';
+var specialCase = isRoyalty && hasInvitation;
+var canEnterOurBar = suitable || specialCase;
+
+if (canEnterOurBar) {
+    console.log('You can enter our bar');
+} else {
+    console.log('You cannot enter our bar');
+}
+
+var age = 20;
+var height = 5.9;
+var status = 'royalty';
+var hasInvitation = true;
+var isLegal = age >= 18;
+var tall = height >= 5.11;
+var suitable = isLegal && tall;
+var isRoyalty = status === 'royalty';
+var specialCase = isRoyalty && hasInvitation;
+var canEnterOurBar = suitable || specialCase;
+if (canEnterOurBar) {
+    console.log('You can enter our bar');
+} else {
+    console.log('You cannot enter our bar');
+}
+
+
+var age = 18;
+var height = 5.4;
+var status = 'single';
+var isBeautiful = true;
+var isLegal = age >= 18;
+var tall = height >= 5.11;
+var suitable = isLegal && tall;
+var isSingle = status === 'single';
+var specialCase = isSingle && isBeautiful;
+var canDate = suitable || specialCase;
+if (canDate) {
+    console.log('You can date our single');
+} else {
+    console.log('You cannot date our single');
+}
+
+
+var age = 20;
+var gender = 'female';
+var status = 'single';
+var isBeautiful = true;
+var isLegal = age >= 18;
+var isFemale = gender === 'female';
+var suitable = isLegal && isFemale;
+var isSingle = status === 'single';
+var specialCase = isSingle && isBeautiful;
+var canEnterMyRoom = suitable || specialCase;
+if (canEnterMyRoom) {
+    console.log('You can enter my room');
+} else {
+    console.log('You cannot my room');
+}
