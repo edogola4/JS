@@ -1271,4 +1271,13 @@ console.log(b);
 
 
 
-// 
+// Rational Operators(<,<=,>,>=) in JavaScript
+console.log(1 < 2);
+console.log(1 > 2);
+console.log(1 <= 2);
+console.log(1 >= 2);
+console.log(1 < 1);
+console.log(1 <= 1);
+console.log(1 > 1);
+console.log(1 >= 1);
+console.log(1 < "1");
