@@ -2206,3 +2206,24 @@ console.log(myArray);
 console.log(myArray.length);
 console.log(uniqueArray.length);
 console.log(uniqueArray);
+
+
+// Array comparison 
+// For simple array comparison you can use JSON stringify and compare the output strings:
+var a = [1, 2, 3];
+var b = [1, 2, 3];
+console.log(JSON.stringify(a) === JSON.stringify(b));
+ // → true
+
+var a = [1, 2, 3];
+var b = [1, 2, 3, 4];
+console.log(JSON.stringify(a) === JSON.stringify(b));
+
+var lovedGirlfriends = ['Shantel', 'Daisy', 'Shanice', 'Dorcas'];
+var allowedGirlfriends = ['Shantel', 'Daisy', 'Shanice', 'Dorcas'];
+console.log(JSON.stringify(lovedGirlfriends) === JSON.stringify(allowedGirlfriends));
+
+var lovedGirlfriends = ['Shantel', 'Daisy', 'Shanice', 'Dorcas'];
+var allowedGirlfriends = ['Shantel', 'Daisy', 'Shanice', 'Dorcas'];
+
+console.log(JSON.stringify(lovedGirlfriends) === JSON.stringify(allowedGirlfriends));
