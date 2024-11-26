@@ -2138,3 +2138,26 @@ var myArray = [ 1, 22, 333, 44, 444, 555, 66, 777,];
 $.each(myArray, function (index, value){
     console.log(value);
 });
+
+
+// using _.each() , in Underscore.js: Array Iteration in JavaScript
+var _ = require("underscore");
+
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+_.each(myArray, function (value) {
+    console.log(value);
+});
+
+var _ = require("underscore");
+
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+_.each(myArray, function (value) {
+    console.log(value);
+});
+
+var myArray = [10, 2, 3, 4, 5, 6, 7, 8, 90];
+_.each(myArray, function (value) {
+    console.log(value);
+});
+
+
