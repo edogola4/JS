@@ -1532,3 +1532,105 @@ console.log(Array.isArray(array));
 console.log(arrayLike instanceof Array);
 console.log(realArray instanceof Array);
 
+
+
+// convert array like object to arrays in ES6
+var realArray = [ 'a', 'b', 'c', 'd', 'e'];
+var arrayLike = {
+    0: 'a',
+    1: 'b',
+    2: 'c',
+    3: 'd',
+    4: 'e',
+    length: 5
+};
+var array = Array.from(arrayLike);
+console.log(array);
+console.log(realArray);
+console.log(arrayLike);
+console.log(Array.isArray(arrayLike));
+console.log(Array.isArray(realArray));
+
+
+// now use for...of
+var realArray = [ 'a', 'b', 'c', 'd', 'e'];
+var arrayLike = {
+    0: 'a',
+    1: 'b',
+    2: 'c',
+    3: 'd',
+    4: 'e',
+    length: 5
+};
+var array = Array.from(arrayLike);
+console.log(array);
+console.log(realArray);
+console.log(arrayLike);
+console.log(Array.isArray(arrayLike));
+console.log(Array.isArray(realArray));
+
+
+var realArray = [ 'a', 'b', 'c', 'd', 'e'];
+var arrayLike = {
+    0: 'a',
+    1: 'b',
+    2: 'c',
+    3: 'd',
+    4: 'e',
+    length: 5
+};
+var array = Array.from(arrayLike);
+console.log(array);
+console.log(realArray);
+
+console.log(arrayLike);
+console.log(Array.isArray(arrayLike));
+console.log(Array.isArray(realArray));
+console.log(arrayLike instanceof Array);
+console.log(realArray instanceof Array);
+console.log(array instanceof Array);
+console.log(Array.isArray(array));
+
+
+var myArrayLike = {
+    0: 'Value shantel is smart',
+    1: 'Value daisy is ugly',
+    length: 2
+};
+
+Array.from(myArrayLike).forEach(value => {
+    console.log(value); // Outputs 'Value 0' and 'Value 1'
+});
+
+Array.from(myArrayLike, value => {
+    console.log(value.toUpperCase()); // Outputs 'VALUE 0' and 'VALUE 1'
+});
+
+const mappedArray = Array.from(myArrayLike).map(value => value.toLowerCase());
+console.log(mappedArray); // Outputs ['value 0', 'value 1']
+
+
+var myGirlFriends = ['Daisy', 'Shantel', 'Dorcas', 'Shanice'];
+myGirlFriends.forEach((value, index) => {
+    console.log(index, value);
+});
+console.log(myGirlFriends.length);
+console.log(myGirlFriends[0]);
+console.log(myGirlFriends[1]);
+console.log(myGirlFriends[2]);
+console.log(myGirlFriends[3]);
+console.log(myGirlFriends[4]);
+
+
+var myGirlFriend = {
+    0: 'Daisy',
+    1: 'Shantel',
+    2: 'Dorcas',
+    3: 'Shanice',
+    length: 4
+};
+console.log(myGirlFriend[0]);
+
+console.log(myGirlFriend[1]);
+
+console.log(myGirlFriend[2]);
