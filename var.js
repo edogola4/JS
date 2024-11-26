@@ -1831,3 +1831,116 @@ var friendsAllowedAtMine = age.filter(function (age) {
     return age.age < 30;
 });
 console.log(friendsAllowedAtMine);
+
+var people = [{
+    name: 'Daisy',
+    age: 22
+}, {
+    name: 'Shantel',
+    age: 25
+}, {
+    name: 'Dorcas',
+    age: 30
+}, {
+    name: 'Shanice',
+    age: 35
+}];
+var allowedAtOurBar = people.filter(function (people) {
+    return people.age > 30;
+});
+console.log(allowedAtOurBar);
+
+
+
+/// Sorting Arrays in JavaScript
+var numbers = [1, 2, 3, 4, 5];
+
+var sortedNumbers = numbers.sort(function (a, b) {
+    return a - b;
+});
+console.log(sortedNumbers);
+
+var girls = ['shantel', 'daisy', 'shanice', 'dorcas'];
+var sortedGirls = girls.sort(function (shantel, daisy){
+    return shantel - daisy;
+});
+console.log(sortedGirls);
+
+// Default Sort
+var items = ['s', 't', 'a', 34, 'K', 'o', 'v', 'E', 'r', '2', '4', 'o', 'W', -1, '-4'];
+var sortedItems = items.sort();
+console.log(sortedItems);
+
+// Alphabetical Sort
+var items = ['s', 't', 'a', 'K', 'o', 'v', 'E', 'r', 'W', ];
+var sortedItems = items.sort(function (a, b){
+    return a.localeCompare(b);
+});
+console.log(sortedItems);
+
+// String sorting by length (longest ﬁrst)
+var animals = ['cat', 'donkey', 'elephant', 'goat', 'penguins' ];
+var sortedAnimals = animals.sort(function (a, b){
+    return b.length - a.length;
+});
+console.log(sortedAnimals);
+
+// String sorting by length (shortest ﬁrst)
+var animals = ['cat', 'donkey', 'elephant', 'goat', 'penguins' ];
+var sortedAnimals = animals.sort(function (a, b){
+    return a.length - b.length;
+});
+console.log(sortedAnimals);
+
+// Numerical Sort (ascending)
+var numbers = [1, 2, 3, 4, 5];
+var sortedNumbers = numbers.sort(function (a, b){
+    return a - b;
+});
+console.log(sortedNumbers);
+
+// Numerical Sort (descending)
+var numbers = [101, 201, 301, 401, 501];
+var sortedNumbers = numbers.sort(function (a, b){
+    return b - a;
+});
+console.log(sortedNumbers);
+
+// Sorting array by even and odd numbers
+var numbers = [1, 2, 3, 4, 5, 9, 13, 22, 28, 17, 100, 202, 505, 1000];
+var sortedNumbers = numbers.sort(function (a, b){
+    return (a &1 ) - (b &1 ) || a - b;
+});
+console.log(sortedNumbers);
+
+// Date Sort (descending)
+var dates = [
+    new Date('2024-01-01'),
+    new Date('2023-01-01'),
+    new Date('2022-01-02'),
+    new Date('2021-01-03'),
+    new Date('2020-01-04'),
+    new Date('2029-01-05')
+];
+var sortedDates = dates.sort(function (a, b){
+    return b - a;
+});
+console.log(sortedDates);
+
+var dates = [
+    new Date(2007, 11, 10),
+    new Date(2014, 2, 21),
+    new Date(2009, 6, 11),
+new Date(2016, 7, 23)
+];
+dates.sort(function(a, b) {
+if (a > b) return -1;
+if (a < b) return 1;
+return 0;
+});
+// the date objects can also sort by its difference
+// the same way that numbers array is sorting
+dates.sort(function(a, b) {
+return b-a;
+});
+console.log(dates);
