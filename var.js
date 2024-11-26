@@ -1772,3 +1772,62 @@ console.log(capitalizedNames);
 
 
 // Filtring Object Arrays in JavaScript
+var numbers = [1, 2, 3, 4, 5];
+var evenNumbers = numbers.filter(function (number) {
+    return number % 2 === 0;
+});
+console.log(evenNumbers);
+
+var girlFriends = [
+    { name: 'Daisy', age: 22 },
+    { name: 'Shantel', age: 25 },
+    { name: 'Dorcas', age: 30 },
+    { name: 'Shanice', age: 35 }
+];
+var youngGirlFriends = girlFriends.filter(function (girlFriend) {
+    return girlFriend.age < 30;
+});
+console.log(youngGirlFriends);
+
+var dreamCars = [
+    { model: 'Dodge', year: 2015 },
+    { model: 'Ford', year: 2016 },
+    { model: 'Toyota', year: 2017 },
+    { model: 'Nissan', year: 2018 }
+];
+var bestMyCars = dreamCars.filter(function (dreamCars){
+    return dreamCars.year > 2014;
+}); 
+console.log(bestMyCars);
+
+// Suppose we want to get all odd number in an array:
+
+var numbers = [1, 2, 3, 4, 5];
+var oddNumbers = numbers.filter(function (number) {
+    return number % 2 !== 0;
+});
+console.log(oddNumbers);
+
+// shortened to (n => n % 2)
+
+var numbers = [1, 2, 3, 4, 5];
+var oddNumbers = numbers.filter(n => n % 2);
+console.log(oddNumbers)
+
+var age = [{
+    name: 'Daisy',
+    age: 22
+}, {
+    name: 'Shantel',
+    age: 25
+}, {
+    name: 'Dorcas',
+    age: 30
+}, {
+    name: 'Shanice',
+    age: 35
+}];
+var friendsAllowedAtMine = age.filter(function (age) {
+    return age.age < 30;
+});
+console.log(friendsAllowedAtMine);
