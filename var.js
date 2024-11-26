@@ -2227,3 +2227,42 @@ var lovedGirlfriends = ['Shantel', 'Daisy', 'Shanice', 'Dorcas'];
 var allowedGirlfriends = ['Shantel', 'Daisy', 'Shanice', 'Dorcas'];
 
 console.log(JSON.stringify(lovedGirlfriends) === JSON.stringify(allowedGirlfriends));
+
+
+// You can use a recursive function to compare arrays.
+ 
+// This function will compare the length of the arrays and their elements recursively:
+function compareArrays(arr1, arr2) {
+    if (arr1.length !== arr2.length) {
+        return false;
+    }
+    for (var i = 0; i < arr1.length; i++) {
+        if (Array.isArray(arr1[i]) && Array.isArray(arr2[i])) {
+            if (!compareArrays(arr1[i], arr2[i])) {
+                return false;
+            }
+        } else if (arr1[i] !== arr2[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+var a = [1, 2, 3];
+
+var b = [1, 2, 3];
+console.log(compareArrays(a, b));
+// → true
+
+var a = [1, 2, 3];
+
+var b = [1, 2, 3, 4];
+console.log(compareArrays(a, b));
+
+// → false
+
+var a = [1, [2, 3]];
+var b = [1, [2, 3]];
+console.log(compareArrays(a, b));
+
+
+
