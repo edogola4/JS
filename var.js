@@ -68,7 +68,7 @@ console.log(myNull);
 
 var myArray = []; // empty array
 var myArray2 = [1, 2, 3, 4, 5];
- // array with values
+// array with values
 console.log(myArray2);
 
 var favouriteFruits = ["apples", "oranges", "bananas"];
@@ -95,7 +95,7 @@ var myObject2 = {
     firstName: "Bran",
     middleName: "undefined",
     lastName: "Don",
-    fullName: "Bran" + " " + "Don", 
+    fullName: "Bran" + " " + "Don",
     age: 25,
     isMarried: false,
     favouriteFruits: ["apples", "oranges", "bananas"],
@@ -341,31 +341,31 @@ console.log(Math.floor("a"));
 // CONSOLE
 var personArr = [
     {
-    "personId": 123,
-    "name": "Jhon",
-    "city": "Melbourne",
-    "phoneNo": "1234567890"
+        "personId": 123,
+        "name": "Jhon",
+        "city": "Melbourne",
+        "phoneNo": "1234567890"
     },
     {
-    "personId": 124,
-    "name": "Amelia",
-    "city": "Sydney",
-    "phoneNo": "1234567890"
+        "personId": 124,
+        "name": "Amelia",
+        "city": "Sydney",
+        "phoneNo": "1234567890"
     },
     {
-    "personId": 125,
-    "name": "Emily",
-    "city": "Perth",
-    "phoneNo": "1234567890"
+        "personId": 125,
+        "name": "Emily",
+        "city": "Perth",
+        "phoneNo": "1234567890"
     },
     {
-    "personId": 126,
-    "name": "Abraham",
-    "city": "Perth",
-    "phoneNo": "1234567890"
+        "personId": 126,
+        "name": "Abraham",
+        "city": "Perth",
+        "phoneNo": "1234567890"
     }
-    ];
-    console.table(personArr, ['name', 'phoneNo', 'city', 'personId']);
+];
+console.table(personArr, ['name', 'phoneNo', 'city', 'personId']);
 
 
 
@@ -374,28 +374,28 @@ var personArr = [
 var myString = "Hello World";
 console.log(typeof myString);
 
-    //typeof
-    myString = "Hello World";
-    console.log(typeof myString);
+//typeof
+myString = "Hello World";
+console.log(typeof myString);
 
-    myString = 123;
-    console.log(typeof myString);
+myString = 123;
+console.log(typeof myString);
 
-    myString = true;
-    console.log(typeof myString);
+myString = true;
+console.log(typeof myString);
 
-    myString = null;
-    console.log(typeof myString);
+myString = null;
+console.log(typeof myString);
 
-    myString = undefined;
-    console.log(typeof myString);
+myString = undefined;
+console.log(typeof myString);
 
-    // typeof is used to check the type of a variable
+// typeof is used to check the type of a variable
 
-    // typeof is used to check the type of a variable
-    myString = "Hello World";
-    console.log(typeof myString);
-    myString = 123;
+// typeof is used to check the type of a variable
+myString = "Hello World";
+console.log(typeof myString);
+myString = 123;
 
 // finding an object class
 var myObject = {};
@@ -453,7 +453,7 @@ console.log(myString.charAt(2));
 var myString = String.fromCharCode(65);
 console.log(myString);
 
-String.fromCharCode(104, 101, 108, 108, 111);   
+String.fromCharCode(104, 101, 108, 108, 111);
 console.log(String.fromCharCode(104, 101, 108, 108, 111));
 
 var myString = "Hello World";
@@ -551,7 +551,7 @@ console.log(myName.split("").reverse().join(""));
 function reverseString(str) {
     return str.split('').reverse().join('');
 }
-console.log(reverseString('string')); 
+console.log(reverseString('string'));
 
 
 function reverseString(str) {
@@ -566,7 +566,7 @@ console.log([...myString].reverse().join(("")));
 var myName = "Bran Don";
 console.log([...myName].reverse().join(("")));
 
-function reverseString(str){
+function reverseString(str) {
     return [...String(str)].reverse().join('');
 }
 console.log(reverseString('Bran don $'));
@@ -635,7 +635,7 @@ var myName = "Ogola"
 console.log(myName.charAt(1));
 
 var string = "Hello World";
-console.log( string[4] );
+console.log(string[4]);
 
 
 // Escaping Quotes in JavaScript
@@ -815,12 +815,12 @@ var myString = "Hello World";
 console.log(myString.replace("World", "Universe"));
 
 var string = "Hello, World!";
-console.log( string.indexOf("o") );
-console.log( string.indexOf("foo") );
+console.log(string.indexOf("o"));
+console.log(string.indexOf("foo"));
 
 var string = "Hello, World!";
-console.log( string.lastIndexOf("o") );
-console.log( string.lastIndexOf("foo") );
+console.log(string.lastIndexOf("o"));
+console.log(string.lastIndexOf("foo"));
 
 
 // Find the index of a substring inside a string
@@ -838,7 +838,7 @@ var myString = "Hello World";
 console.log(myString.toUpperCase());
 
 var myName = "Bran Don";
-console.log(myName.toUpperCase());  
+console.log(myName.toUpperCase());
 
 
 // string to lowercase
@@ -926,7 +926,7 @@ console.log(myDate.toUTCString());
 // Creates a Date object with the first day of the year 2012 in the local
 // timezone.
 // (Months are zero-based)
-var myDate = new Date(2012, 0); 
+var myDate = new Date(2012, 0);
 console.log(myDate.toUTCString());
 
 //Creates a Date object with the first day of the year 2025 in the local
@@ -1002,16 +1002,16 @@ var myDate = new Date();
 console.log(myDate.toString());
 
 var today = new Date().toLocaleDateString('en-GB', {
-    day : 'numeric',
-    month : 'short',
-    year : 'numeric'
-    });
-    console.log(today);
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric'
+});
+console.log(today);
 
 var tomorrow = new Date().toString('en-GB', {
-    day : 'numeric',
-    month : 'short',
-    year : 'numeric',
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
     hour: 'numeric',
     minute: 'numeric',
     second: 'numeric',
@@ -1024,36 +1024,36 @@ var tomorrow = new Date().toString('en-GB', {
 console.log(tomorrow);
 
 
-var DateObject = (function() {
+var DateObject = (function () {
     var monthNames = [
-    "January", "February", "March",
-    "April", "May", "June", "July",
-    "August", "September", "October",
-    "November", "December"
+        "January", "February", "March",
+        "April", "May", "June", "July",
+        "August", "September", "October",
+        "November", "December"
     ];
-    var date = function(str) {
-    this.set(str);
+    var date = function (str) {
+        this.set(str);
     };
     date.prototype = {
-    set : function(str) {
-    var dateDef = str ? new Date(str) : new Date();
-    this.day = dateDef.getDate();
-    this.dayPadded = (this.day < 10) ? ("0" + this.day) : "" + this.day;
-    this.month = dateDef.getMonth() + 1;
-    this.monthPadded = (this.month < 10) ? ("0" + this.month) : "" + this.month;
-    this.monthName = monthNames[this.month - 1];
-    this.year = dateDef.getFullYear();
-    },
-    get : function(properties, separator) {
-    var separator = separator ? separator : '-'
-    ret = [];
-    for(var i in properties) {
-    ret.push(this[properties[i]]);
-    }
-    return ret.join(separator);
-}
-};
-return date;
+        set: function (str) {
+            var dateDef = str ? new Date(str) : new Date();
+            this.day = dateDef.getDate();
+            this.dayPadded = (this.day < 10) ? ("0" + this.day) : "" + this.day;
+            this.month = dateDef.getMonth() + 1;
+            this.monthPadded = (this.month < 10) ? ("0" + this.month) : "" + this.month;
+            this.monthName = monthNames[this.month - 1];
+            this.year = dateDef.getFullYear();
+        },
+        get: function (properties, separator) {
+            var separator = separator ? separator : '-'
+            ret = [];
+            for (var i in properties) {
+                ret.push(this[properties[i]]);
+            }
+            return ret.join(separator);
+        }
+    };
+    return date;
 })();
 console.log(new DateObject().get(['year', 'month', 'day']));
 
@@ -1065,13 +1065,13 @@ console.log(year);
 var month = (new Date()).getMonth();
 console.log(month);
 
-var day = (new Date()).getDate();   
+var day = (new Date()).getDate();
 console.log(day);
 
 var hours = (new Date()).getHours();
 console.log(hours);
 
-var minutes = (new Date()).getMinutes();    
+var minutes = (new Date()).getMinutes();
 console.log(minutes);
 
 var seconds = (new Date()).getSeconds();
@@ -1147,7 +1147,7 @@ console.log(isNaN(NaN));
 console.log(isNaN(1));
 console.log(isNaN("1"));
 console.log(isNaN("1a"));
-console.log(isNaN("a1"));   
+console.log(isNaN("a1"));
 console.log(isNaN({}));
 
 
@@ -1160,7 +1160,7 @@ console.log(isNaN({}));
 var x = 1;
 var y = 2;
 //var z = 3;
-console.log(x && y );
+console.log(x && y);
 
 //var x = 1;
 //var y = 2;
@@ -1168,24 +1168,24 @@ console.log(x && y );
 function T() { // True
     console.log("T");
     return true;
-    }
-    function F() { // False
+}
+function F() { // False
     console.log("F");
     return false;
-    }
-    console.log(T() && F());
+}
+console.log(T() && F());
 
 function T() { // True
     console.log("T");
     return true;
-    }
-    function F() { // False
+}
+function F() { // False
     console.log("F");
     return false;
-    }
-    console.log(F() && T());   
-    console.log(T() || F()) ;
-    console.log(F() || T()) ;
+}
+console.log(F() && T());
+console.log(T() || F());
+console.log(F() || T());
 
 
 // Null and Undefined in JavaScript
@@ -1194,7 +1194,7 @@ console.log(null === undefined);
 console.log(null == 0);
 console.log(null === 0);
 console.log(null == false);
-console.log(null === false);    
+console.log(null === false);
 // false
 console.log(null == "");
 console.log(null === "");
@@ -1363,7 +1363,7 @@ var age = 20;
 var status = (age >= 18) ? 'adult' : 'minor';
 console.log(status);
 var age = 16;
-var status = (age >= 18) ? 'adult' : 'minor';   
+var status = (age >= 18) ? 'adult' : 'minor';
 console.log(status);
 
 var name = 'Brandon';
@@ -1445,7 +1445,7 @@ switch (daisy) {
 }
 
 var animal = 'Lion';
-switch (animal){
+switch (animal) {
     case 'Dog':
         console.log('I will not run since animal !== "Dog"');
         break;
@@ -1457,7 +1457,7 @@ switch (animal){
 }
 
 var employed = 'marry';
-switch (employed){
+switch (employed) {
     case 'Tech':
         console.log('I will marry since employed !== "Tech"');
         break;
@@ -1465,7 +1465,7 @@ switch (employed){
         console.log('I will not marry since employment !== "white job"');
         break;
     default:
-        console.log('I will marry when I want') ;   
+        console.log('I will marry when I want');
 }
 
 
@@ -1513,7 +1513,7 @@ if (daisy === 'cute') {
 // ARRAYS IN JAVASCRIPT
 
 // converting array like objects to arrays
-var realArray = [ 'a', 'b', 'c', 'd', 'e'];
+var realArray = ['a', 'b', 'c', 'd', 'e'];
 var arrayLike = {
     0: 'a',
     1: 'b',
@@ -1535,7 +1535,7 @@ console.log(realArray instanceof Array);
 
 
 // convert array like object to arrays in ES6
-var realArray = [ 'a', 'b', 'c', 'd', 'e'];
+var realArray = ['a', 'b', 'c', 'd', 'e'];
 var arrayLike = {
     0: 'a',
     1: 'b',
@@ -1553,7 +1553,7 @@ console.log(Array.isArray(realArray));
 
 
 // now use for...of
-var realArray = [ 'a', 'b', 'c', 'd', 'e'];
+var realArray = ['a', 'b', 'c', 'd', 'e'];
 var arrayLike = {
     0: 'a',
     1: 'b',
@@ -1570,7 +1570,7 @@ console.log(Array.isArray(arrayLike));
 console.log(Array.isArray(realArray));
 
 
-var realArray = [ 'a', 'b', 'c', 'd', 'e'];
+var realArray = ['a', 'b', 'c', 'd', 'e'];
 var arrayLike = {
     0: 'a',
     1: 'b',
@@ -1650,7 +1650,7 @@ example(1, 2, 3, 4); // Logs [1, 2, 3, 4]
 
 
 // Convert Array-like Objects to Arrays in ≤ ES5
-var realArray = [ 'a', 'b', 'c', 'd', 'e'];
+var realArray = ['a', 'b', 'c', 'd', 'e'];
 var arrayLike = {
     0: 'a',
     1: 'b',
@@ -1795,9 +1795,9 @@ var dreamCars = [
     { model: 'Toyota', year: 2017 },
     { model: 'Nissan', year: 2018 }
 ];
-var bestMyCars = dreamCars.filter(function (dreamCars){
+var bestMyCars = dreamCars.filter(function (dreamCars) {
     return dreamCars.year > 2014;
-}); 
+});
 console.log(bestMyCars);
 
 // Suppose we want to get all odd number in an array:
@@ -1861,7 +1861,7 @@ var sortedNumbers = numbers.sort(function (a, b) {
 console.log(sortedNumbers);
 
 var girls = ['shantel', 'daisy', 'shanice', 'dorcas'];
-var sortedGirls = girls.sort(function (shantel, daisy){
+var sortedGirls = girls.sort(function (shantel, daisy) {
     return shantel - daisy;
 });
 console.log(sortedGirls);
@@ -1872,44 +1872,44 @@ var sortedItems = items.sort();
 console.log(sortedItems);
 
 // Alphabetical Sort
-var items = ['s', 't', 'a', 'K', 'o', 'v', 'E', 'r', 'W', ];
-var sortedItems = items.sort(function (a, b){
+var items = ['s', 't', 'a', 'K', 'o', 'v', 'E', 'r', 'W',];
+var sortedItems = items.sort(function (a, b) {
     return a.localeCompare(b);
 });
 console.log(sortedItems);
 
 // String sorting by length (longest ﬁrst)
-var animals = ['cat', 'donkey', 'elephant', 'goat', 'penguins' ];
-var sortedAnimals = animals.sort(function (a, b){
+var animals = ['cat', 'donkey', 'elephant', 'goat', 'penguins'];
+var sortedAnimals = animals.sort(function (a, b) {
     return b.length - a.length;
 });
 console.log(sortedAnimals);
 
 // String sorting by length (shortest ﬁrst)
-var animals = ['cat', 'donkey', 'elephant', 'goat', 'penguins' ];
-var sortedAnimals = animals.sort(function (a, b){
+var animals = ['cat', 'donkey', 'elephant', 'goat', 'penguins'];
+var sortedAnimals = animals.sort(function (a, b) {
     return a.length - b.length;
 });
 console.log(sortedAnimals);
 
 // Numerical Sort (ascending)
 var numbers = [1, 2, 3, 4, 5];
-var sortedNumbers = numbers.sort(function (a, b){
+var sortedNumbers = numbers.sort(function (a, b) {
     return a - b;
 });
 console.log(sortedNumbers);
 
 // Numerical Sort (descending)
 var numbers = [101, 201, 301, 401, 501];
-var sortedNumbers = numbers.sort(function (a, b){
+var sortedNumbers = numbers.sort(function (a, b) {
     return b - a;
 });
 console.log(sortedNumbers);
 
 // Sorting array by even and odd numbers
 var numbers = [1, 2, 3, 4, 5, 9, 13, 22, 28, 17, 100, 202, 505, 1000];
-var sortedNumbers = numbers.sort(function (a, b){
-    return (a &1 ) - (b &1 ) || a - b;
+var sortedNumbers = numbers.sort(function (a, b) {
+    return (a & 1) - (b & 1) || a - b;
 });
 console.log(sortedNumbers);
 
@@ -1922,7 +1922,7 @@ var dates = [
     new Date('2020-01-04'),
     new Date('2029-01-05')
 ];
-var sortedDates = dates.sort(function (a, b){
+var sortedDates = dates.sort(function (a, b) {
     return b - a;
 });
 console.log(sortedDates);
@@ -1931,16 +1931,125 @@ var dates = [
     new Date(2007, 11, 10),
     new Date(2014, 2, 21),
     new Date(2009, 6, 11),
-new Date(2016, 7, 23)
+    new Date(2016, 7, 23)
 ];
-dates.sort(function(a, b) {
-if (a > b) return -1;
-if (a < b) return 1;
-return 0;
+dates.sort(function (a, b) {
+    if (a > b) return -1;
+    if (a < b) return 1;
+    return 0;
 });
 // the date objects can also sort by its difference
 // the same way that numbers array is sorting
-dates.sort(function(a, b) {
-return b-a;
+dates.sort(function (a, b) {
+    return b - a;
 });
 console.log(dates);
+
+
+// Array Iteration in JavaScript
+var numbers = [1, 2, 3, 4, 5];
+numbers.forEach(function (number) {
+    console.log(number);
+});
+var myGirlFriends = ['Daisy', 'Shantel', 'Dorcas', 'Shanice'];
+
+myGirlFriends.forEach(function (name) {
+    console.log(name);
+});
+console.log(myGirlFriends);
+console.log(numbers);
+
+for (var i = 0, length = 10; i < length; i++) {
+    console.log(i);
+}
+
+var myGirlFriends = ['Daisy', 'Shantel', 'Dorcas', 'Shanice'];
+myGirlFriends.forEach(function (name) {
+    console.log(name);
+});
+console.log(myGirlFriends);
+
+for (var i = myArray.length - 1; i > -1; i--) {
+    console.log(myArray[i]);
+};
+
+// using A while loop for Array Iteration in JavaScript
+var myArray = [1, 2, 3, 4, 5];
+var i = 0;
+while (i < myArray.length) {
+    console.log(myArray[i]);
+    i++;
+}
+
+var key = 0;
+while (value = myArray[key++]) {
+    console.log(value);
+}
+
+// using for...in loop for Array Iteration in JavaScript
+var myArray = [1, 2, 3, 4, 5];
+for (var key in myArray) {
+    console.log(myArray[key]);
+}
+var myArray = [1, 2, 3, 4, 5];
+for (var key in myArray) {
+    console.log(key);
+}
+var myArray = [1, 2, 3, 4, 5];
+for (var key in myArray) {
+    console.log(myArray[key]);
+}
+var myArray = [11, 22, 33, 44, 55];
+for (var key in myArray) {
+    console.log(key);
+
+}
+
+// using for...of loop for Array Iteration in JavaScript
+var myArray = [1, 2, 3, 4, 50];
+for (var value of myArray) {
+    console.log(value);
+}
+var myGirlFriend = ['Shartel', 'Daisy', 'NaN'];
+for (var value of myGirlFriend){
+    console.log(value)
+}
+
+// using Array.prototype.keys() for Array Iteration in JavaScript
+var myArray = [1, 2, 3, 4, 5];
+var iterator = myArray.keys();
+for (var key of iterator) {
+    console.log(key);
+}
+
+var myArray = [1, 2, 3, 4, 5];
+var iterator = myArray.keys();
+for (var key of iterator) {
+    console.log(myArray[key]);
+}
+var myArray = [1, 2, 3, 4, 5];
+var iterator = myArray.keys();
+for (var key of iterator) {
+    console.log(key);
+}
+
+var myArray = [1, 2, 3, 4];
+for (let i of myArray.keys()) {
+var twoValue = myArray[i] * 2;
+console.log("2 * value is: %d", twoValue);
+}
+
+// using Array.prototype.forEach() for Array Iteration in JavaScript
+var myArray = [1, 2, 3, 4, 5];
+myArray.forEach(function (value) {
+    console.log(value);
+});
+
+var myArray = [1, 2, 3, 4, 5];
+myArray.forEach(function (value) {
+    console.log(value);
+});
+var myArray = [1, 2, 3, 4, 5];
+myArray.forEach(function (value) {
+    console.log(value);
+});
