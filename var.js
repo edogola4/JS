@@ -2266,3 +2266,36 @@ console.log(compareArrays(a, b));
 
 
 
+// Reversing arrays in JavaScript
+var myArray = [1, 2, 3, 4, 5];
+var reversedArray = myArray.reverse();
+
+console.log(reversedArray);
+
+var myArray = [1, 2, 3, 4, 5];
+
+var reversedArray = myArray.reverse();
+
+console.log(reversedArray);
+
+var myArray = [1, 2, 3, 4, 5];
+var reversedArray = myArray.reverse();
+console.log(reversedArray);
+
+var myArray = [1, 2, 3, 4, 5];
+var reversedArray = myArray.reverse();
+console.log(reversedArray);
+
+var myGirls = ['daisy', 'shantel', 'shanice', 'dorcas'];
+var reversedGirls = myGirls.reverse();
+console.log(reversedGirls);
+
+
+// Shallow cloning an array in JavaScript
+var myArray = [1, 2, 3, 4, 5];
+var clonedArray = [...myArray];
+console.log(clonedArray);
+
+var myArray = [1, 2, 3, 4, 5];
+var clonedArray = [...myArray];
+console.log(clonedArray);
