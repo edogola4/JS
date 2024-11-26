@@ -2161,3 +2161,48 @@ _.each(myArray, function (value) {
 });
 
 
+// Destructuring an Array in JavaScript
+var myArray = [1, 2, 3, 4, 5];
+var [first, shantel, daisy, shanice, dorcas] = myArray;
+console.log(first);
+console.log(shantel);
+console.log(daisy);
+console.log(shanice);
+console.log(dorcas);
+
+var myArray = [1, 2, 3, 4, 5];
+var [first, second, third, fourth, fifth] = myArray;
+console.log(first);
+console.log(second);
+
+console.log(third);
+console.log(fourth);
+console.log(fifth);
+
+
+var triangle = [3, 4, 5];
+var [length, height, hypotenuse] = triangle;
+
+console.log(length); // → 3
+console.log(height); // → 4
+console.log(hypotenuse === 5); // → true
+
+var girlFriends = [shantel, daisy];
+var [first, second] = girlFriends;
+console.log(first);
+console.log(second);
+console.log(girlFriends);
+console.log(shantel);
+console.log(daisy);
+
+
+
+// Removing duplicate elements in an Array in JavaScript
+var myArray = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5];
+var uniqueArray = [...new Set(myArray)];
+
+console.log(uniqueArray);
+console.log(myArray);
+console.log(myArray.length);
+console.log(uniqueArray.length);
+console.log(uniqueArray);
