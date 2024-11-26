@@ -2111,3 +2111,30 @@ console.log(allEven);
 
 // using Array.prototype.some for Array Iteration in JavaScript
 var myArray = [1, 2, 3, 4, 5];
+var someEven = myArray.some(function (value) {
+    return value % 2 === 0;
+
+});
+console.log(someEven);
+
+var myArray = [1, 2, 3, 4, 5];
+var someEven = myArray.some(function (value) {
+    return value % 2 === 0;
+
+});
+console.log(someEven);
+
+
+// using jQuery.each() , in jQuery: Array Iteration in JavaScript
+const { JSDOM } = require("jsdom");
+const $ = require("jquery")(new JSDOM().window);
+
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+$.each(myArray, function (index, value) {
+    console.log(value);
+});
+
+var myArray = [ 1, 22, 333, 44, 444, 555, 66, 777,];
+$.each(myArray, function (index, value){
+    console.log(value);
+});
