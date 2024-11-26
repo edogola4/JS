@@ -2011,7 +2011,7 @@ for (var value of myArray) {
     console.log(value);
 }
 var myGirlFriend = ['Shartel', 'Daisy', 'NaN'];
-for (var value of myGirlFriend){
+for (var value of myGirlFriend) {
     console.log(value)
 }
 
@@ -2035,8 +2035,8 @@ for (var key of iterator) {
 
 var myArray = [1, 2, 3, 4];
 for (let i of myArray.keys()) {
-var twoValue = myArray[i] * 2;
-console.log("2 * value is: %d", twoValue);
+    var twoValue = myArray[i] * 2;
+    console.log("2 * value is: %d", twoValue);
 }
 
 // using Array.prototype.forEach() for Array Iteration in JavaScript
@@ -2053,3 +2053,34 @@ var myArray = [1, 2, 3, 4, 5];
 myArray.forEach(function (value) {
     console.log(value);
 });
+
+[1, 2, 3, 4].forEach(function (value, index, arr) {
+    var twoValue = value * 2;
+    console.log("2 * value is: %d", twoValue);
+});
+
+var myArray = [1, 2, 3, 4];
+for (var i = 0; i < myArray.length; ++i) {
+    var twoValue = myArray[i] * 2;
+    console.log("2 * value is: %d", twoValue);
+}
+
+var myArray = [10, 20, 30, 40];
+for (var i = 0; i < myArray.length; ++i) {
+    var twoValue = myArray[i] * 2;
+    console.log("2 * value is: %d", twoValue);
+}
+
+var myArray = [1, 2, 3, 4],
+    i = 0, sum = 0;
+while (i++ < myArray.length) {
+    sum += i;
+}
+console.log(sum);
+
+var myArray = [19, 29, 39, 49],
+    i = 0, sum = 0;
+    while (i++ < myArray.length) {
+        sum += i;
+    }
+    console.log(sum);
