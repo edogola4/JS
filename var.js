@@ -2299,3 +2299,28 @@ console.log(clonedArray);
 var myArray = [1, 2, 3, 4, 5];
 var clonedArray = [...myArray];
 console.log(clonedArray);
+
+
+// Concatenating Arrays in JavaScript
+var myArray = [1, 2, 3, 4, 5];
+var myArray2 = [6, 7, 8, 9, 10];
+var concatenatedArray = myArray.concat(myArray2);
+console.log(concatenatedArray);
+
+// Concatenating Multiple Arrays in JavaScript 
+var myArray = [1, 2, 3, 4, 5];
+var myArray2 = [6, 7, 8, 9, 10];
+var myArray3 = [11, 12, 13, 14, 15];
+var concatenatedArray = myArray.concat(myArray2, myArray3);
+console.log(concatenatedArray);
+
+// Concatenating Arrays in JavaScript Without Copying the First Array
+var myArray = [1, 2, 3, 4, 5];
+
+var myArray2 = [6, 7, 8, 9, 10];
+var myArray3 = [11, 12, 13, 14, 15];
+var concatenatedArray = myArray.concat(myArray2, myArray3);
+console.log(concatenatedArray);
+
+
+ 
