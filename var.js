@@ -1507,3 +1507,28 @@ if (daisy === 'cute') {
 } else {
     console.log('unknown');
 }
+
+
+
+// ARRAYS IN JAVASCRIPT
+
+// converting array like objects to arrays
+var realArray = [ 'a', 'b', 'c', 'd', 'e'];
+var arrayLike = {
+    0: 'a',
+    1: 'b',
+    2: 'c',
+    3: 'd',
+    4: 'e',
+    length: 5
+};
+var array = Array.from(arrayLike);
+console.log(array);
+console.log(realArray);
+console.log(arrayLike);
+console.log(Array.isArray(arrayLike));
+console.log(Array.isArray(realArray));
+console.log(Array.isArray(array));
+console.log(arrayLike instanceof Array);
+console.log(realArray instanceof Array);
+
