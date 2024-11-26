@@ -1725,3 +1725,50 @@ var concatenatedString = myGirlFriends.reduce(function (accumulator, currentValu
     return accumulator + currentValue;
 }, '');
 console.log(concatenatedString);
+
+// Array sum in reducing values in javascript
+var numbers = [1, 2, 3, 4, 5];
+var sum = numbers.reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue;
+}, 0);
+console.log(sum);
+
+var myGirlFriends = ['Daisy', 'Shantel'];
+var concatenatedString = myGirlFriends.reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue;
+}, '');
+console.log(concatenatedString);
+
+// flatten array of objects in reducing values in javascript
+var objects = [{ name: 'Daisy' }, { name: 'Shantel' }, { name: 'Dorcas' }, { name: 'Shanice' }];
+arrayOfNames = objects.reduce(function (accumulator, currentValue) {
+    accumulator.push(currentValue.name);
+    return accumulator;
+}, []);
+console.log(arrayOfNames);
+
+
+
+//MAPPING VALUES IN JAVASCRIPT
+var numbers = [1, 2, 3, 4, 5];
+var doubledNumbers = numbers.map(function (number) {
+    return number * 2;
+
+});
+var myGirlFriends = ['Daisy', 'Shantel', 'Dorcas', 'Shanice'];
+var capitalizedNames = myGirlFriends.map(function (name) {
+    return name.toUpperCase();
+});
+console.log(doubledNumbers);
+console.log(capitalizedNames);
+console.log(numbers);
+console.log(myGirlFriends);
+
+var myGirlFriends = ['Daisy', 'Shantel', 'Dorcas', 'Shanice'];
+var capitalizedNames = myGirlFriends.map(function (name) {
+    return name.toUpperCase();
+});
+console.log(capitalizedNames);
+
+
+// Filtring Object Arrays in JavaScript
