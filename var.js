@@ -1634,3 +1634,94 @@ console.log(myGirlFriend[0]);
 console.log(myGirlFriend[1]);
 
 console.log(myGirlFriend[2]);
+
+/*
+// Assuming this code is run in a browser
+var divs = document.getElementsByTagName('div'); // NodeList
+var divArray = Array.from(divs); // Convert to Array
+console.log(divArray); // Outputs an Array of div elements
+*/
+
+function example() {
+    const argsArray = Array.from(arguments); // Convert arguments to Array
+    console.log(argsArray); // Outputs an Array of the arguments
+}
+example(1, 2, 3, 4); // Logs [1, 2, 3, 4]
+
+
+// Convert Array-like Objects to Arrays in ≤ ES5
+var realArray = [ 'a', 'b', 'c', 'd', 'e'];
+var arrayLike = {
+    0: 'a',
+    1: 'b',
+    2: 'c',
+    3: 'd',
+    4: 'e',
+    length: 5
+};
+var array = Array.prototype.slice.call(arrayLike);
+console.log(array);
+console.log(realArray);
+console.log(arrayLike);
+console.log(Array.isArray(arrayLike));
+console.log(Array.isArray(realArray));
+console.log(Array.isArray(array));
+
+console.log(arrayLike instanceof Array);
+console.log(realArray instanceof Array);
+console.log(array instanceof Array);
+console.log(Array.isArray(array));
+console.log(Array.isArray(realArray));
+console.log(Array.isArray(arrayLike));
+console.log(arrayLike instanceof Array);
+
+
+// Convert a NodeList to an Array
+//var divs = document.getElementsByTagName('div'); // NodeList
+//var divArray = Array.prototype.slice.call(divs); // Convert NodeList to Array
+//console.log(divArray); // Logs an Array of div elements
+
+// Convert arguments into an Array
+function getArgs() {
+    var argsArray = Array.prototype.slice.call(arguments); // Convert arguments to Array
+    console.log(argsArray); // Logs [1, 2, 3]
+}
+getArgs(1, 2, 3, 'shantel, daisy'); // Call the function
+
+// Convert array-like object with a length property
+var arrayLike = { 0: 'Value 0', 1: 'Value 1', length: 2 };
+var realArray = Array.prototype.slice.call(arrayLike);
+console.log(realArray); // Logs ['Value 0', 'Value 1']
+
+
+
+// using call() method
+// Convert a NodeList to an Array
+
+// Convert arguments into an Array
+function getArgs() {
+    var argsArray = Array.prototype.slice.call(arguments);
+    console.log(argsArray); // Logs [1, 2, 3]
+}
+getArgs(1, 2, 3); // Call the function
+
+// Convert array-like object
+var arrayLike = { 0: 'Value 0', 1: 'Value 1', length: 2 };
+var realArray = Array.prototype.slice.call(arrayLike);
+console.log(realArray); // Logs ['Value 0', 'Value 1']
+
+
+
+
+// Reducing Values in JavaScript
+var numbers = [1, 2, 3, 4, 5];
+var sum = numbers.reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue;
+}, 0);
+console.log(sum);
+
+var myGirlFriends = ['Daisy', 'Shantel', 'Dorcas', 'Shanice'];
+var concatenatedString = myGirlFriends.reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue;
+}, '');
+console.log(concatenatedString);
