@@ -2084,3 +2084,30 @@ var myArray = [19, 29, 39, 49],
         sum += i;
     }
     console.log(sum);
+
+
+
+// using Array.prototype.every for Array Iteration in JavaScript
+var myArray = [1, 2, 3, 4, 5];
+var allEven = myArray.every(function (value) {
+    return value % 2 === 0;
+
+});
+console.log(allEven);
+
+var myArray = [1, 2, 3, 4, 5];
+var allEven = myArray.every(function (value) {
+    return value % 2 === 0;
+
+});
+console.log(allEven);
+
+var myArray = [1, 2, 3, 4, 5];
+var allEven = myArray.every(function (value) {
+    return value % 2 === 0;
+
+});
+console.log(allEven);
+
+// using Array.prototype.some for Array Iteration in JavaScript
+var myArray = [1, 2, 3, 4, 5];
