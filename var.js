@@ -2451,3 +2451,18 @@ console.log(myArray);
 array = [1, 2, 3, 4, 5];
 array.length = 2;
 console.log(array);
+
+
+
+// Removing all elements in an array in JavaScript
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+myArray.length = 4;
+console.log(myArray);
+
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+myArray.length = 0;
+console.log(myArray);
+
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+myArray.length = 0;
+console.log(myArray);
