@@ -2739,3 +2739,19 @@ console.log([true, true].every(function (value) {
 console.log([true, false].some(function (value) {
     return value;
 }));
+
+
+// Checking if an object is an Array
+// Array.isArray(obj) returns true if the object is an Array , otherwise false .
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(Array.isArray(myArray));
+
+Array.isArray([])
+Array.isArray([1, 2, 3])
+Array.isArray({})
+Array.isArray(1)
+console.log(Array.isArray([]));
+
+[] instanceof Array; 
+1 instanceof Array;
+console.log([] instanceof Array);
