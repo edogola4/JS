@@ -2404,3 +2404,18 @@ let myGirl = [
 ];
 var shantel = myGirl.find(myGirls => myGirls.name === "shantel");
 console.log(shantel);
+
+
+// Convert a String to an Array in JavaScript
+var myGirls = "Shantel Shartel";
+var myArray = myGirls.split(" ");
+console.log(myArray);
+
+var strArray = "StackOverflow".split("");
+console.log(strArray);
+
+var myFavGirl = "Shantel Shartel Atieno Odhiambo".split("");
+console.log(myFavGirl);
+
+var strArray = [..."sky is dark and it has started raining"];
+console.log(strArray)
