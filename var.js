@@ -2351,3 +2351,37 @@ var result = rows.reduce(function(result, field, index) {
 }, {})
 console.log(result);
 
+
+
+// Array spread / rest in JavaScript
+
+let arr = [1, 2, 3, ...[4, 5, 6]];
+console.log(arr);
+
+arr = [1, 2, 3];
+arr.push(4, 5, 6);
+console.log(arr)
+
+let num = [1, 2, 3, ...[..."456"].map(x=>parseInt(x))];
+console.log(num)
+
+let arr2 = [..."1234567890"].map(x=>parseInt(x));
+console.log(arr2);
+
+
+// Filtering values in array in JavaScript
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var filteredArray = myArray.filter(function (value) {
+    return value % 2 === 0;
+
+});
+console.log(filteredArray);
+
+var myGirls = ['Shantel', 'Daisy', 'Shanice', 'Dorcas'];
+var knownGirls = myGirls.filter(function (value) {
+    return value.length > 5;
+   // return value % 2 === 5;
+
+
+});
+console.log(knownGirls);
