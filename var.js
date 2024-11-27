@@ -2584,11 +2584,11 @@ console.log(newArray);
 
 
 // Joining array elements in a string 
-var myArray = [ 1, 2, 3, 4, 5 ];
+var myArray = [1, 2, 3, 4, 5];
 console.log(["hello", "", "world"].join(myArray));
 
 var myGirls = ['Shantel, Daisy, Dorcas, Shanice'];
-console.log(["I" , "hate", "", "them"].join(myGirls));
+console.log(["I", "hate", "", "them"].join(myGirls));
 
 
 // Removing/Adding elements using splice() in JavaScript
@@ -2597,10 +2597,10 @@ var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 myArray.splice(2, 3);
 console.log(myArray);
 
-var values = [ 1, 2, 3, 4, 5, 6, 7,  9]
+var values = [1, 2, 3, 4, 5, 6, 7, 9]
 var i = values.indexOf(3);
 if (i >= 0) {
-values.splice(i, 1);
+    values.splice(i, 1);
 }
 console.log(values);
 
@@ -2624,13 +2624,13 @@ console.log(values);
 
 /// The entries() method
 // The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
-var letters = ['a','b','c'];
-for(const[index,element] of letters.entries()){
-console.log(index,element);
+var letters = ['a', 'b', 'c'];
+for (const [index, element] of letters.entries()) {
+    console.log(index, element);
 }
 
 var girls = ['shantel', 'daisy', 'shanice', 'dorcas'];
-for (const[index,element] of girls.entries()){
+for (const [index, element] of girls.entries()) {
     console.log(index, element);
 }
 
@@ -2641,3 +2641,18 @@ console.log(myArray);
 
 //array.filter(function(val) { return val !== to_remove; });
 //console.log(array);
+
+
+
+/// Flattening Arrays
+function flattenES6(arr) {
+    return [].concat(...arr);
+}
+var arrL1 = [1, 2, [3, 4]];
+console.log(flattenES6(arrL1));
+
+var arrL2 = [1, 2, [3, 4, [5, 6]]];
+console.log(flattenES6(arrL2));
+console.log(flattenES6(arrL2).flat());
+console.log(flattenES6(arrL2).flat(2));
+
