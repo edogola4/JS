@@ -2589,3 +2589,33 @@ console.log(["hello", "", "world"].join(myArray));
 
 var myGirls = ['Shantel, Daisy, Dorcas, Shanice'];
 console.log(["I" , "hate", "", "them"].join(myGirls));
+
+
+// Removing/Adding elements using splice() in JavaScript
+
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+myArray.splice(2, 3);
+console.log(myArray);
+
+var values = [ 1, 2, 3, 4, 5, 6, 7,  9]
+var i = values.indexOf(3);
+if (i >= 0) {
+values.splice(i, 1);
+}
+console.log(values);
+
+// The splice() method can also be used to add elements to an array.
+var values = [1, 2, 4, 5, 3];
+var i = values.length + 1;
+values.splice(i, 0, 6, 7, 8);
+console.log(values)
+
+var girls = ['shantel', 'daisy'];
+var i = girls.length + 1;
+girls.splice(i, 'shanice', 'dorcas');
+console.log(girls);
+
+var values = [1, 2, 4, 5, 3];
+var i = values.length + 1;
+values.splice(i, 0, 6, 7, 8);
+console.log(values);
