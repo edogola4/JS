@@ -2798,3 +2798,11 @@ array.sort(function (a, b) {
 array.sort((a, b) => a[1] - b[1]);
 console.log(array);
 
+
+
+
+// Test all array items for equality
+// The .every method tests if all array elements pass a provided predicate test.
+[1, 2, 1].every(function(item, i, list) { return item === list[0]; }); 
+[1, 1, 1].every(function(item, i, list) { return item === list[0]; });
+console.log()
