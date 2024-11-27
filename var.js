@@ -2781,3 +2781,20 @@ Array.prototype.insert = function (index) {
 };
 ["a", "b", "c", "d"].insert(2, "V", ["W", "X", "Y"], "Z").join("-");
 console.log(["a", "b", "c", "d"].insert(2, "V", ["W", "X", "Y"], "Z").join("-"));
+
+
+
+// Sorting multidimensional array
+
+var array = [
+    ["key1", 10],
+    ["key2", 3],
+    ["key3", 40],
+    ["key4", 20]
+];
+array.sort(function (a, b) {
+    return a[1] - b[1];
+})
+array.sort((a, b) => a[1] - b[1]);
+console.log(array);
+
