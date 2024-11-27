@@ -2080,10 +2080,10 @@ console.log(sum);
 
 var myArray = [19, 29, 39, 49],
     i = 0, sum = 0;
-    while (i++ < myArray.length) {
-        sum += i;
-    }
-    console.log(sum);
+while (i++ < myArray.length) {
+    sum += i;
+}
+console.log(sum);
 
 
 
@@ -2134,8 +2134,8 @@ $.each(myArray, function (index, value) {
     console.log(value);
 });
 
-var myArray = [ 1, 22, 333, 44, 444, 555, 66, 777,];
-$.each(myArray, function (index, value){
+var myArray = [1, 22, 333, 44, 444, 555, 66, 777,];
+$.each(myArray, function (index, value) {
     console.log(value);
 });
 
@@ -2213,7 +2213,7 @@ console.log(uniqueArray);
 var a = [1, 2, 3];
 var b = [1, 2, 3];
 console.log(JSON.stringify(a) === JSON.stringify(b));
- // → true
+// → true
 
 var a = [1, 2, 3];
 var b = [1, 2, 3, 4];
@@ -2230,7 +2230,7 @@ console.log(JSON.stringify(lovedGirlfriends) === JSON.stringify(allowedGirlfrien
 
 
 // You can use a recursive function to compare arrays.
- 
+
 // This function will compare the length of the arrays and their elements recursively:
 function compareArrays(arr1, arr2) {
     if (arr1.length !== arr2.length) {
@@ -2327,15 +2327,15 @@ console.log(concatenatedArray);
 
 var columns = ["Date", "Number", "Size", "Location", "Age"];
 var rows = ["2001", "5", "Big", "Sydney", "25"];
-var result = rows.reduce(function(result, field, index) {
-result[columns[index]] = field;
-return result;
+var result = rows.reduce(function (result, field, index) {
+    result[columns[index]] = field;
+    return result;
 }, {})
 console.log(result);
- 
+
 var columns = ["Name", "Number", "Size", "Location", "Age"];
 var rows = ["Shantel", "5", "petite", "Fsvl", "25"];
-var result = rows.reduce(function(result, field, index) {
+var result = rows.reduce(function (result, field, index) {
     result[columns[index]] = field;
     return result;
 
@@ -2344,7 +2344,7 @@ console.log(result);
 
 var columns = ["Name", "Number", "Size", "Location", "Age"];
 var rows = ["Daisy", "4", "short$chubby", "Hall20", "22"];
-var result = rows.reduce(function(result, field, index) {
+var result = rows.reduce(function (result, field, index) {
     result[columns[index]] = field;
     return result;
 
@@ -2362,10 +2362,10 @@ arr = [1, 2, 3];
 arr.push(4, 5, 6);
 console.log(arr)
 
-let num = [1, 2, 3, ...[..."456"].map(x=>parseInt(x))];
+let num = [1, 2, 3, ...[..."456"].map(x => parseInt(x))];
 console.log(num)
 
-let arr2 = [..."1234567890"].map(x=>parseInt(x));
+let arr2 = [..."1234567890"].map(x => parseInt(x));
 console.log(arr2);
 
 
@@ -2380,12 +2380,27 @@ console.log(filteredArray);
 var myGirls = ['Shantel', 'Daisy', 'Shanice', 'Dorcas'];
 var knownGirls = myGirls.filter(function (value) {
     return value.length > 5;
-   // return value % 2 === 5;
+    // return value % 2 === 5;
 
 
 });
 console.log(knownGirls);
 
 // Filter falsy values in an array in JavaScript
-var filtered = [ 0, undefined, {}, null, '', true, 5].filter(Boolean);
+var filtered = [0, undefined, {}, null, '', true, 5].filter(Boolean);
 console.log(filtered);
+
+
+// Searching an Array in JavaScript
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var found = myArray.find(function (value) {
+    return value > 5;
+});
+console.log(found);
+
+let myGirl = [
+    { name: "shantel" },
+    { name: "daisy" }
+];
+var shantel = myGirl.find(myGirls => myGirls.name === "shantel");
+console.log(shantel);
