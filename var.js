@@ -2702,3 +2702,40 @@ for (var girl in girlFriend) {
     array.push([girl, girlFriend[girl]]);
 }
 console.log(array);
+
+
+
+/// Logical connective of values using .some , .every, OR and AND
+[false, false].some(function (value) {
+    return value;
+});
+[false, false].every(function (value) {
+    return value;
+});
+[true, true].some(function (value) {
+    return value;
+});
+[true, true].every(function (value) {
+    return value;
+});
+[true, false].some(function (value) {
+    return value;
+});
+console.log([true, false].some(function (value) {
+    return value;
+}));
+[true, false].every(function (value) {
+    return value;
+});
+console.log([true, false].every(function (value) {
+    return value;
+}));
+console.log([true, true].some(function (value) {
+    return value;
+}));
+console.log([true, true].every(function (value) {
+    return value;
+}));
+console.log([true, false].some(function (value) {
+    return value;
+}));
