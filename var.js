@@ -2619,3 +2619,18 @@ var values = [1, 2, 4, 5, 3];
 var i = values.length + 1;
 values.splice(i, 0, 6, 7, 8);
 console.log(values);
+
+
+
+/// The entries() method
+// The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
+var letters = ['a','b','c'];
+for(const[index,element] of letters.entries()){
+console.log(index,element);
+}
+
+var girls = ['shantel', 'daisy', 'shanice', 'dorcas'];
+for (const[index,element] of girls.entries()){
+    console.log(index, element);
+}
+
