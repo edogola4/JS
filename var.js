@@ -2419,3 +2419,35 @@ console.log(myFavGirl);
 
 var strArray = [..."sky is dark and it has started raining"];
 console.log(strArray)
+
+
+
+/// Removing items from an array in Javascript using Shift, Pop, Splice, Delete, Array.prototype.length
+
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+myArray.shift();
+console.log(myArray);
+
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+myArray.pop();
+console.log(myArray);
+
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+myArray.splice(0, 1);
+console.log(myArray);
+
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+myArray.splice(0, 2);
+console.log(myArray);
+
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+delete myArray[0];  
+console.log(myArray);
+
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+myArray.length = 0;
+console.log(myArray);
+
+array = [1, 2, 3, 4, 5];
+array.length = 2;
+console.log(array);
