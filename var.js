@@ -2441,7 +2441,7 @@ myArray.splice(0, 2);
 console.log(myArray);
 
 var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-delete myArray[0];  
+delete myArray[0];
 console.log(myArray);
 
 var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -2466,3 +2466,82 @@ console.log(myArray);
 var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 myArray.length = 0;
 console.log(myArray);
+
+
+// Finding the minimum or maximum element
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var min = Math.min(...myArray);
+console.log(min);
+
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var max = Math.max(...myArray);
+console.log(max);
+
+var myArray = [1, 2, 3, 4, 99, 20];
+var maxValue = Math.max(...myArray);
+var minValue = Math.min(...myArray);
+console.log(maxValue);
+console.log(minValue);
+
+var maxValue = myArray[0];
+for (var i = 1; i < myArray.length; i++) {
+    var currentValue = myArray[i];
+    if (currentValue > maxValue) {
+        maxValue = currentValue;
+    }
+}
+console.log(maxValue);
+
+
+var minValue = myArray[0];
+for (var i = 1; i < myArray.length; i++) {
+    var currentValue = myArray[i];
+    if (currentValue < minValue) {
+        minValue = currentValue;
+    }
+}
+console.log(minValue);
+
+
+var myArray = [1, 2, 3, 4];
+myArray.reduce(function (a, b) {
+    return Math.min(a, b);
+});
+myArray.reduce(function (a, b) {
+    return Math.max(a, b);
+});
+console.log(myArray);
+
+
+var myArray = [1, 2, 3, 4];
+var min = Math.min(...myArray);
+var max = Math.max(...myArray);
+console.log(min);
+console.log(max);
+
+myArray.reduce((a, b) => Math.min(a, b));
+myArray.reduce((a, b) => Math.max(a, b));
+console.log(myArray);
+
+
+function myMax(array) {
+    return array.reduce(function (maxSoFar, element) {
+        return Math.max(maxSoFar, element);
+    }, -Infinity);
+}
+myMax([3, 5]);
+myMax([]);
+Math.max.apply(null, []);
+Math.max.apply(null, [3, 5]);
+Math.max.apply(null, [3, 5, 7]);
+Math.max.apply(null, [3, 5, 7, 9]);
+Math.max.apply(null, [3, 5, 7, 9, 11]);
+Math.max.apply(null, [3, 5, 7, 9, 11, 13]);
+console.log(myMax([3, 5]));
+console.log(myMax([]));
+console.log(Math.max.apply(null, []));
+console.log(Math.max.apply(null, [3, 5]));
+console.log(Math.max.apply(null, [3, 5, 7]));
+console.log(Math.max.apply(null, [3, 5, 7, 9]));
+console.log(Math.max.apply(null, [3, 5, 7, 9, 11]));
+console.log(Math.max.apply(null, [3, 5, 7, 9, 11, 13]));
