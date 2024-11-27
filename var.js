@@ -2323,4 +2323,31 @@ var concatenatedArray = myArray.concat(myArray2, myArray3);
 console.log(concatenatedArray);
 
 
+// Merge two array as key value pair in JavaScript
+
+var columns = ["Date", "Number", "Size", "Location", "Age"];
+var rows = ["2001", "5", "Big", "Sydney", "25"];
+var result = rows.reduce(function(result, field, index) {
+result[columns[index]] = field;
+return result;
+}, {})
+console.log(result);
  
+var columns = ["Name", "Number", "Size", "Location", "Age"];
+var rows = ["Shantel", "5", "petite", "Fsvl", "25"];
+var result = rows.reduce(function(result, field, index) {
+    result[columns[index]] = field;
+    return result;
+
+}, {})
+console.log(result);
+
+var columns = ["Name", "Number", "Size", "Location", "Age"];
+var rows = ["Daisy", "4", "short$chubby", "Hall20", "22"];
+var result = rows.reduce(function(result, field, index) {
+    result[columns[index]] = field;
+    return result;
+
+}, {})
+console.log(result);
+
