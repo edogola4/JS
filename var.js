@@ -2545,3 +2545,38 @@ console.log(Math.max.apply(null, [3, 5, 7]));
 console.log(Math.max.apply(null, [3, 5, 7, 9]));
 console.log(Math.max.apply(null, [3, 5, 7, 9, 11]));
 console.log(Math.max.apply(null, [3, 5, 7, 9, 11, 13]));
+
+
+
+// Standard Array Initialization
+
+var myArray = new Array();
+myArray[0] = 1;
+myArray[1] = 2;
+myArray[2] = 3;
+
+myArray[3] = 4;
+
+console.log(myArray);
+
+var array = [1, 2, 3, 4];
+var array2 = new Array(1, 2, 3, 4);
+var arr3 = new Array();
+console.log(array, array2, arr3);
+
+var arr4 = new Array(4);
+console.log(arr4);
+
+var arr5 = new Array("foo");
+console.log(arr5);
+
+//Array.of(21, "Hello", "World");
+//console.log(Array.of(21, "Hello", "World"));
+var arr5 = Array.of(21, "Hello", "World");
+console.log(arr5);
+
+var arr6 = Array.of(21, "Hello", "World");
+console.log(arr6);
+
+var newArray = Array.from({ length: 5 }, (_, index) => Math.pow(index, 4));
+console.log(newArray);
