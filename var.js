@@ -2656,3 +2656,14 @@ console.log(flattenES6(arrL2));
 console.log(flattenES6(arrL2).flat());
 console.log(flattenES6(arrL2).flat(2));
 
+
+
+// Append / Prepend items to Array using Unshift, Push
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+myArray.unshift(0);
+console.log(myArray);
+
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+myArray.push(11, 22,555, 777,888);
+console.log(myArray);
+
