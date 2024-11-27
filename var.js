@@ -2664,6 +2664,41 @@ myArray.unshift(0);
 console.log(myArray);
 
 var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-myArray.push(11, 22,555, 777,888);
+myArray.push(11, 22, 555, 777, 888);
 console.log(myArray);
 
+
+
+// Object keys and values to array
+var myObject = { a: 1, b: 2, c: 3, d: 4, e: 5 };
+var myKeys = Object.keys(myObject);
+console.log(myKeys);
+
+var myValues = Object.values(myObject);
+console.log(myValues);
+
+var object = {
+    key1: 10,
+    key2: 3,
+    key3: 40,
+    key4: 20
+};
+var array = [];
+for (var people in object) {
+    array.push([people, object[people]]);
+}
+console.log(array);
+
+var girlFriend = {
+    name: "Shantel",
+    age: 25,
+    location: "Fsvl",
+    size: "petite",
+    number: 5,
+    color: "lightskin"
+};
+var array = [];
+for (var girl in girlFriend) {
+    array.push([girl, girlFriend[girl]]);
+}
+console.log(array);
