@@ -2580,3 +2580,12 @@ console.log(arr6);
 
 var newArray = Array.from({ length: 5 }, (_, index) => Math.pow(index, 4));
 console.log(newArray);
+
+
+
+// Joining array elements in a string 
+var myArray = [ 1, 2, 3, 4, 5 ];
+console.log(["hello", "", "world"].join(myArray));
+
+var myGirls = ['Shantel, Daisy, Dorcas, Shanice'];
+console.log(["I" , "hate", "", "them"].join(myGirls));
