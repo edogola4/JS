@@ -2634,3 +2634,10 @@ for (const[index,element] of girls.entries()){
     console.log(index, element);
 }
 
+// Remove value from array
+var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+myArray.splice(2, 3);
+console.log(myArray);
+
+//array.filter(function(val) { return val !== to_remove; });
+//console.log(array);
