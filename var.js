@@ -2885,3 +2885,33 @@ console.log(objclone);
 var obj = { a: 1, b: 2 };
 var objclone = Object.fromEntries(Object.entries(obj));
 console.log(objclone);
+
+
+
+/// Object properties iteration
+var obj = { a: 1, b: 2 };
+for (var prop in obj) {
+    console.log(prop, obj[prop]);
+
+}
+console.log(Object.keys(obj));
+
+var girlFriend = {
+    name: "Shantel",
+    age: 25,
+    location: "Fsvl",
+    size: "petite",
+    number: 5,
+    color: "lightskin"
+};
+for (var prop in girlFriend) {
+    console.log(prop, girlFriend[prop]);
+};
+console.log(Object.keys(girlFriend));
+
+var obj = { a: 1, b: 2 };
+Object.keys(obj).forEach(function (key) {
+    console.log(key, obj[key]);
+});
+console.log(Object.keys(obj));
+
