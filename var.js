@@ -3003,3 +3003,10 @@ console.log(obj.c);
 
 // Object.is
 console.log(Object.is(25, 25));
+console.log(Object.is("foo", "foo"));
+console.log(Object.is("foo", "bar"));
+console.log(Object.is([], []));
+console.log(Object.is(null, null));
+console.log(Object.is(true, false));
+console.log(Object.is(true, 1));
+console.log(Object.is([], {}));
