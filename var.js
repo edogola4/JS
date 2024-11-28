@@ -2835,3 +2835,23 @@ clone[prop] = existing[prop];
 }
 }
 console.log(clone2);
+
+
+// Object.freeze
+var obj = { a: 1, b: 2 };
+Object.freeze(obj);
+obj.a = 3;
+console.log(obj);
+
+var obj = { a: 1, b: 2 };
+Object.freeze(obj);
+obj.a = 3;
+console.log(obj);
+
+console.log(Object.isFrozen(obj));
+console.log(Object.isFrozen({}));
+console.log(Object.isFrozen([]));
+console.log(Object.isFrozen(new Date()));
+console.log(Object.isFrozen(new RegExp()));
+console.log(Object.isFrozen(new Map()));
+console.log(Object.isFrozen(new Set()));
