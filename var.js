@@ -2803,8 +2803,8 @@ console.log(array);
 
 // Test all array items for equality
 // The .every method tests if all array elements pass a provided predicate test.
-[1, 2, 1].every(function(item, i, list) { return item === list[0]; }); 
-[1, 1, 1].every(function(item, i, list) { return item === list[0]; });
+[1, 2, 1].every(function (item, i, list) { return item === list[0]; });
+[1, 1, 1].every(function (item, i, list) { return item === list[0]; });
 console.log()
 
 
@@ -2830,9 +2830,9 @@ console.log(objclone);
 var existing2 = { a: 1, b: 2, c: 3 };
 var clone2 = {};
 for (var prop in existing) {
-if (existing.hasOwnProperty(prop)) {
-clone[prop] = existing[prop];
-}
+    if (existing.hasOwnProperty(prop)) {
+        clone[prop] = existing[prop];
+    }
 }
 console.log(clone2);
 
@@ -2915,3 +2915,39 @@ Object.keys(obj).forEach(function (key) {
 });
 console.log(Object.keys(obj));
 
+
+
+// object.assign
+var obj = { a: 1, b: 2 };
+var objclone = Object.assign({}, obj);
+console.log(objclone);
+
+var user = {
+    firstName: "Bran"
+};
+Object.assign(user, { lastName: "Don", age: 39 });
+var obj = Object.assign({}, user);
+console.log(user);
+console.log(obj);
+
+var obj1 = {
+    a: 1
+};
+var obj2 = {
+    b: 2
+};
+var obj3 = {
+    c: 3
+};
+var obj = Object.assign(obj1, obj2, obj3);
+console.log(obj);
+console.log(obj1);
+console.log(obj2);
+
+var var_1 = 'abc';
+var var_2 = true;
+var var_3 = 10;
+var var_4 = null;
+var var_5 = Symbol( 'foo' );
+var obj = Object.assign({}, var_1, null, var_2, undefined, var_3, var_4, var_5) ;
+console.log(obj);
