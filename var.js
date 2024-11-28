@@ -2963,3 +2963,21 @@ var obj2 = { ...obj, b: 2, c: 3 };
 var obj3 = { ...obj, b: { c: 2 } };
 console.log(obj2);
 console.log(obj3);
+
+
+
+// Object.deﬁneProperty
+var obj = { a: 1 };
+Object.defineProperty(obj, 'b', {
+    value: 2,
+    writable: true,
+    enumerable: true, 
+    configurable: true
+});
+console.log(obj);
+console.log(obj.b);
+console.log(Object.keys(obj));
+
+console.log(Object.values(obj));
+console.log(Object.entries(obj));
+console.log(Object.getOwnPropertyNames(obj));
