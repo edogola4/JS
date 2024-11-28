@@ -3067,3 +3067,7 @@ var array = Object.keys(obj)
 return obj[key];
 });
 console.log(array);
+
+
+
+// Retrieving properties from an object
