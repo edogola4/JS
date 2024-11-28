@@ -3038,3 +3038,14 @@ console.log('a' in obj);
 console.log('b' in obj);
 console.log('toString' in obj);
 console.log(obj.hasOwnProperty('a'));
+
+
+// Object.seal
+var obj = { a: 1 };
+Object.seal(obj);
+obj.a = 2;
+console.log(obj);
+delete obj.a;
+console.log(obj);
+obj.b = 3;
+console.log(obj);
