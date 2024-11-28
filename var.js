@@ -3049,3 +3049,21 @@ delete obj.a;
 console.log(obj);
 obj.b = 3;
 console.log(obj);
+
+
+
+// Convert object's values to array
+var obj = { a: 1, b: 2, c: 3 };
+var values = Object.values(obj);
+console.log(values);
+
+var obj = {
+    a: "hello",
+    b: "this is",
+    c: "javascript!",
+};
+var array = Object.keys(obj)
+.map(function(key) {
+return obj[key];
+});
+console.log(array);
