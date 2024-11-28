@@ -2806,3 +2806,32 @@ console.log(array);
 [1, 2, 1].every(function(item, i, list) { return item === list[0]; }); 
 [1, 1, 1].every(function(item, i, list) { return item === list[0]; });
 console.log()
+
+
+
+/// OBJECTS IN JAVASCRIPT
+// Shallow cloning
+var obj = { a: 1, b: 2 };
+var obj2 = Object.assign({}, obj);
+console.log(obj2);
+
+const existing = { a: 1, b: 2, c: 3 };
+const clone = Object.assign({}, existing);
+console.log(clone);
+
+const existing1 = { a: 1, b: 2, c: 3 };
+const { ...clone1 } = existing;
+console.log(clone1);
+
+var obj = { a: 0, b: { c: 0 } };
+var objclone = Object.assign({}, obj);
+console.log(objclone);
+
+var existing2 = { a: 1, b: 2, c: 3 };
+var clone2 = {};
+for (var prop in existing) {
+if (existing.hasOwnProperty(prop)) {
+clone[prop] = existing[prop];
+}
+}
+console.log(clone2);
