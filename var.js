@@ -3017,10 +3017,20 @@ var obj = { a: 1 };
 var objclone = { [obj.a]: 2 };
 console.log(objclone);
 
-var dictionary = {
-    lettuce: 'a veggie',
-    banana: 'a fruit',
-    tomato: 'it depends on who you ask',
-    apple: 'a fruit',
-    Apple: 'Steve Jobs rocks!' // properties are case-sensitive
-}
+// Arrays are Objects
+var anObject = {
+    foo: 'bar',
+    length: 'interesting',
+    '0': 'zero!',
+    '1': 'one!'
+};
+var anArray = ['zero.', 'one.'];
+
+console.log(anArray[0], anObject[0]);
+console.log(anArray[1], anObject[1]);
+console.log(anArray.length, anObject.length);
+console.log(anArray.foo, anObject.foo);
+
+
+// Object property existence
+var obj = { a: 1 };
