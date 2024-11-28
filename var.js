@@ -2981,3 +2981,25 @@ console.log(Object.keys(obj));
 console.log(Object.values(obj));
 console.log(Object.entries(obj));
 console.log(Object.getOwnPropertyNames(obj));
+
+
+// Accesor properties (get and set)
+var obj = {
+    a: 1,
+    get b() {
+        return this.a + 1;
+    },
+    set c(x) {
+        this.a = x / 2;
+    }
+};
+console.log(obj.a);
+console.log(obj.b);
+obj.c = 10;
+
+console.log(obj.a);
+console.log(obj.b);
+console.log(obj.c);
+
+// Object.is
+console.log(Object.is(25, 25));
