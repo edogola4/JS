@@ -2855,3 +2855,33 @@ console.log(Object.isFrozen(new Date()));
 console.log(Object.isFrozen(new RegExp()));
 console.log(Object.isFrozen(new Map()));
 console.log(Object.isFrozen(new Set()));
+
+
+// Object Cloning
+var obj = { a: 1, b: 2 };
+var objclone = JSON.parse(JSON.stringify(obj));
+console.log(objclone);
+
+var obj = { a: 1, b: 2 };
+var objclone = Object.assign({}, obj);
+console.log(objclone);
+
+var obj = { a: 1, b: 2 };
+var objclone = Object.create(obj);
+console.log(objclone);
+
+var obj = { a: 1, b: 2 };
+var objclone = { ...obj };
+console.log(objclone);
+
+var obj = { a: 1, b: 2 };
+var objclone = Object.fromEntries(Object.entries(obj));
+console.log(objclone);
+
+var obj = { a: 1, b: 2 };
+var objclone = Object.fromEntries(Object.entries(obj));
+console.log(objclone);
+
+var obj = { a: 1, b: 2 };
+var objclone = Object.fromEntries(Object.entries(obj));
+console.log(objclone);
