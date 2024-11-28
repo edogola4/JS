@@ -2951,3 +2951,15 @@ var var_4 = null;
 var var_5 = Symbol( 'foo' );
 var obj = Object.assign({}, var_1, null, var_2, undefined, var_3, var_4, var_5) ;
 console.log(obj);
+
+
+// Object rest/spread (...)
+var obj = { a: 1, b: 2 };
+var objclone = { ...obj };  
+console.log(objclone);
+
+var obj = { a: 1 };
+var obj2 = { ...obj, b: 2, c: 3 };
+var obj3 = { ...obj, b: { c: 2 } };
+console.log(obj2);
+console.log(obj3);
