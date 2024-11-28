@@ -3034,3 +3034,7 @@ console.log(anArray.foo, anObject.foo);
 
 // Object property existence
 var obj = { a: 1 };
+console.log('a' in obj);
+console.log('b' in obj);
+console.log('toString' in obj);
+console.log(obj.hasOwnProperty('a'));
