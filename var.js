@@ -2948,14 +2948,14 @@ var var_1 = 'abc';
 var var_2 = true;
 var var_3 = 10;
 var var_4 = null;
-var var_5 = Symbol( 'foo' );
-var obj = Object.assign({}, var_1, null, var_2, undefined, var_3, var_4, var_5) ;
+var var_5 = Symbol('foo');
+var obj = Object.assign({}, var_1, null, var_2, undefined, var_3, var_4, var_5);
 console.log(obj);
 
 
 // Object rest/spread (...)
 var obj = { a: 1, b: 2 };
-var objclone = { ...obj };  
+var objclone = { ...obj };
 console.log(objclone);
 
 var obj = { a: 1 };
@@ -2971,7 +2971,7 @@ var obj = { a: 1 };
 Object.defineProperty(obj, 'b', {
     value: 2,
     writable: true,
-    enumerable: true, 
+    enumerable: true,
     configurable: true
 });
 console.log(obj);
@@ -3010,3 +3010,17 @@ console.log(Object.is(null, null));
 console.log(Object.is(true, false));
 console.log(Object.is(true, 1));
 console.log(Object.is([], {}));
+
+
+// Dynamic / variable property names
+var obj = { a: 1 };
+var objclone = { [obj.a]: 2 };
+console.log(objclone);
+
+var dictionary = {
+    lettuce: 'a veggie',
+    banana: 'a fruit',
+    tomato: 'it depends on who you ask',
+    apple: 'a fruit',
+    Apple: 'Steve Jobs rocks!' // properties are case-sensitive
+}
