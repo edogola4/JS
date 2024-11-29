@@ -3071,3 +3071,12 @@ console.log(array);
 
 
 // Retrieving properties from an object
+
+// Methods of retrieving properties :
+// 1. for..in loop
+var obj = { a: 1, b: 2, c: 3 };
+for (var prop in obj) {
+    console.log(prop, obj[prop]);
+};
+console.log(Object.keys(obj));
+console.log(Object.values(obj));
