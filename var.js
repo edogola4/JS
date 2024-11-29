@@ -3233,3 +3233,28 @@ Object.defineProperty(b , 'bra', {
 });
 b.bra = 'old';
 console.log(b.bra);
+
+
+// Non enumerable property
+var obj = { a: 1 };
+Object.defineProperty(obj, 'b', {
+    value: 2,
+    writable: true,
+    enumerable: false,
+    configurable: true
+});
+console.log(obj);
+
+var obj = { };
+Object.defineProperty(obj, "foo", { value: 'show', enumerable: true });
+Object.defineProperty(obj, "bar", { value: 'hide', enumerable: false });
+for (var prop in obj) {
+console.log(obj[prop]);
+}
+console.log(Object.keys(obj));
+
+console.log(Object.values(obj));
+console.log(Object.entries(obj));
+console.log(Object.getOwnPropertyNames(obj));
+console.log(Object.getOwnPropertySymbols(obj));
+console.log(Object.getOwnPropertyDescriptor(obj, "foo"));
