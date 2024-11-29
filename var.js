@@ -3145,3 +3145,41 @@ var x = { a : 10 } , props;
 Object.defineProperty(x, "b", {value : 5, enumerable : true, configurable : false});
 props = Object.keys(x); 
 console.log(props);
+
+
+// 3. Object.getOwnProperties() function
+var obj = { a: 1, b: 2, c: 3 }; 
+console.log(Object.getOwnPropertyNames(obj));
+console.log(Object.getOwnPropertySymbols(obj));
+console.log(Object.entries(obj));
+console.log(Object.getOwnPropertyDescriptor(obj));
+
+var x = { a : 10 , b : 3} , props;
+props = Object.getOwnPropertyNames(x);
+console.log(props);
+
+var y = { a : 10 , __proto__ : { b : 10 }} , props;
+props = Object.getOwnPropertyNames(y);
+console.log(props);
+
+var z = { a : 10 }, props;
+Object.defineProperty(z, "b", {value : 5, enumerable : false});
+props = Object.getOwnPropertyNames(z);
+console.log(props);
+
+var girlFriend = {
+    name: "Shantel",
+    age: 25,
+    location: "Fsvl",
+    size: "petite",
+    number: 5,
+    color: "lightskin"
+};
+for (var prop in girlFriend) {
+    console.log(prop, girlFriend[prop]);
+};
+console.log(Object.keys(girlFriend));
+console.log(Object.values(girlFriend));
+console.log(Object.entries(girlFriend));
+console.log(Object.getOwnPropertyNames(girlFriend));
+console.log(Object.getOwnPropertySymbols(girlFriend));
