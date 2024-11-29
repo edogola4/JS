@@ -3352,3 +3352,69 @@ console.log(myObject['12' + '3']) // string concatenation
 console.log(myObject[120 + 3]) // arithmetic, still resulting in 123 and producing the same result
 console.log(myObject[123.0]) // this works too because 123.0 evaluates to 123
 console.log(myObject['123.0']) // this does NOT work, because '123' != '123.0'
+
+
+// Creating an Iterable object
+var myIterable = {};
+myIterable[Symbol.iterator] = function* () {
+    yield 1;
+    yield 2;
+    yield 3;
+};
+console.log(myIterable)
+
+var myIterableObject = {};
+// An Iterable object must define a method located at the Symbol.iterator key:
+myIterableObject[Symbol.iterator] = function () {
+    // The iterator should return an Iterator object
+    return {
+        // The Iterator object must implement a method, next()
+        next: function () {
+            // next must itself return an IteratorResult object
+            if (!this.iterated) {
+                this.iterated = true;
+                // The IteratorResult object has two properties
+                return {
+                    // whether the iteration is complete, and
+                    done: false,
+                    // the value of the current iteration
+                    value: 'One'
+                };
+            }
+            return {
+                // When iteration is complete, just the done property is needed
+                done: true
+            };
+        },
+        iterated: false
+    };
+};
+for (var c of myIterableObject) {
+    console.log(c);
+}
+
+var myIterableObject = {};
+myIterableObject[Symbol.iterator] = function () {
+    return {
+        next: function () {
+            if (!this.iterated) {
+                this.iterated = true;
+                return {
+                    done: false,
+                    value: 'One'
+                };
+            }
+            return {
+                done: true
+            };
+        },
+        iterated: false
+    };
+};
+for (var c of myIterableObject) {
+    console.log(c);
+}
+console.log([...myIterableObject]);
+console.log(Array.from(myIterableObject));
+console.log(Array.of(...myIterableObject));
+console.log(Array.of(myIterableObject));
