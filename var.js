@@ -3418,3 +3418,20 @@ console.log([...myIterableObject]);
 console.log(Array.from(myIterableObject));
 console.log(Array.of(...myIterableObject));
 console.log(Array.of(myIterableObject));
+
+
+
+// Iterating over Object entries - Object.entries()
+var obj = { a: 1, b: 2, c: 3 };
+for (var [key, value] of Object.entries(obj)) {
+    console.log(key, value);
+}
+console.log(Object.entries(obj));
+console.log(Object.entries(obj).map(function (entry) {
+    return entry[0] + entry[1];
+}));
+console.log(Object.entries(obj).map(([key, value]) => key + value));
+console.log(Object.entries(obj).map(([key, value]) => key + value).join(''));
+console.log(Object.entries(obj).map(([key, value]) => key + value).join(' '));
+console.log(Object.entries(obj).map(([key, value]) => key + value).join(' '));
+
