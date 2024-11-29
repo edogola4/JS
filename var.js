@@ -3193,7 +3193,7 @@ function getAllProperties(obj, props = []) {
 }
 var x = { a: 10, __proto__: { b: 5, c: 15 } };
 //adding a non enumerable property to first level prototype
-Object.defineProperty(x.__proto__, "d", {value : 20, enumerable : false});
+Object.defineProperty(x.__proto__, "d", { value: 20, enumerable: false });
 console.log(getAllProperties(x));
 console.log(Object.keys(x));
 console.log(Object.values(x));
@@ -3205,3 +3205,31 @@ console.log(Object.getOwnPropertyDescriptor(x, "b"));
 console.log(Object.getOwnPropertyDescriptor(x, "c"));
 console.log(Object.getOwnPropertyDescriptor(x, "d"));
 console.log(Object.getOwnPropertyDescriptor(x, "e"));
+
+
+
+// Read-Only property
+var obj = { a: 1 };
+Object.defineProperty(obj, 'b', {
+    value: 2,
+    writable: false,
+    enumerable: true,
+    configurable: true
+});
+console.log(obj);
+
+var a = {};
+Object.defineProperty(a, 'foo', {
+    value: 'original',
+    writable: false
+});
+a.foo = 'new';
+console.log(a.foo);
+
+var b = {};
+Object.defineProperty(b , 'bra', {
+    value: 'changed',
+    writable: 'false'
+});
+b.bra = 'old';
+console.log(b.bra);
