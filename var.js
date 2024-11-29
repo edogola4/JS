@@ -3279,7 +3279,7 @@ Object.defineProperty(obj, 'b', {
     enumerable: true,
     configurable: true
 });
-console.log(Object.getOwnPropertyDescriptor(obj, 'a')); 
+console.log(Object.getOwnPropertyDescriptor(obj, 'a'));
 
 var girlFriend = {
     name: "Shantel",
@@ -3318,3 +3318,25 @@ var girlFriend = {
 for (var prop in girlFriend) {
     console.log(prop, girlFriend[prop]);
 };
+
+
+// Object.keys
+var obj = {
+    a: "hello",
+    b: "this is",
+    c: "javascript!"
+};
+var keys = Object.keys(obj);
+console.log(keys);
+
+var girlFriend = {
+    name: "Shantel",
+    age: 25,
+    location: "Fsvl",
+    size: "petite",
+    number: 5,
+    color: "lightskin"
+};
+var keys = Object.keys(girlFriend);
+console.log(keys);
+
