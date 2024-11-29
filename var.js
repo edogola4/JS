@@ -3227,7 +3227,7 @@ a.foo = 'new';
 console.log(a.foo);
 
 var b = {};
-Object.defineProperty(b , 'bra', {
+Object.defineProperty(b, 'bra', {
     value: 'changed',
     writable: 'false'
 });
@@ -3245,11 +3245,11 @@ Object.defineProperty(obj, 'b', {
 });
 console.log(obj);
 
-var obj = { };
+var obj = {};
 Object.defineProperty(obj, "foo", { value: 'show', enumerable: true });
 Object.defineProperty(obj, "bar", { value: 'hide', enumerable: false });
 for (var prop in obj) {
-console.log(obj[prop]);
+    console.log(obj[prop]);
 }
 console.log(Object.keys(obj));
 
@@ -3258,3 +3258,16 @@ console.log(Object.entries(obj));
 console.log(Object.getOwnPropertyNames(obj));
 console.log(Object.getOwnPropertySymbols(obj));
 console.log(Object.getOwnPropertyDescriptor(obj, "foo"));
+
+
+// Lock property description
+var obj = { a: 1 };
+Object.defineProperty(obj, 'b', {
+    value: 2,
+    writable: true,
+    enumerable: true,
+    configurable: false
+});
+console.log(obj);
+
+
