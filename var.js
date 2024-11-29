@@ -3435,3 +3435,12 @@ console.log(Object.entries(obj).map(([key, value]) => key + value).join(''));
 console.log(Object.entries(obj).map(([key, value]) => key + value).join(' '));
 console.log(Object.entries(obj).map(([key, value]) => key + value).join(' '));
 
+
+// Object.values()
+var obj = { a: 1, b: 2, c: 3 };
+console.log(Object.values(obj));
+console.log(Object.values(obj).map(function (value) {
+    return value * 2;
+}));
+console.log(Object.values(obj).map(value => value * 2));
+console.log(Object.values(obj).map(value => value * 2).join(''));
