@@ -3293,3 +3293,28 @@ for (var prop in girlFriend) {
     console.log(prop, girlFriend[prop]);
 };
 console.log(Object.keys(girlFriend));
+
+
+// Descriptors and Named Properties
+var obj = { a: 1 };
+Object.defineProperty(obj, 'b', {
+    value: 2,
+    writable: true,
+    enumerable: true,
+    configurable: true
+});
+console.log(obj);
+console.log(Object.getOwnPropertyDescriptor(obj, 'a'));
+console.log(Object.getOwnPropertyDescriptor(obj, 'b'));
+
+var girlFriend = {
+    name: "Shantel",
+    age: 25,
+    location: "Fsvl",
+    size: "petite",
+    number: 5,
+    color: "lightskin"
+};
+for (var prop in girlFriend) {
+    console.log(prop, girlFriend[prop]);
+};
