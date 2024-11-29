@@ -3080,3 +3080,38 @@ for (var prop in obj) {
 };
 console.log(Object.keys(obj));
 console.log(Object.values(obj));
+
+
+var x = { a : 10 , b : 3} , props = [];
+for(prop in x){
+props.push(prop);
+}
+console.log(props);
+console.log(Object.keys(x))
+console.log(Object.values(x))
+
+var x = { a : 10 , __proto__ : { b : 10 }} , props = [];
+for(prop in x){
+props.push(prop);
+}
+console.log(props);
+console.log(Object.keys(x))
+console.log(Object.values(x))
+
+var x = { a : 10 } , props = [];
+Object.defineProperty(x, "b", {value : 5, enumerable : false});
+for(prop in x){
+props.push(prop);
+}
+console.log(props);
+console.log(Object.keys(x))
+console.log(Object.values(x))
+
+
+
+// 2. Object.keys() function
+var obj = { a: 1, b: 2, c: 3 };
+console.log(Object.keys(obj));
+console.log(Object.values(obj));
+console.log(Object.entries(obj));
+console.log(Object.getOwnPropertyNames(obj));
