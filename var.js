@@ -3115,3 +3115,33 @@ console.log(Object.keys(obj));
 console.log(Object.values(obj));
 console.log(Object.entries(obj));
 console.log(Object.getOwnPropertyNames(obj));
+console.log(Object.getOwnPropertySymbols(obj));
+
+var x = { a : 10 , b : 3} , props;
+props = Object.keys(x);
+console.log(props);
+console.log(Object.keys(x))
+console.log(Object.values(x))
+
+var x = { a : 10 , __proto__ : { b : 10 }} , props;
+props = Object.keys(x);
+console.log(props);
+
+var x = { a : 10 } , props;
+props = Object.keys(x);
+console.log(props);
+
+var x = { a : 10 } , props;
+Object.defineProperty(x, "b", {value : 5, enumerable : false});
+props = Object.keys(x);
+console.log(props);
+
+var x = { a : 10 } , props;
+Object.defineProperty(x, "b", {value : 5, enumerable : true});
+props = Object.keys(x); 
+console.log(props);
+
+var x = { a : 10 } , props;
+Object.defineProperty(x, "b", {value : 5, enumerable : true, configurable : false});
+props = Object.keys(x); 
+console.log(props);
