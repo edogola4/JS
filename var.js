@@ -3063,9 +3063,9 @@ var obj = {
     c: "javascript!",
 };
 var array = Object.keys(obj)
-.map(function(key) {
-return obj[key];
-});
+    .map(function (key) {
+        return obj[key];
+    });
 console.log(array);
 
 
@@ -3082,26 +3082,26 @@ console.log(Object.keys(obj));
 console.log(Object.values(obj));
 
 
-var x = { a : 10 , b : 3} , props = [];
-for(prop in x){
-props.push(prop);
+var x = { a: 10, b: 3 }, props = [];
+for (prop in x) {
+    props.push(prop);
 }
 console.log(props);
 console.log(Object.keys(x))
 console.log(Object.values(x))
 
-var x = { a : 10 , __proto__ : { b : 10 }} , props = [];
-for(prop in x){
-props.push(prop);
+var x = { a: 10, __proto__: { b: 10 } }, props = [];
+for (prop in x) {
+    props.push(prop);
 }
 console.log(props);
 console.log(Object.keys(x))
 console.log(Object.values(x))
 
-var x = { a : 10 } , props = [];
-Object.defineProperty(x, "b", {value : 5, enumerable : false});
-for(prop in x){
-props.push(prop);
+var x = { a: 10 }, props = [];
+Object.defineProperty(x, "b", { value: 5, enumerable: false });
+for (prop in x) {
+    props.push(prop);
 }
 console.log(props);
 console.log(Object.keys(x))
@@ -3117,53 +3117,53 @@ console.log(Object.entries(obj));
 console.log(Object.getOwnPropertyNames(obj));
 console.log(Object.getOwnPropertySymbols(obj));
 
-var x = { a : 10 , b : 3} , props;
+var x = { a: 10, b: 3 }, props;
 props = Object.keys(x);
 console.log(props);
 console.log(Object.keys(x))
 console.log(Object.values(x))
 
-var x = { a : 10 , __proto__ : { b : 10 }} , props;
+var x = { a: 10, __proto__: { b: 10 } }, props;
 props = Object.keys(x);
 console.log(props);
 
-var x = { a : 10 } , props;
+var x = { a: 10 }, props;
 props = Object.keys(x);
 console.log(props);
 
-var x = { a : 10 } , props;
-Object.defineProperty(x, "b", {value : 5, enumerable : false});
+var x = { a: 10 }, props;
+Object.defineProperty(x, "b", { value: 5, enumerable: false });
 props = Object.keys(x);
 console.log(props);
 
-var x = { a : 10 } , props;
-Object.defineProperty(x, "b", {value : 5, enumerable : true});
-props = Object.keys(x); 
+var x = { a: 10 }, props;
+Object.defineProperty(x, "b", { value: 5, enumerable: true });
+props = Object.keys(x);
 console.log(props);
 
-var x = { a : 10 } , props;
-Object.defineProperty(x, "b", {value : 5, enumerable : true, configurable : false});
-props = Object.keys(x); 
+var x = { a: 10 }, props;
+Object.defineProperty(x, "b", { value: 5, enumerable: true, configurable: false });
+props = Object.keys(x);
 console.log(props);
 
 
 // 3. Object.getOwnProperties() function
-var obj = { a: 1, b: 2, c: 3 }; 
+var obj = { a: 1, b: 2, c: 3 };
 console.log(Object.getOwnPropertyNames(obj));
 console.log(Object.getOwnPropertySymbols(obj));
 console.log(Object.entries(obj));
 console.log(Object.getOwnPropertyDescriptor(obj));
 
-var x = { a : 10 , b : 3} , props;
+var x = { a: 10, b: 3 }, props;
 props = Object.getOwnPropertyNames(x);
 console.log(props);
 
-var y = { a : 10 , __proto__ : { b : 10 }} , props;
+var y = { a: 10, __proto__: { b: 10 } }, props;
 props = Object.getOwnPropertyNames(y);
 console.log(props);
 
-var z = { a : 10 }, props;
-Object.defineProperty(z, "b", {value : 5, enumerable : false});
+var z = { a: 10 }, props;
+Object.defineProperty(z, "b", { value: 5, enumerable: false });
 props = Object.getOwnPropertyNames(z);
 console.log(props);
 
@@ -3183,3 +3183,25 @@ console.log(Object.values(girlFriend));
 console.log(Object.entries(girlFriend));
 console.log(Object.getOwnPropertyNames(girlFriend));
 console.log(Object.getOwnPropertySymbols(girlFriend));
+
+
+// A technique for retrieving all (own, enumerable, non enumerable, all prototype level) properties from an object
+function getAllProperties(obj, props = []) {
+    return obj == null ? props :
+        getAllProperties(Object.getPrototypeOf(obj),
+            props.concat(Object.getOwnPropertyNames(obj)));
+}
+var x = { a: 10, __proto__: { b: 5, c: 15 } };
+//adding a non enumerable property to first level prototype
+Object.defineProperty(x.__proto__, "d", {value : 20, enumerable : false});
+console.log(getAllProperties(x));
+console.log(Object.keys(x));
+console.log(Object.values(x));
+console.log(Object.entries(x)); //returns an array of key-value pairs
+console.log(Object.getOwnPropertyNames(x));
+console.log(Object.getOwnPropertySymbols(x));
+console.log(Object.getOwnPropertyDescriptor(x, "a"));
+console.log(Object.getOwnPropertyDescriptor(x, "b"));
+console.log(Object.getOwnPropertyDescriptor(x, "c"));
+console.log(Object.getOwnPropertyDescriptor(x, "d"));
+console.log(Object.getOwnPropertyDescriptor(x, "e"));
