@@ -4016,3 +4016,21 @@ var y = v2.y - v1.y;
 var distance = Math.sqrt(x * x + y * y);
 console.log(distance);
 console.log(Math.hypot(x, y));
+
+
+// Periodic functions using Math.sin
+function periodicSin(x, period, amplitude, phase) {
+    return amplitude * Math.sin(x / period * 2 * Math.PI + phase);
+}
+console.log(periodicSin(0, 1, 1, 0));
+
+
+// Decrementing (--)
+// The decrement operator ( -- ) decrements numbers by one.
+  var a = 1;
+ console.log(a--);
+ console.log(a);
+
+var a = 1;
+
+console.log(--a);
