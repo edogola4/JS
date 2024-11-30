@@ -3800,3 +3800,20 @@ console.log(data32);
 
 data32[0] = myNum;
 console.log(data32);
+
+
+
+// Get Random Between Two Numbers
+function randomBetween(min, max) {
+return Math.floor(Math.random() * (max - min + 1) + min);
+}
+Math.floor(Math.random() * 11);
+Math.floor(Math.random() * 11) + 10;
+Math.floor(Math.random() * 11) + 10 | 0;
+Math.floor(Math.random() * 10) + 1;
+Math.floor(Math.random() * 16) + 5;
+Math.floor(Math.random() * 9) - 10;
+console.log(randomBetween(10, 20));
+console.log(randomBetween(20, 30));
+console.log(randomBetween(30, 40));
+console.log(randomBetween(40, 50));
