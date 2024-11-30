@@ -3656,3 +3656,23 @@ console.log(a);
 var a = 0b0011;
 a <<= 0b0011;
 console.log(a);
+
+
+
+// Incrementing (++)
+var a = 1;
+console.log(a++);
+
+var a = 1;
+console.log(++a);
+
+var a = 5,
+b = a++,
+c = a
+console.log(b, c);
+
+var a = 5,
+b = ++a,
+c = a
+console.log(b, c);
+
