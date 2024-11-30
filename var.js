@@ -3631,3 +3631,28 @@ console.log(1 >>> 2);
 console.log(1 & 2);
 console.log(a = ~0b0011); // bitwise NOT
 console.log(a = 0b0011); // bitwise NOT
+
+// Bitwise assignment operators
+var a = 0b0011;
+a &= 0b0101;
+console.log(a);
+
+var a = 0b0011;
+a |= 0b0101;
+console.log(a);
+
+var a = 0b0011;
+a ^= 0b0101;
+console.log(a);
+
+var a = 0b0011;
+a >>= 0b0011;
+console.log(a);
+
+var a = 0b0011;
+a >>>= 0b0011;
+console.log(a);
+
+var a = 0b0011;
+a <<= 0b0011;
+console.log(a);
