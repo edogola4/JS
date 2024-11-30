@@ -3667,12 +3667,42 @@ var a = 1;
 console.log(++a);
 
 var a = 5,
-b = a++,
-c = a
+    b = a++,
+    c = a
 console.log(b, c);
 
 var a = 5,
-b = ++a,
-c = a
+    b = ++a,
+    c = a
 console.log(b, c);
 
+
+
+// Exponentiation (Math.pow() or **)
+console.log(Math.pow(2, 3));
+console.log(2 ** 3);
+
+var a = 2,
+    b = 3,
+    c = Math.pow(a, b);
+console.log(c);
+
+var a = 2,
+    b = 3,
+    c = a ** b;
+console.log(c);
+
+var a = 16;
+var b = Math.pow(a, 1 / 2);
+var c = Math.pow(a, 1 / 3);
+var d = Math.pow(a, 1 / 4);
+console.log(b, c, d);
+
+var a = 16;
+var b = a ** (1 / 2);
+var c = a ** (1 / 3);
+var d = a ** (1 / 4);
+console.log(b, c, d);
+console.log(16 ** (1 / 2));
+console.log(16 ** (1 / 3));
+console.log(16 ** (1 / 4));
