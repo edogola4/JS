@@ -3461,4 +3461,31 @@ console.log(Math.SQRT1_2); // square root of 1/2
 console.log(Math.SQRT2); // square root of 2
 
 // Methods
-console.log(Math.abs(-10));
+console.log(Math.abs(-10)); // returns the absolute value of a number
+console.log(Math.acos(1)); // returns the arccosine of a number
+console.log(Math.acosh(2)); // returns the hyperbolic arccosine of a number
+console.log(Math.asin(1)); // returns the arcsine of a number
+console.log(Math.asinh(1)); // returns the hyperbolic arcsine of a number
+console.log(Math.atan(1)); // returns the arctangent of a number in the range (-PI/2, PI/2)
+console.log(Math.atan2(1, 1)); // returns the arctangent of the quotient of its arguments
+console.log(Math.atanh(1)); // returns the hyperbolic arctangent of a number
+console.log(Math.cbrt(8)); // returns the cube root of a number
+console.log(Math.ceil(1.1)); // returns the smallest integer greater than or equal to a number
+console.log(Math.clz32(1)); // returns the number of leading zero bits in the 32-bit binary representation of a number
+console.log(Math.cos(1)); // returns the cosine of a number
+console.log(Math.cosh(1)); // returns the hyperbolic cosine of a number
+console.log(Math.exp(1)); // returns Ex, where E is Euler's constant
+console.log(Math.expm1(1)); // returns subtracting 1 from e raised to the power of the specified number
+console.log(Math.floor(1.1)); // returns the largest integer less than or equal to a number
+console.log(Math.fround(1.1)); // returns the nearest single precision float representation of a number
+console.log(Math.hypot(3, 4)); // returns the square root of the sum of squares of its arguments
+console.log(Math.imul(2, 2)); // returns the result of a 32-bit integer multiplication
+console.log(Math.log(1)); // returns the natural logarithm of a number
+console.log(Math.log10(1)); // returns the base 10 logarithm of a number
+console.log(Math.log1p(1)); // returns the natural logarithm of 1 + a number
+console.log(Math.log2(2)); // returns the base 2 logarithm of a number
+console.log(Math.max(1, 2)); // returns the largest of zero or more numbers
+console.log(Math.min(1, 2));// returns the smallest of zero or more numbers
+console.log(Math.pow(2, 2)); // returns the value of a base raised to a power
+console.log(Math.random()); // returns a pseudo-random number between 0 and 1
+console.log(Math.round(1.1));
