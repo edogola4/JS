@@ -3617,3 +3617,17 @@ console.log(Math.atanh(1.1752011936438014));
 console.log(Math.atanh(1.1752011936438014) / Math.PI);
 console.log(Math.atanh(1.1752011936438014) / Math.PI * 180);
 console.log(Math.atanh(1.1752011936438014) / Math.PI * 180 + 180);
+
+
+
+// Bitwise operators
+console.log(1 & 2); // bitwise AND
+console.log(1 | 2); // bitwise OR
+console.log(1 ^ 2); // bitwise XOR(exclusive or)
+console.log(~1); // bitwise 
+console.log(1 << 2); // bitwise left shift
+console.log(1 >> 2); // Bitwise right shift >> (Sign-propagating shift) >>> (Zero-ﬁll right shift)
+console.log(1 >>> 2);
+console.log(1 & 2);
+console.log(a = ~0b0011); // bitwise NOT
+console.log(a = 0b0011); // bitwise NOT
