@@ -3805,7 +3805,7 @@ console.log(data32);
 
 // Get Random Between Two Numbers
 function randomBetween(min, max) {
-return Math.floor(Math.random() * (max - min + 1) + min);
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 Math.floor(Math.random() * 11);
 Math.floor(Math.random() * 11) + 10;
@@ -3817,3 +3817,15 @@ console.log(randomBetween(10, 20));
 console.log(randomBetween(20, 30));
 console.log(randomBetween(30, 40));
 console.log(randomBetween(40, 50));
+
+
+
+// Simulating events with dierent probabilities
+function simulateEvent(numEvents) {
+    var event = Math.floor(numEvents * Math.random());
+    return event;
+}
+console.log("Rolled a " + (simulateEvent(6) + 1));
+console.log(simulateEvent(10));
+
+
