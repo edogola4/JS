@@ -3489,3 +3489,64 @@ console.log(Math.min(1, 2));// returns the smallest of zero or more numbers
 console.log(Math.pow(2, 2)); // returns the value of a base raised to a power
 console.log(Math.random()); // returns a pseudo-random number between 0 and 1
 console.log(Math.round(1.1));
+
+
+
+// Remainder / Modulus (%)
+console.log(5 % 2); // 1
+console.log(5 % -2);
+console.log(-5 % 2);
+
+
+// Rounding
+var a = Math.round(2.3);
+var b = Math.round(2.7);
+var c = Math.round(2.5);
+var d = Math.round(-2.5);
+var e = Math.round(-2.7);
+var f = Math.round(-2.3);
+var g = Math.round(-2.7);
+console.log(a, b, c, d, e, f, g);
+
+
+var a = Math.ceil(2.3)
+var b = Math.ceil(2.7)
+var c = Math.ceil(2.5)
+var d = Math.ceil(-2.5)
+console.log(a, b, c, d);
+
+
+var a = Math.floor(2.3);
+var b = Math.floor(2.7);
+var c = Math.floor(2.5);
+var d = Math.floor(-2.5);
+console.log(a, b, c, d);
+
+
+2.3 | 0;
+-2.3 | 0;
+NaN | 0;
+Infinity | 0;
+-Infinity | 0;
+console.log(2.3 | 0);
+console.log(-2.3 | 0);
+console.log(NaN | 0);
+console.log(Infinity | 0);
+console.log(-Infinity | 0);
+
+Math.trunc(2.3);
+Math.trunc(-2.3);
+Math.trunc(2147483648.1);
+Math.trunc(-2147483649.1);
+Math.trunc(NaN);
+Math.trunc(Infinity);
+Math.trunc(-Infinity);
+Math.trunc(Infinity);
+console.log(Math.trunc(2.3));
+console.log(Math.trunc(-2.3));
+console.log(Math.trunc(2147483648.1));
+console.log(Math.trunc(-2147483649.1));
+console.log(Math.trunc(NaN));
+console.log(Math.trunc(Infinity));
+console.log(Math.trunc(-Infinity));
+console.log(Math.trunc(Infinity));
