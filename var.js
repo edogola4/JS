@@ -4003,3 +4003,16 @@ console.log(vec);
 console.log(vec.x);
 console.log(vec.y);
 
+
+// Math.hypot
+console.log(Math.hypot(3, 4));
+
+console.log(Math.hypot(4, 3));
+
+var v1 = {x : 10, y :5};
+var v2 = {x : 20, y : 10};
+var x = v2.x - v1.x;
+var y = v2.y - v1.y;
+var distance = Math.sqrt(x * x + y * y);
+console.log(distance);
+console.log(Math.hypot(x, y));
