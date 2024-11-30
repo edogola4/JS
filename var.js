@@ -3980,8 +3980,8 @@ console.log(dir);
 console.log(dir / Math.PI * 180);
 
 
-var point1 = { x: 123, y : 294};
-var point2 = { x: 354, y : 284};
+var point1 = { x: 123, y: 294 };
+var point2 = { x: 354, y: 284 };
 // get the direction from point1 to point2
 var dir = Math.atan2(point2.y - point1.y, point2.x - point1.x);
 console.log(dir);
@@ -3991,3 +3991,15 @@ console.log(dir / Math.PI * 180);
 // Division (/)
 console.log(1 / 2);
 console.log(1 / '2');
+
+
+// Sin & Cos to create a vector given direction & distance
+var dir = 1.4536; // direction in radians
+var dist = 200; // distance
+var vec = {};
+vec.x = Math.cos(dir) * dist; // get the x component
+vec.y = Math.sin(dir) * dist; // get the y component
+console.log(vec);
+console.log(vec.x);
+console.log(vec.y);
+
