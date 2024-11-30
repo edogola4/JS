@@ -3550,3 +3550,27 @@ console.log(Math.trunc(NaN));
 console.log(Math.trunc(Infinity));
 console.log(Math.trunc(-Infinity));
 console.log(Math.trunc(Infinity));
+
+
+// Trigonometry
+// All angles below are in radians. An angle r in radians has measure 180 * r / Math.PI in degrees.
+
+// 1. Sine
+// Math.sin(r); This will return the sine of r , a value between -1 and 1.
+console.log(Math.sin(1));
+console.log(Math.sin(1) / Math.PI);
+
+console.log(Math.sin(1) / Math.PI * 180);
+
+
+// Math.asin(r); This will return the arcsine (the reverse of the sine) of r .
+console.log(Math.asin(1));
+console.log(Math.asin(1) / Math.PI);
+console.log(Math.asin(1) / Math.PI * 180);
+
+
+// Math.asinh(r); This will return the hyperbolic arcsine of r .
+console.log(Math.asinh(1));
+console.log(Math.asinh(1.1752011936438014));
+console.log(Math.asinh(1.1752011936438014) / Math.PI);
+console.log(Math.asinh(1.1752011936438014) / Math.PI * 180);
