@@ -3877,13 +3877,30 @@ console.log(Math.min(-1, -15));
 console.log(Math.min(4, 12));
 
 var arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9],
-max = Math.max.apply(Math, arr1),
-min = Math.min.apply(Math, arr1);
+    max = Math.max.apply(Math, arr1),
+    min = Math.min.apply(Math, arr1);
 console.log(max);
 console.log(min);
 
 var arr22 = [1, 2, 3, 4, 5, 6, 7, 8, 9],
-max = Math.max(...arr22),
-min = Math.min(...arr22);
+    max = Math.max(...arr22),
+    min = Math.min(...arr22);
 console.log(max);
-console.log(min);   
+console.log(min);
+
+
+// Restrict Number to Min/Max Range
+function clamp(min, max, val) {
+    return Math.min(Math.max(min, +val), max);
+}
+console.log(clamp(-10, 10, "4.30"));
+console.log(clamp(-10, 10, "-4.30"));
+console.log(clamp(-10, 10, 8));
+console.log(clamp(-10, 10, -8));
+console.log(clamp(-10, 10, 12));
+console.log(clamp(-10, 10, -15));
+
+
+
+
+
