@@ -3706,3 +3706,42 @@ console.log(b, c, d);
 console.log(16 ** (1 / 2));
 console.log(16 ** (1 / 3));
 console.log(16 ** (1 / 4));
+
+
+
+// Random Integers and Floats
+console.log(Math.random());
+console.log(Math.random() * 10);
+console.log(Math.random() * 10 + 1);
+console.log(Math.random() * 10 + 10);
+console.log(Math.random() * 10 - 10);
+console.log(Math.random() * 10 - 10 + 1);
+console.log(Math.random() * 10 - 10 + 1 | 0);
+
+function getRandom() {
+return Math.random();
+}
+console.log(getRandom());
+
+function getRandomArbitrary(min, max) {
+return Math.random() * (max - min) + min;
+}
+console.log(getRandomArbitrary(0, 10));
+console.log(getRandomArbitrary(10, 20));
+console.log(getRandomArbitrary(20, 30));
+
+function getRandomInt(min, max) {
+return Math.floor(Math.random() * (max - min)) + min;
+}
+console.log(getRandomInt(0, 10));
+console.log(getRandomInt(10, 20));
+console.log(getRandomInt(20, 30));
+console.log(getRandomInt(30, 40));
+
+function getRandomIntInclusive(min, max) {
+return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log(getRandomIntInclusive(0, 10));
+console.log(getRandomIntInclusive(10, 20));
+console.log(getRandomIntInclusive(20, 30));
+console.log(getRandomIntInclusive(30, 40));
