@@ -3756,7 +3756,7 @@ var a = 9,
     c = a + b;
 console.log(c);
 
-null + null ;
+null + null;
 null + undefined;
 null + 1;
 null + {};
@@ -3767,3 +3767,36 @@ console.log(null + 1);
 console.log(null + {});
 console.log(null + '');
 console.log(undefined + null);
+
+
+// Little / Big endian for typed arrays when using bitwise operators
+var isLittleEndian = true;
+(() => {
+    var buf = new ArrayBuffer(4);
+    var buf8 = new Uint8ClampedArray(buf);
+    var data = new Uint32Array(buf);
+    data[0] = 0x0F000000;
+    if (buf8[0] === 0x0f) {
+        isLittleEndian = false;
+    }
+})();
+console.log(isLittleEndian);
+console.log(0x0F000000);
+console.log(0x0000000F);
+
+
+var myNum = 0x11223344 | 0;
+console.log(myNum);
+
+var buf = new ArrayBuffer(4);
+console.log(buf);
+
+var data8 = new Uint8ClampedArray(buf);
+console.log(data8);
+
+var data32 = new Uint32Array(buf);
+console.log(data32);
+
+
+data32[0] = myNum;
+console.log(data32);
