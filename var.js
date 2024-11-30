@@ -3866,3 +3866,24 @@ console.log("foo" * 1);
 
 console.log("foo" * "bar");
 console.log("foo" * "1");
+
+
+// Getting maximum and minimum
+
+console.log(Math.max(-1, -15));
+console.log(Math.max(4, 12));
+
+console.log(Math.min(-1, -15));
+console.log(Math.min(4, 12));
+
+var arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9],
+max = Math.max.apply(Math, arr1),
+min = Math.min.apply(Math, arr1);
+console.log(max);
+console.log(min);
+
+var arr22 = [1, 2, 3, 4, 5, 6, 7, 8, 9],
+max = Math.max(...arr22),
+min = Math.min(...arr22);
+console.log(max);
+console.log(min);   
