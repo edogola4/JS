@@ -3925,7 +3925,7 @@ console.log(Math.cbrt(27));
 
 console.log(Math.cbrt(64));
 
-console.log(Math.pow(64, 1/6));
+console.log(Math.pow(64, 1 / 6));
 
 
 
@@ -3962,3 +3962,32 @@ console.log(gaussianRandom(-5.2, 3));
 console.log(gaussianRandom(0, -2));
 console.log(gaussianRandom(0, 0));
 console.log(gaussianRandom(1, 0.5));
+
+
+
+// Math.atan2 to ﬁnd direction
+var vec = { x: 4, y: 3 };
+var dir = Math.atan2(vec.y, vec.x);
+console.log(dir);
+
+var line = {
+    p1: { x: 100, y: 128 },
+    p2: { x: 320, y: 256 }
+}
+// get the direction from p1 to p2
+var dir = Math.atan2(line.p2.y - line.p1.y, line.p2.x - line.p1.x);
+console.log(dir);
+console.log(dir / Math.PI * 180);
+
+
+var point1 = { x: 123, y : 294};
+var point2 = { x: 354, y : 284};
+// get the direction from point1 to point2
+var dir = Math.atan2(point2.y - point1.y, point2.x - point1.x);
+console.log(dir);
+
+console.log(dir / Math.PI * 180);
+
+// Division (/)
+console.log(1 / 2);
+console.log(1 / '2');
