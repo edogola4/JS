@@ -3559,7 +3559,6 @@ console.log(Math.trunc(Infinity));
 // Math.sin(r); This will return the sine of r , a value between -1 and 1.
 console.log(Math.sin(1));
 console.log(Math.sin(1) / Math.PI);
-
 console.log(Math.sin(1) / Math.PI * 180);
 
 
@@ -3574,3 +3573,31 @@ console.log(Math.asinh(1));
 console.log(Math.asinh(1.1752011936438014));
 console.log(Math.asinh(1.1752011936438014) / Math.PI);
 console.log(Math.asinh(1.1752011936438014) / Math.PI * 180);
+
+
+// 2. Cosine
+// Math.cos(r); This will return the cosine of r , a value between -1 and 1
+console.log(Math.cos(1));
+console.log(Math.cos(1) / Math.PI);
+console.log(Math.cos(1) / Math.PI * 180);
+
+
+// Math.acos(r); This will return the arccosine (the reverse of the cosine) of r .
+console.log(Math.acos(1));
+console.log(Math.acos(1) / Math.PI);
+console.log(Math.acos(1) / Math.PI * 180);
+
+
+// Math.acosh(r); This will return the hyperbolic arccosine of r .
+console.log(Math.acosh(1));
+console.log(Math.acosh(1.1752011936438014));
+console.log(Math.acosh(1.1752011936438014) / Math.PI);
+console.log(Math.acosh(1.1752011936438014) / Math.PI * 180);
+
+
+//3. Tangent
+// Math.tan(r); This will return the tangent of r , a value between -1 and 1.
+console.log(Math.tan(1));
+
+
+// 
