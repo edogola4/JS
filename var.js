@@ -3845,3 +3845,24 @@ console.log(c);
 
 console.log("foo" - 1);
 console.log("foo" - "bar");
+
+
+// Multiplication (*)
+console.log(2 * 3);
+console.log(2 * '3');
+console.log('2' * '3');
+
+console.log('2' * 3);
+
+console.log('2' * '3');
+
+var a = 9;
+
+var b = 3;
+var c = a * b;
+console.log(c);
+
+console.log("foo" * 1);
+
+console.log("foo" * "bar");
+console.log("foo" * "1");
