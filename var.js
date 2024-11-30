@@ -3600,4 +3600,20 @@ console.log(Math.acosh(1.1752011936438014) / Math.PI * 180);
 console.log(Math.tan(1));
 
 
-// 
+// Math.atan(r); This will return the arctangent (the reverse of the tangent) of r . Note that it will return an angle in radians between -π/2 and π/2 .
+console.log(Math.atan(1));
+console.log(Math.atan(1) / Math.PI);
+console.log(Math.atan(1) / Math.PI * 180);
+
+// Math.atan2(y, x); This will return the arctangent of the quotient of its arguments. Note that it will return an angle in radians between -π and π .
+console.log(Math.atan2(1, 1));
+console.log(Math.atan2(1, 1) / Math.PI);
+console.log(Math.atan2(1, 1) / Math.PI * 180);
+console.log(Math.atan2(1, 1) / Math.PI * 180 + 180);
+
+// Math.atanh(r); This will return the hyperbolic arctangent of r .
+console.log(Math.atanh(1));
+console.log(Math.atanh(1.1752011936438014));
+console.log(Math.atanh(1.1752011936438014) / Math.PI);
+console.log(Math.atanh(1.1752011936438014) / Math.PI * 180);
+console.log(Math.atanh(1.1752011936438014) / Math.PI * 180 + 180);
