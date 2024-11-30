@@ -3829,3 +3829,19 @@ console.log("Rolled a " + (simulateEvent(6) + 1));
 console.log(simulateEvent(10));
 
 
+// Subtraction (-)
+
+console.log(1 - 2);
+console.log(1 - '2');
+console.log('1' - '2');
+console.log('1' - 2);
+console.log('1' - '2');
+
+var a = 9;
+var b = 3;
+var c = a - b;
+console.log(c);
+
+
+console.log("foo" - 1);
+console.log("foo" - "bar");
