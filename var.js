@@ -3901,6 +3901,19 @@ console.log(clamp(-10, 10, 12));
 console.log(clamp(-10, 10, -15));
 
 
+// Ceiling and Floor
+Math.ceil();
+console.log(Math.ceil(0.60));
+console.log(Math.ceil(0.40));
+console.log(Math.ceil(5.1));
+console.log(Math.ceil(-5.1));
+console.log(Math.ceil(-5.9));
 
+Math.floor();
+console.log(Math.ceil(0.60));
+console.log(Math.ceil(0.40));
+console.log(Math.ceil(5.1));
+console.log(Math.ceil(-5.1));
+console.log(Math.ceil(-5.9));
 
 
