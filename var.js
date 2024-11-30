@@ -3444,3 +3444,21 @@ console.log(Object.values(obj).map(function (value) {
 }));
 console.log(Object.values(obj).map(value => value * 2));
 console.log(Object.values(obj).map(value => value * 2).join(''));
+
+
+
+
+
+// / ARITHMETIC (Math)
+// Constants
+console.log(Math.E); // Euler's constant and the base of natural logarithms
+console.log(Math.PI); //
+console.log(Math.LN2); //
+console.log(Math.LN10); // natural logarithm of 10
+console.log(Math.LOG2E); // base 2 logarithm of E
+console.log(Math.LOG10E); // base 10 logarithm of E
+console.log(Math.SQRT1_2); // square root of 1/2
+console.log(Math.SQRT2); // square root of 2
+
+// Methods
+console.log(Math.abs(-10));
