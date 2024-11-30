@@ -3917,3 +3917,12 @@ console.log(Math.ceil(-5.1));
 console.log(Math.ceil(-5.9));
 
 
+// Getting roots of a number
+Math.sqrt(16)
+console.log(Math.sqrt(16));
+
+console.log(Math.cbrt(27));
+
+console.log(Math.cbrt(64));
+
+console.log(Math.pow(64, 1/6));
