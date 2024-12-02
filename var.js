@@ -4114,7 +4114,7 @@ console.log(-1 ^ 0);
 
 // real-world examples where bitwise operators in JavaScript are useful:
 
-//1.  Checking if a Number is Odd or Even
+// 1. Checking if a Number is Odd or Even
 // Use the bitwise AND operator (&) to determine if a number is odd or even.
 function isOdd(number){
     return (number & 1) === 1;
@@ -4125,3 +4125,16 @@ console.log(isOdd(3));
 console.log(isOdd(2));
 console.log(isOdd(1));
 console.log(isOdd(0));  
+
+// 2. Swapping Two Numbers Without a Temporary Variable
+// The XOR (^) operator can be used to swap two numbers.
+ shantel = 8; 
+ daisy = 7;
+console.log(`Before: shantel = ${shantel}, daisy = ${daisy}`);
+
+// Swap using XOR
+shantel = shantel ^ daisy;
+daisy = shantel ^ daisy;
+shantel = shantel ^ daisy;
+
+console.log(`After: shantel = ${shantel}, daisy = ${daisy}`);
