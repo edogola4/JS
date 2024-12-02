@@ -4249,3 +4249,25 @@ const DAISY_B = 0b0010;
 // Set DAISY_A and DAISY_B
 daisy = daisy | DAISY_A | DAISY_B;
 console.log(daisy.toString(2)); // "0011" (decimal: 3)
+
+
+// 7. Clearing Specific Bits
+// Use the AND NOT (& ~) operation to clear specific bits.
+let options = 0b1111;
+const OPTION_A = 0b0001;
+const OPTION_B = 0b0010;
+const OPTION_C = 0b0100;
+const OPTION_D = 0b1000;
+options = options & ~OPTION_A & ~OPTION_C;
+console.log(options.toString(2));
+console.log((options & OPTION_A) !== 0);
+console.log((options & OPTION_B) !== 0);
+console.log((options & OPTION_C) !== 0);
+console.log((options & OPTION_D) !== 0);
+
+options = options & ~OPTION_B;
+console.log(options.toString(2));
+console.log((options & OPTION_A) !== 0);
+console.log((options & OPTION_B) !== 0);
+console.log((options & OPTION_C) !== 0);
+console.log((options & OPTION_D) !== 0);
