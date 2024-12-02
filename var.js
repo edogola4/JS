@@ -4100,10 +4100,10 @@ console.log(13 | 7);
 console.log(13 | 7 | 8);
 
 // Bitwise NOT
-console.log( ~ -14);
-console.log( ~ -13);
-console.log( ~ 13);
-console.log( ~ 0);
+console.log(~ -14);
+console.log(~ -13);
+console.log(~13);
+console.log(~0);
 
 // Bitwise XOR
 console.log(1 ^ 2);
@@ -4116,7 +4116,7 @@ console.log(-1 ^ 0);
 
 // 1. Checking if a Number is Odd or Even
 // Use the bitwise AND operator (&) to determine if a number is odd or even.
-function isOdd(number){
+function isOdd(number) {
     return (number & 1) === 1;
 }
 console.log(isOdd(4));
@@ -4124,12 +4124,12 @@ console.log(isOdd(5));
 console.log(isOdd(3));
 console.log(isOdd(2));
 console.log(isOdd(1));
-console.log(isOdd(0));  
+console.log(isOdd(0));
 
 // 2. Swapping Two Numbers Without a Temporary Variable
 // The XOR (^) operator can be used to swap two numbers.
- shantel = 8; 
- daisy = 7;
+shantel = 8;
+daisy = 7;
 console.log(`Before: shantel = ${shantel}, daisy = ${daisy}`);
 
 // Swap using XOR
@@ -4196,11 +4196,11 @@ console.log((permission & EXECUTE) !== 0);
 
 // 5. Optimizing Multiplications and Divisions
 // Use the bitwise left shift (<<) and right shift (>>) operators to multiply or divide by powers of 2 efficiently.
- x = 5;
- y = x << 1;
+x = 5;
+y = x << 1;
 console.log(y);
 
- z = y >> 1;
+z = y >> 1;
 console.log(z);
 
 console.log(z === x);
@@ -4214,10 +4214,38 @@ x = 8;
 y = x << 3;
 console.log(y);
 
- number = 8;
+number = 8;
 
 // Multiply by 2
 console.log(number << 1); // 16 (8 * 2)
 
 // Divide by 2
 console.log(number >> 1); // 4 (8 / 2)
+
+
+// 6. Setting Specific Bits
+// Use the OR (|) operator to set a specific bit in a number.
+let flags = 0b0000;
+const FLAG_A = 0b0001;
+const FLAG_B = 0b0010;
+const FLAG_C = 0b0100;
+const FLAG_D = 0b1000;
+flags = flags | FLAG_A | FLAG_C;
+console.log(flags.toString(2));
+console.log((flags & FLAG_A) !== 0);
+console.log((flags & FLAG_B) !== 0);
+console.log((flags & FLAG_C) !== 0);
+console.log((flags & FLAG_D) !== 0);
+flags = flags | FLAG_B;
+console.log(flags.toString(2));
+console.log((flags & FLAG_A) !== 0);
+console.log((flags & FLAG_B) !== 0);
+
+
+daisy = 0b0000; // No daisy set
+const DAISY_A = 0b0001;
+const DAISY_B = 0b0010;
+
+// Set DAISY_A and DAISY_B
+daisy = daisy | DAISY_A | DAISY_B;
+console.log(daisy.toString(2)); // "0011" (decimal: 3)
