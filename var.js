@@ -4506,3 +4506,12 @@ console.log(daisy.__proto__.__proto__ === GirlFriend.prototype);
 console.log(daisy.__proto__.__proto__.__proto__ === Object.prototype);
 
 console.log(daisy.__proto__.__proto__.__proto__.__proto__ === null);
+
+
+/**
+ * Benefits of Constructor Functions
+Encapsulation: Bundle related data and behavior in one structure.
+Reusability: Methods defined on prototype are shared, reducing memory usage.
+Ease of Instantiation: Simplify object creation with pre-configured properties.
+
+ */
