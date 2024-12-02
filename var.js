@@ -4582,7 +4582,7 @@ console.log(xx);
 const girlie = {
     name: "Shantel"
 };
-console.log('The name of the girlie is', girlie.name); 
+console.log('The name of the girlie is', girlie.name);
 
 girlie.surname = "Odhiambo";
 console.log('The surname of the girlie is', girlie.surname);
@@ -4635,7 +4635,7 @@ let ab;
 console.log(ab);
 
 var bc;
-console.log(typeof bc === "undefined"); 
+console.log(typeof bc === "undefined");
 console.log(typeof variableDoesNotExist === "undefined");
 
 console.log(typeof undeclaredVariable);
@@ -4766,8 +4766,17 @@ let cz = az + bz;
 console.log(cz);
 
 var a = 9,
-b = 3;
+    b = 3;
 b += a;
 console.log(b);
 
 // Decrement by
+var d = 5;
+d -= 2;
+console.log(d);
+
+var a = 9,
+    b = 3;
+b -= a;
+console.log(b);
+
