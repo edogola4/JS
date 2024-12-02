@@ -4093,3 +4093,8 @@ console.log(4 & 1);
 
 console.log(5 & 1);
 console.log(6 & 1);
+
+// Bitwise OR
+console.log(1 | 2);
+console.log(13 | 7);
+console.log(13 | 7 | 8);
