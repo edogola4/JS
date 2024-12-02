@@ -4271,3 +4271,25 @@ console.log((options & OPTION_A) !== 0);
 console.log((options & OPTION_B) !== 0);
 console.log((options & OPTION_C) !== 0);
 console.log((options & OPTION_D) !== 0);
+
+
+// 8. Bitwise NOT for Quick Negative Arithmetic
+// The NOT (~) operator can quickly calculate -(n + 1) for use cases like efficient hashing or bounds checking.
+number = 5;
+let negated = ~number + 1;
+console.log(negated);
+console.log(-number);
+console.log(~number);
+
+ x = 5;
+console.log(~x); // -6 (equivalent to -(5 + 1))
+
+x = -5;
+console.log(~x);
+console.log(~-5);
+console.log(~(-5 + 1));
+
+console.log(~(-5 - 1));
+console.log(~(-5 + 1));
+console.log(~(-5 - 1) + 1);
+console.log(~(-5 + 1) + 1);
