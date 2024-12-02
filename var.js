@@ -4098,3 +4098,9 @@ console.log(6 & 1);
 console.log(1 | 2);
 console.log(13 | 7);
 console.log(13 | 7 | 8);
+
+// Bitwise NOT
+console.log( ~ -14);
+console.log( ~ -13);
+console.log( ~ 13);
+console.log( ~ 0);
