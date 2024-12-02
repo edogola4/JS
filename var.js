@@ -4515,3 +4515,38 @@ Reusability: Methods defined on prototype are shared, reducing memory usage.
 Ease of Instantiation: Simplify object creation with pre-configured properties.
 
  */
+
+
+// Real-World Example
+function Vehicle(type, wheels) {
+    this.type = type;
+    this.wheels = wheels;
+}
+
+Vehicle.prototype.describe = function() {
+    console.log(`This is a ${this.type} with ${this.wheels} wheels.`);
+};
+
+// Create instances
+let car = new Vehicle("Car", 4);
+let bike = new Vehicle("Bike", 2);
+
+car.describe(); // Outputs: "This is a Car with 4 wheels."
+bike.describe(); // Outputs: "This is a Bike with 2 wheels."
+
+
+function GirlFriend(type, bodycount) {
+    this.type = type;
+    this.bodycount = bodycount;
+}
+
+GirlFriend.prototype.describe = function() {
+    console.log(`This is ${this.type} with ${this.bodycount} bodycount.`);
+};
+
+// Create instances
+ shantel = new GirlFriend("Shantel", 4);
+ daisy = new GirlFriend("Daisy", 10);
+
+shantel.describe(); // Outputs: "This is a Car with 4 wheels."
+daisy.describe(); // Outputs: "This is a Bike with 2 wheels."
