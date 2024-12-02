@@ -4378,7 +4378,7 @@ console.log(shantel.sound); // Outputs: "Meow"
 2. Optimize memory usage by avoiding method duplication.
  */
 // Adding Methods Using prototype:
-GirlFriend.prototype.speak = function() {
+GirlFriend.prototype.speak = function () {
     console.log(this.sound);
 }
 shantel.speak();
@@ -4388,7 +4388,7 @@ function GirlFriend(name) {
     this.name = name;
     this.sound = "Aaah";
 }
-GirlFriend.prototype.speak = function() {
+GirlFriend.prototype.speak = function () {
     console.log(this.sound);
 }
 function BestFriend(name) {
@@ -4398,9 +4398,9 @@ function BestFriend(name) {
 BestFriend.prototype = Object.create(GirlFriend.prototype);
 BestFriend.prototype.constructor = BestFriend;
 
- daisy = new BestFriend("Daisy");
+daisy = new BestFriend("Daisy");
 daisy.speak();
- // Outputs: "Aaah"
+// Outputs: "Aaah"
 
 
 // Inheritance using the prototype chain
@@ -4408,7 +4408,7 @@ function GirlFriend(name) {
     this.name = name;
     this.sound = "Aaah";
 }
-GirlFriend.prototype.speak = function() {
+GirlFriend.prototype.speak = function () {
     console.log(this.sound);
 }
 function BestFriend(name) {
@@ -4418,7 +4418,7 @@ function BestFriend(name) {
 BestFriend.prototype = Object.create(GirlFriend.prototype);
 
 BestFriend.prototype.constructor = BestFriend;
- daisy = new BestFriend("Daisy");
+daisy = new BestFriend("Daisy");
 daisy.speak();
 
 
@@ -4428,7 +4428,7 @@ daisy.speak();
  * This points to the function that created the instance.
  */
 console.log(shantel.constructor === GirlFriend);
- // Outputs: true
+// Outputs: true
 console.log(shantel.constructor.name);    // shantel is an instance of GirlFriend
 console.log(daisy.constructor.name);
 
@@ -4439,30 +4439,30 @@ console.log(daisy.constructor.name);
  * The instanceof operator checks if an object was created by a specific constructor function.
  */
 console.log(shantel instanceof GirlFriend);
- // Outputs: true
+// Outputs: true
 console.log(shantel instanceof BestFriend);
- // Outputs: false
+// Outputs: false
 console.log(daisy instanceof GirlFriend);
- // Outputs: true
+// Outputs: true
 console.log(daisy instanceof BestFriend);
- // Outputs: true
+// Outputs: true
 
 
 // Prototype Chain
 console.log(shantel.__proto__ === GirlFriend.prototype);
- // Outputs: true
+// Outputs: true
 console.log(daisy.__proto__ === BestFriend.prototype);
- // Outputs: true
+// Outputs: true
 console.log(daisy.__proto__.__proto__ === GirlFriend.prototype);
- // Outputs: true
+// Outputs: true
 console.log(daisy.__proto__.__proto__.__proto__ === Object.prototype);
- // Outputs: true
+// Outputs: true
 console.log(daisy.__proto__.__proto__.__proto__.__proto__ === null);
- // Outputs: true
+// Outputs: true
 
 
 // Prototype Property
-GirlFriend.prototype.speak = function() {
+GirlFriend.prototype.speak = function () {
     console.log(this.sound);
 }
 shantel.speak();
@@ -4485,7 +4485,7 @@ function GirlFriend(name, age) {
     this.age = age;
     this.sound = "Aaah";
 }
-GirlFriend.prototype.speak = function() {
+GirlFriend.prototype.speak = function () {
     console.log(this.sound);
 }
 function BestFriend(name, age, hobby) {
@@ -4494,7 +4494,7 @@ function BestFriend(name, age, hobby) {
 }
 BestFriend.prototype = Object.create(GirlFriend.prototype);
 BestFriend.prototype.constructor = BestFriend;
-BestFriend.prototype.play = function() {
+BestFriend.prototype.play = function () {
     console.log(`${this.name} is playing ${this.hobby}.`);
 }
 daisy = new BestFriend("Daisy", 5, "acting");
@@ -4523,7 +4523,7 @@ function Vehicle(type, wheels) {
     this.wheels = wheels;
 }
 
-Vehicle.prototype.describe = function() {
+Vehicle.prototype.describe = function () {
     console.log(`This is a ${this.type} with ${this.wheels} wheels.`);
 };
 
@@ -4540,13 +4540,13 @@ function GirlFriend(type, bodycount) {
     this.bodycount = bodycount;
 }
 
-GirlFriend.prototype.describe = function() {
+GirlFriend.prototype.describe = function () {
     console.log(`This is ${this.type} with ${this.bodycount} bodycount.`);
 };
 
 // Create instances
- shantel = new GirlFriend("Shantel", 4);
- daisy = new GirlFriend("Daisy", 10);
+shantel = new GirlFriend("Shantel", 4);
+daisy = new GirlFriend("Daisy", 10);
 
 shantel.describe(); // Outputs: "This is a Car with 4 wheels."
 daisy.describe(); // Outputs: "This is a Bike with 2 wheels."
@@ -4569,5 +4569,29 @@ class GirlFriends {
     }
 }
 
- shantel = new GirlFriends("Shantel", 4); 
-shantel.speak(); 
+shantel = new GirlFriends("Shantel", 4);
+shantel.speak();
+
+
+
+// Declarations and Assignments
+// Modifying constants
+const xx = 5;
+console.log(xx);
+
+const girlie = {
+    name: "Shantel"
+};
+console.log('The name of the girlie is', girlie.name); 
+
+girlie.surname = "Odhiambo";
+console.log('The surname of the girlie is', girlie.surname);
+
+girlie.name = "Daisy";
+console.log('The name of the girlie is', girlie.name);
+console.log('The surname of the girlie is', girlie.surname);
+console.log(girlie);
+girlie.name = "Shantel";
+console.log('The name of the girlie is', girlie.name);
+console.log('The surname of the girlie is', girlie.surname);
+console.log(girlie);
