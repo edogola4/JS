@@ -4293,3 +4293,33 @@ console.log(~(-5 - 1));
 console.log(~(-5 + 1));
 console.log(~(-5 - 1) + 1);
 console.log(~(-5 + 1) + 1);
+
+
+// 9. Checking Power of 2
+// Use the AND (&) operator to check if a number is a power of 2. A number is a power of 2 if it has only one 1 in its binary representation.
+function isPowerOfTwo(number) {
+    return (number & (number - 1)) === 0;
+}
+console.log(isPowerOfTwo(1));   
+console.log(isPowerOfTwo(2));
+
+
+function isPowerOfTwo(n) {
+    return n > 0 && (n & (n - 1)) === 0;
+}
+console.log(isPowerOfTwo(4)); // true
+console.log(isPowerOfTwo(5)); // false
+console.log(isPowerOfTwo(8));
+console.log(isPowerOfTwo(0));
+
+
+function isPowerOfTwo(n) {
+    return n > 0 && (n & (n - 1)) === 0;
+}
+console.log(isPowerOfTwo(4));
+ // true
+console.log(isPowerOfTwo(5));
+ // false
+console.log(isPowerOfTwo(8));
+console.log(isPowerOfTwo(0));
+console.log(isPowerOfTwo(1));
