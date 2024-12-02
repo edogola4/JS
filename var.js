@@ -4780,3 +4780,17 @@ var a = 9,
 b -= a;
 console.log(b);
 
+// Multiply by
+var d = 5;
+d *= 2;
+console.log(d);
+
+var a = 9,
+    b = 3;
+b *= a;
+console.log(b);
+
+var a = 909,
+    b = 3;
+b *= a;
+console.log(b);
