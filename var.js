@@ -4111,3 +4111,17 @@ console.log(13 ^ 7);
 console.log(5 ^ 3);
 console.log(1 ^ 1);
 console.log(-1 ^ 0);
+
+// real-world examples where bitwise operators in JavaScript are useful:
+
+//1.  Checking if a Number is Odd or Even
+// Use the bitwise AND operator (&) to determine if a number is odd or even.
+function isOdd(number){
+    return (number & 1) === 1;
+}
+console.log(isOdd(4));
+console.log(isOdd(5));
+console.log(isOdd(3));
+console.log(isOdd(2));
+console.log(isOdd(1));
+console.log(isOdd(0));  
