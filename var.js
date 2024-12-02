@@ -4474,3 +4474,35 @@ console.log(daisy.__proto__.__proto__ === GirlFriend.prototype);
 console.log(daisy.__proto__.__proto__.__proto__ === Object.prototype);
 
 console.log(daisy.__proto__.__proto__.__proto__.__proto__ === null);
+
+
+// Customizing Constructors
+/**
+ * You can add logic or parameters to customize how objects are created.
+ */
+function GirlFriend(name, age) {
+    this.name = name;
+    this.age = age;
+    this.sound = "Aaah";
+}
+GirlFriend.prototype.speak = function() {
+    console.log(this.sound);
+}
+function BestFriend(name, age, hobby) {
+    GirlFriend.call(this, name, age);
+    this.hobby = hobby;
+}
+BestFriend.prototype = Object.create(GirlFriend.prototype);
+BestFriend.prototype.constructor = BestFriend;
+BestFriend.prototype.play = function() {
+    console.log(`${this.name} is playing ${this.hobby}.`);
+}
+daisy = new BestFriend("Daisy", 5, "acting");
+daisy.speak();
+daisy.play();
+console.log(daisy.__proto__ === BestFriend.prototype);
+
+console.log(daisy.__proto__.__proto__ === GirlFriend.prototype);
+console.log(daisy.__proto__.__proto__.__proto__ === Object.prototype);
+
+console.log(daisy.__proto__.__proto__.__proto__.__proto__ === null);
