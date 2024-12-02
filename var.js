@@ -4172,3 +4172,24 @@ console.log(state.toString(2)); // "0111" (decimal: 7)
 
 state = state ^ toggleMask; // Toggle again
 console.log(state.toString(2)); // "0101" (back to decimal: 5)
+
+
+// Bitmasking: Storing and Checking Permissions
+// Store multiple boolean flags (like permissions) in a single number and use bitwise operators to check/set permissions.
+const READ = 0b0001;
+const WRITE = 0b0010;
+const EXECUTE = 0b0100;
+let permission = READ | WRITE;
+console.log((permission & READ) !== 0);
+console.log((permission & WRITE) !== 0);
+console.log((permission & EXECUTE) !== 0);
+
+permission = permission | EXECUTE;
+console.log((permission & READ) !== 0);
+console.log((permission & WRITE) !== 0);
+console.log((permission & EXECUTE) !== 0);
+
+permission = permission & ~WRITE;
+console.log((permission & READ) !== 0);
+console.log((permission & WRITE) !== 0);
+console.log((permission & EXECUTE) !== 0);
