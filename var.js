@@ -4595,3 +4595,18 @@ girlie.name = "Shantel";
 console.log('The name of the girlie is', girlie.name);
 console.log('The surname of the girlie is', girlie.surname);
 console.log(girlie);
+
+
+// Declaring and initializing constants
+const yy = 5;
+console.log(yy);
+
+const mygirlie = {
+    name: "Shantel"
+};
+console.log('The name of the mygirlie is', mygirlie.name);
+
+const foot = 100;
+const bar = false;
+console.log(foot);
+console.log(bar);
