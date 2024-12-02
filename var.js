@@ -4432,3 +4432,45 @@ console.log(shantel.constructor === GirlFriend);
 console.log(shantel.constructor.name);    // shantel is an instance of GirlFriend
 console.log(daisy.constructor.name);
 
+
+
+// instanceof Operator
+/**
+ * The instanceof operator checks if an object was created by a specific constructor function.
+ */
+console.log(shantel instanceof GirlFriend);
+ // Outputs: true
+console.log(shantel instanceof BestFriend);
+ // Outputs: false
+console.log(daisy instanceof GirlFriend);
+ // Outputs: true
+console.log(daisy instanceof BestFriend);
+ // Outputs: true
+
+
+// Prototype Chain
+console.log(shantel.__proto__ === GirlFriend.prototype);
+ // Outputs: true
+console.log(daisy.__proto__ === BestFriend.prototype);
+ // Outputs: true
+console.log(daisy.__proto__.__proto__ === GirlFriend.prototype);
+ // Outputs: true
+console.log(daisy.__proto__.__proto__.__proto__ === Object.prototype);
+ // Outputs: true
+console.log(daisy.__proto__.__proto__.__proto__.__proto__ === null);
+ // Outputs: true
+
+
+// Prototype Property
+GirlFriend.prototype.speak = function() {
+    console.log(this.sound);
+}
+shantel.speak();
+daisy.speak();
+console.log(shantel.__proto__ === GirlFriend.prototype);
+
+console.log(daisy.__proto__ === BestFriend.prototype);
+console.log(daisy.__proto__.__proto__ === GirlFriend.prototype);
+console.log(daisy.__proto__.__proto__.__proto__ === Object.prototype);
+
+console.log(daisy.__proto__.__proto__.__proto__.__proto__ === null);
