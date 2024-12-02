@@ -4009,8 +4009,8 @@ console.log(Math.hypot(3, 4));
 
 console.log(Math.hypot(4, 3));
 
-var v1 = {x : 10, y :5};
-var v2 = {x : 20, y : 10};
+var v1 = { x: 10, y: 5 };
+var v2 = { x: 20, y: 10 };
 var x = v2.x - v1.x;
 var y = v2.y - v1.y;
 var distance = Math.sqrt(x * x + y * y);
@@ -4027,10 +4027,69 @@ console.log(periodicSin(0, 1, 1, 0));
 
 // Decrementing (--)
 // The decrement operator ( -- ) decrements numbers by one.
-  var a = 1;
- console.log(a--);
- console.log(a);
+var a = 1;
+console.log(a--);
+console.log(a);
 
 var a = 1;
 
 console.log(--a);
+
+
+
+
+// Bitwise Operators
+console.log(1 & 2);
+console.log(1 | 2);
+console.log(1 ^ 2);
+
+function isEven(n) {
+    return n % 2 == 0;
+}
+
+function isOdd(n) {
+    return Math.abs(n % 2) == 1;
+}
+console.log(isEven(4));
+console.log(isEven(5));
+console.log(isOdd(4));
+
+console.log(isOdd(5));
+
+function isOdd(n) {
+    if (isEven(n)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+console.log(isOdd(4));
+console.log(isOdd(5));
+console.log(isOdd(6));
+
+console.log(isOdd(7));
+
+function isOdd(n) {
+    return !isEven(n);
+}
+console.log(isOdd(4));
+console.log(isOdd(5));
+console.log(isOdd(6));
+
+console.log(isOdd(7));
+
+
+let n = 5;
+if (n & 1) {
+    console.log("ODD!");
+} else {
+    console.log("EVEN!");
+}
+console.log(1 & 1);
+
+console.log(2 & 1);
+console.log(3 & 1);
+console.log(4 & 1);
+
+console.log(5 & 1);
+console.log(6 & 1);
