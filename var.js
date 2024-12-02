@@ -4382,3 +4382,53 @@ GirlFriend.prototype.speak = function() {
     console.log(this.sound);
 }
 shantel.speak();
+
+// Prototype Inheritance
+function GirlFriend(name) {
+    this.name = name;
+    this.sound = "Aaah";
+}
+GirlFriend.prototype.speak = function() {
+    console.log(this.sound);
+}
+function BestFriend(name) {
+    GirlFriend.call(this, name);
+    this.sound = "Aaah";
+}
+BestFriend.prototype = Object.create(GirlFriend.prototype);
+BestFriend.prototype.constructor = BestFriend;
+
+ daisy = new BestFriend("Daisy");
+daisy.speak();
+ // Outputs: "Aaah"
+
+
+// Inheritance using the prototype chain
+function GirlFriend(name) {
+    this.name = name;
+    this.sound = "Aaah";
+}
+GirlFriend.prototype.speak = function() {
+    console.log(this.sound);
+}
+function BestFriend(name) {
+    GirlFriend.call(this, name);
+    this.sound = "Aaah";
+}
+BestFriend.prototype = Object.create(GirlFriend.prototype);
+
+BestFriend.prototype.constructor = BestFriend;
+ daisy = new BestFriend("Daisy");
+daisy.speak();
+
+
+// Constructor Property
+/**
+ * Every object created by a constructor function has a constructor property. 
+ * This points to the function that created the instance.
+ */
+console.log(shantel.constructor === GirlFriend);
+ // Outputs: true
+console.log(shantel.constructor.name);    // shantel is an instance of GirlFriend
+console.log(daisy.constructor.name);
+
