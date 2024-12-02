@@ -4756,3 +4756,18 @@ console.log(typeof date01);
 // Object
 let obj11 = {};
 console.log(typeof obj11);
+
+
+
+/// Mathematic operations and assignment
+let az = 5;
+let bz = 3;
+let cz = az + bz;
+console.log(cz);
+
+var a = 9,
+b = 3;
+b += a;
+console.log(b);
+
+// Decrement by
