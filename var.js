@@ -4351,3 +4351,34 @@ function rotateRight(num, bits) {
 values = 0b1101; // Binary: 13
 console.log(rotateLeft(values, 2).toString(2)); // "110100" (decimal: 52)
 console.log(rotateRight(values, 2).toString(2)); // "1100" (decimal: 12)
+
+
+
+
+
+/// Constructor functions
+// Declaring a Constructor Function
+
+function GirlFriend(name) {
+    this.name = name;
+    this.sound = "Aaah";
+}
+
+// Using the constructor function
+shantel = new GirlFriend("Shantel");
+console.log(shantel.name);  // Outputs: "Tom"
+console.log(shantel.sound); // Outputs: "Meow"
+
+
+// Prototype Property
+/**
+ * Every function in JavaScript (including constructor functions) has a special property called prototype. 
+ * This is used to:
+1. Share methods or properties across all instances created by the constructor.
+2. Optimize memory usage by avoiding method duplication.
+ */
+// Adding Methods Using prototype:
+GirlFriend.prototype.speak = function() {
+    console.log(this.sound);
+}
+shantel.speak();
