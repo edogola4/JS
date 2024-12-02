@@ -4794,3 +4794,48 @@ var a = 909,
     b = 3;
 b *= a;
 console.log(b);
+
+// Divide by
+var d = 10;
+d /= 2;
+console.log(d);
+
+var a = 9,
+    b = 3;
+b /= a;
+
+console.log(b);
+
+var a = 909,
+    b = 3;
+b /= a;
+console.log(b);
+
+// Raised to the power of
+
+var d = 5;
+d **= 2;
+console.log(d);
+
+var a = 9,
+    b = 3;
+console.log(b **= a);
+console.log(b);
+console.log(a);
+
+console.log(b **= a);
+
+console.log(b);
+console.log(a);
+
+// Modulus
+var d = 5;
+
+d %= 2;
+
+console.log(d);
+var a = 9,
+    b = 3;
+
+b %= a;
+console.log(b);
