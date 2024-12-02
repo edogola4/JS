@@ -4550,3 +4550,24 @@ GirlFriend.prototype.describe = function() {
 
 shantel.describe(); // Outputs: "This is a Car with 4 wheels."
 daisy.describe(); // Outputs: "This is a Bike with 2 wheels."
+
+
+
+// Transition to ES6 Classes
+/**
+ * Constructor functions have largely been replaced by class syntax, which is more intuitive and provides the same functionality.
+ */
+class GirlFriends {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+        this.sound = "Aaah";
+    }
+
+    speak() {
+        console.log(`${this.name} says "${this.sound}"`);
+    }
+}
+
+ shantel = new GirlFriends("Shantel", 4); 
+shantel.speak(); 
