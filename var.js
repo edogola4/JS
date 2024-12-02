@@ -4281,7 +4281,7 @@ console.log(negated);
 console.log(-number);
 console.log(~number);
 
- x = 5;
+x = 5;
 console.log(~x); // -6 (equivalent to -(5 + 1))
 
 x = -5;
@@ -4300,7 +4300,7 @@ console.log(~(-5 + 1) + 1);
 function isPowerOfTwo(number) {
     return (number & (number - 1)) === 0;
 }
-console.log(isPowerOfTwo(1));   
+console.log(isPowerOfTwo(1));
 console.log(isPowerOfTwo(2));
 
 
@@ -4317,9 +4317,37 @@ function isPowerOfTwo(n) {
     return n > 0 && (n & (n - 1)) === 0;
 }
 console.log(isPowerOfTwo(4));
- // true
+// true
 console.log(isPowerOfTwo(5));
- // false
+// false
 console.log(isPowerOfTwo(8));
 console.log(isPowerOfTwo(0));
 console.log(isPowerOfTwo(1));
+
+
+// 10. Circular Bit Shifts
+// Perform circular shifts using the combination of left and right shifts. This is useful in cryptographic algorithms.
+function circularLeftShift(number, shift) {
+    return (number << shift) | (number >>> (32 - shift));
+}
+function circularRightShift(number, shift) {
+    return (number >>> shift) | (number << (32 - shift));
+}
+let nums = 0b1010;
+let shifted = circularLeftShift(nums, 1);
+console.log(shifted.toString(2));
+shifted = circularRightShift(nums, 1);
+console.log(shifted.toString(2));
+
+
+function rotateLeft(num, bits) {
+    return (num << bits) | (num >>> (32 - bits));
+}
+
+function rotateRight(num, bits) {
+    return (num >>> bits) | (num << (32 - bits));
+}
+
+values = 0b1101; // Binary: 13
+console.log(rotateLeft(values, 2).toString(2)); // "110100" (decimal: 52)
+console.log(rotateRight(values, 2).toString(2)); // "1100" (decimal: 12)
