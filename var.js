@@ -4640,3 +4640,119 @@ console.log(typeof variableDoesNotExist === "undefined");
 
 console.log(typeof undeclaredVariable);
 console.log(typeof undeclaredVariable === "undefined");
+
+
+
+// Data Types
+// Number
+let numb = 42;
+console.log(typeof numb);
+let pi = 3.14;
+console.log(typeof pi);
+
+// String
+let message = "I love Shantel!";
+console.log(typeof message);
+let girlname = "Daisy";
+console.log(typeof girlname);
+let empty = "";
+console.log(typeof empty);
+let space = " ";
+console.log(typeof space);
+let myname = "Shantel";
+console.log(typeof myname);
+
+// Arrays
+let mynumbers = [1, 2, 3];
+console.log(typeof mynumbers);
+let names = ["Shantel", "Daisy", "Atieno"];
+
+console.log(typeof names);
+let mixed = [1, "two", true];
+
+console.log(typeof mixed);
+let emptyArray = [];
+console.log(typeof emptyArray);
+
+// Objects
+let person = { name: "Shantel", age: 30 };
+console.log(typeof person);
+let emptyObject = {};
+console.log(typeof emptyObject);
+let nullObject = null;
+console.log(typeof nullObject);
+let undefinedObject = undefined;
+console.log(typeof undefinedObject);
+
+// Boolean
+let isTrue = true;
+console.log(typeof isTrue);
+let isFalse = false;
+console.log(typeof isFalse);
+let isGreaterThan = 5 > 3;
+console.log(typeof isGreaterThan);
+let isLessThan = 3 < 5;
+console.log(typeof isLessThan);
+let isNull = null;
+console.log(typeof isNull);
+let isUndefined = undefined;
+
+console.log(typeof isUndefined);
+let isZero = 0;
+console.log(typeof isZero);
+let isOne = 1;
+console.log(typeof isOne);
+
+
+// Symbol
+let sym = Symbol("unique");
+
+console.log(typeof sym);
+let sym2 = Symbol("unique");
+console.log(typeof sym2);
+let sym3 = Symbol("unique");
+console.log(typeof sym3);
+
+
+// BigInt
+let bigInt = 1234567890123456789012345678901234567890n;
+console.log(typeof bigInt);
+let bigInt2 = BigInt("1234567890123456789012345678901234567890");
+console.log(typeof bigInt2);
+
+
+// Null
+let nullValue = null;
+console.log(typeof nullValue);
+let nullObject2 = null;
+console.log(typeof nullObject2);
+
+// Undefined
+let undefinedValue;
+console.log(typeof undefinedValue);
+let undefinedObject2 = undefined;
+console.log(typeof undefinedObject2);
+
+
+// Function
+function greet() {
+    console.log("Hello!");
+}
+console.log(typeof greet);
+
+let greet2 = function () {
+    console.log("Hello!");
+};
+console.log(typeof greet2);
+
+// Date
+let date = new Date();
+console.log(typeof date);
+
+let date01 = new Date("2023-01-01");
+console.log(typeof date01);
+
+
+// Object
+let obj11 = {};
+console.log(typeof obj11);
