@@ -4610,3 +4610,20 @@ const foot = 100;
 const bar = false;
 console.log(foot);
 console.log(bar);
+
+
+// Declaration
+/**
+ * The var keyword creates a function-scope variable.
+The let keyword creates a block-scope variable.
+The const keyword creates a block-scope variable that cannot be reassigned.
+A bare declaration creates a global variable.
+ */
+var x = 5;
+console.log(x);
+
+let yyy = 10;
+console.log(yyy);
+
+const zz = 15;
+console.log(zz);
