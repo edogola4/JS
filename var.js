@@ -4174,7 +4174,7 @@ state = state ^ toggleMask; // Toggle again
 console.log(state.toString(2)); // "0101" (back to decimal: 5)
 
 
-// Bitmasking: Storing and Checking Permissions
+// 4. Bitmasking: Storing and Checking Permissions
 // Store multiple boolean flags (like permissions) in a single number and use bitwise operators to check/set permissions.
 const READ = 0b0001;
 const WRITE = 0b0010;
@@ -4193,3 +4193,31 @@ permission = permission & ~WRITE;
 console.log((permission & READ) !== 0);
 console.log((permission & WRITE) !== 0);
 console.log((permission & EXECUTE) !== 0);
+
+// 5. Optimizing Multiplications and Divisions
+// Use the bitwise left shift (<<) and right shift (>>) operators to multiply or divide by powers of 2 efficiently.
+ x = 5;
+ y = x << 1;
+console.log(y);
+
+ z = y >> 1;
+console.log(z);
+
+console.log(z === x);
+x = 4;
+y = x << 2;
+console.log(y);
+z = y >> 2;
+console.log(z);
+console.log(z === x);
+x = 8;
+y = x << 3;
+console.log(y);
+
+ number = 8;
+
+// Multiply by 2
+console.log(number << 1); // 16 (8 * 2)
+
+// Divide by 2
+console.log(number >> 1); // 4 (8 / 2)
