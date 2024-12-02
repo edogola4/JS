@@ -4104,3 +4104,10 @@ console.log( ~ -14);
 console.log( ~ -13);
 console.log( ~ 13);
 console.log( ~ 0);
+
+// Bitwise XOR
+console.log(1 ^ 2);
+console.log(13 ^ 7);
+console.log(5 ^ 3);
+console.log(1 ^ 1);
+console.log(-1 ^ 0);
