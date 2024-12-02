@@ -4138,3 +4138,37 @@ daisy = shantel ^ daisy;
 shantel = shantel ^ daisy;
 
 console.log(`After: shantel = ${shantel}, daisy = ${daisy}`);
+
+
+// 3. Toggling Bits (Flipping ON/OFF States)
+// Use the XOR (^) operator to toggle a bit. This is useful for managing settings, like enabling/disabling features.
+let settings = 0b1010;
+const FEATURE_A = 0b0001;
+
+const FEATURE_B = 0b0010;
+
+const FEATURE_C = 0b0100;
+
+const FEATURE_D = 0b1000;
+function toggleFeature(feature) {
+    settings ^= feature;
+}
+toggleFeature(FEATURE_A);
+toggleFeature(FEATURE_C);
+console.log(settings.toString(2));
+console.log((settings & FEATURE_A) !== 0);
+console.log((settings & FEATURE_B) !== 0);
+console.log((settings & FEATURE_C) !== 0);
+console.log((settings & FEATURE_D) !== 0);
+toggleFeature(FEATURE_A);
+console.log(settings.toString(2));
+
+
+let state = 0b0101; // Initial state: 5 in decimal
+let toggleMask = 0b0010; // Mask to toggle the 2nd bit
+
+state = state ^ toggleMask;
+console.log(state.toString(2)); // "0111" (decimal: 7)
+
+state = state ^ toggleMask; // Toggle again
+console.log(state.toString(2)); // "0101" (back to decimal: 5)
