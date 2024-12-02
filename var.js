@@ -4627,3 +4627,16 @@ console.log(yyy);
 
 const zz = 15;
 console.log(zz);
+
+
+// Undeﬁned
+// The variable is declared but not assigned a value.
+let ab;
+console.log(ab);
+
+var bc;
+console.log(typeof bc === "undefined"); 
+console.log(typeof variableDoesNotExist === "undefined");
+
+console.log(typeof undeclaredVariable);
+console.log(typeof undeclaredVariable === "undefined");
