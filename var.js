@@ -5118,3 +5118,51 @@ const tags = new Set(['javascript', 'webdev', 'programming']);
 for ( let tag of tags ) {
     console.log("Tags:", tags)
 }
+
+
+// 4. Maps
+// The for...of loop iterates over key-value pairs in Map objects. 
+// You can use destructuring to extract keys and values.
+const map = new Map([['a', 1], ['b', 2], ['c', 3]]);
+for ( let [key, value] of map ) {
+    console.log("Key:", key, "Value:", value);
+}
+const map1 = new Map()
+  .set('abc', 1)
+  .set('def', 2);
+
+for (const iteration of map1) {
+  console.log(iteration); // Logs ['abc', 1] and then ['def', 2]
+}
+for (const [key, value] of map1) {
+  console.log(key, value); // Logs 'abc' and then 'def'
+}
+for (const key of map1.keys()) {
+  console.log(key); // Logs 'abc' and then 'def'
+}
+const map2 = new Map()
+  .set('abc', 1)
+  .set('def', 2);
+
+for (const [key, value] of map2) {
+  console.log(`${key} is mapped to ${value}`);
+}
+
+// Real-World Example:
+// Iterate over key-value pairs in a product catalog:
+const catalog = new Map([
+    ['T-shirt', 19.99],
+    ['Jeans', 49.99],
+    ['Sneakers', 79.99]
+]);
+for (let [product, price] of catalog) {
+    console.log("Product:", product, "Price:", price);
+}
+// Iterate over user settings stored in a map:
+const userSettings = new Map()
+  .set('theme', 'dark')
+  .set('fontSize', '16px');
+
+for (const [key, value] of userSettings) {
+  console.log(`${key}: ${value}`);
+}
