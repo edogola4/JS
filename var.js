@@ -5084,3 +5084,22 @@ var strings = ["Shantel", "Daisy", "Atieno"];
 for (let string of strings) {
     console.log("Girlfriend: " + string);
 }
+
+
+// 2. Strings
+// Strings are treated as sequences of Unicode characters in for...of loops.
+var string = "abcdef";
+for ( let chr of string ){
+    console.log(chr);
+}
+var strings = "abc";
+for (let chr of string) {
+  console.log(chr);
+}
+
+// Real-World Example:
+// Display each character in a username:
+const username = "JaTech";
+for ( let char of username ) {
+    console.log("Character: " + char)
+}
