@@ -5166,3 +5166,30 @@ const userSettings = new Map()
 for (const [key, value] of userSettings) {
   console.log(`${key}: ${value}`);
 }
+
+
+
+// 5. Plain Objects
+/*The for...of loop does not work directly on plain objects. However, you can iterate over an object's keys using Object.keys().*/
+const obj100 = { a: 1, b: 2, c: 3 };
+for (let key of Object.keys(obj100)) {
+    console.log("Key:", key, "Value:", obj100[key]);
+}
+const someObject = { name: 'Shantel', age: 25 };
+for (let key of Object.keys(someObject)) {
+  console.log(`${key}: ${someObject[key]}`);
+}
+// Real-World Example:
+// Display a user's profile details:
+const userProfile = {
+    name: "Shantel",
+    age: 25,
+    city: "Nairobi"
+};
+for (let key of Object.keys(userProfile)) {
+    console.log("Key:", key, "Value:", userProfile[key]);
+}
+const userProfile1 = { username: 'johnDoe', email: 'john@example.com' };
+for (let key of Object.keys(userProfile1)) {
+  console.log(`${key}: ${userProfile1[key]}`);
+}
