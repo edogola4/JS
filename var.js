@@ -5015,3 +5015,24 @@ console.log("Countdown:");
 for (var seconds = 10; seconds >= 0; seconds -= 2) {
     console.log("Start!")
 }
+
+// Summary of Variations
+/**
+ * 1. Standard "for" loops: Used for iterating over a range of numbers or indices.
+ * 2. Multiple Declarations: Allows caching the length of an array or performing multiple declarations.
+ * 3. Changing the Increment: Allows customization of the increment step size.
+ * 4. Decremented Loop: Allows iterating backward by decrementing the counter.
+ * 5. Real-World Example: Demonstrates common use cases in real-world scenarios.
+ */
+/**
+ * 
+Variation	                    Purpose	                                     Example
+Standard Usage	          Iterating through indices or numbers	                 for (var i = 0; i < 10; i++)
+
+Multiple Declarations	  Cache values or manage multiple variables in the loop	 for (var i = 0, len = arr.length; i < len; i++)
+
+Changing the Increment	  Skip steps or create patterns in iteration	             for (var i = 0; i < 10; i += 2)
+
+Decremented Loop	      Iterate in reverse order	                             for (var i = 10; i >= 0; i--)
+ */
+
