@@ -5036,3 +5036,51 @@ Changing the Increment	  Skip steps or create patterns in iteration	            
 Decremented Loop	      Iterate in reverse order	                             for (var i = 10; i >= 0; i--)
  */
 
+
+
+
+/// "for ... of" loop
+// Overview of for...of Loop
+// The for...of loop provides an elegant and concise syntax for iterating over iterable objects, such as arrays, strings, sets, maps, and other collections.
+
+//Advantages of for...of
+/* 
+1. Conciseness: Simplifies the syntax for iterating through array elements or other iterables.
+2. Safety: Avoids issues associated with for...in (e.g., iterating over prototype properties).
+3. Flexibility: Unlike .forEach(), supports break, continue, and return. 
+*/
+
+// Usage Examples
+//1. Arrays
+// The for...of loop iterates over array elements directly, without requiring an index.
+const iterable = [10, 20, 30];
+for (let value of iterable) {
+    console.log(value);
+}
+// Real-World Example:
+// Iterating over an array of colors for a color picker:
+const colors = ["red", "green", "blue"];
+for (let color of colors) {
+    console.log("Color: " + color); 
+}
+// Iterating over an array of my girlfriends:
+const mygirlfriend = ["Shantel", "Daisy", "Atieno"]; 
+for (let mygirlfriends of mygirlfriend) {
+    console.log("Mygirlfriend: " + mygirlfriend);
+
+}
+// Iterating over an array of numbers:
+var numbers = [1, 2, 3, 4, 5];
+for (let number of numbers) {
+    console.log("Number: " + number);
+}
+// Iterating over an array of objects:
+var objects = [{ name: "Shantel" }, { name: "Daisy" }, { name: "Atieno" }];
+for (let object of objects) {
+    console.log("Girlfriend: " + object.name); 
+}
+// Iterating over an array of strings:
+var strings = ["Shantel", "Daisy", "Atieno"];
+for (let string of strings) {
+    console.log("Girlfriend: " + string);
+}
