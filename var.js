@@ -4889,8 +4889,41 @@ for (var i = 0; i < 100; i++) {
 
 // Real-World Example
 // Display a list of product IDs on an e-commerce website:
-var productIds = [ 101, 102, 103, 104 ];
-for ( var i = 0; i < productIds.length; i++ ) {
+var productIds = [101, 102, 103, 104];
+for (var i = 0; i < productIds.length; i++) {
     //console.log(productIds[i]);
     console.log("Product ID: " + productIds[i]);
+}
+
+
+// 2. Multiple Declarations
+// Description
+/**
+ * A for loop can also be used to cache the length of an array or perform multiple declarations in its initialization section. 
+ * This can improve performance when dealing with large arrays.
+ */
+var array = [1, 2, 3, 4, 5];
+var sum = 0;
+for (var i = 0, len = array.length; i < len; i++) {
+    sum += array[i];
+}
+console.log(sum);
+
+var vowels = [a, e, i];
+for (var i = 0; i < vowels.length; i++) {
+    console.log(vowels[i]);
+}
+
+// Real-World Example
+// Iterate through navbar items on a website:
+var navBar = ["Home", "About", "Contact"];
+for (var i = 0, len = navBar.length; i < len; i++) {
+    console.log("Navbar: " + navBar[i]);
+
+}
+
+// Iterate through menu items on a website:
+var menuItems = ['Home', 'About', 'Services', 'Contact'];
+for (var i = 0; i < menuItems.length; i++) {
+    console.log("Menu Item: " + menuItems[i]);
 }
