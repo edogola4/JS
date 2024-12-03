@@ -4968,4 +4968,50 @@ var leaderboard = ["Shantel", "Bob", "Charlie", "David", "Daisy", "Frank"];
 for (var i = 0; i < leaderboard.length; i += 4) {
     console.log("Leaderboard: " + leaderboard[i]);
 }
-// 
+
+
+// 4. Decremented Loop
+// Description
+// You can iterate backward by initializing the counter with a high value and decrementing it with each iteration.
+for (var i = 100; i > 0; i--) {
+    console.log(i);
+}
+for (var i = 100; i > 0; i -= 2) {
+    console.log(i);
+}
+for (var i = 100; i > 0; i -= 3) {
+    console.log(i);
+}
+for (var i = 100; i > 0; i -= 4) {
+    console.log(i);
+}
+for (var i = 100; i > 0; i -= 5) {
+    console.log(i);
+}
+// Real-World Example
+// Countdown timer for a game:
+
+console.log("Starting countdown...");
+for (var i = 10; i > 0; i--) {
+    console.log(i);
+}
+
+console.log("Game over!");
+console.log("Starting countdown...");
+
+for (var i = 10; i > 0; i -= 2) {
+    console.log(i);
+}
+console.log("Game over!");
+
+console.log("Countdown:");
+for (var seconds = 10; seconds >= 0; seconds--) {
+  console.log(seconds);
+}
+console.log("Go!");
+
+
+console.log("Countdown:");
+for (var seconds = 10; seconds >= 0; seconds -= 2) {
+    console.log("Start!")
+}
