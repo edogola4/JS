@@ -4868,3 +4868,29 @@ let y5 = 3;
 x5 /= y5;
 console.log(x5);
 
+
+
+/// Loops
+// Standard "for" loops
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
+// Description
+/*A for loop is commonly used for iterating over a range of numbers or indices. It requires three parts:
+
+1. Initialization: Starts the loop counter (e.g., var i = 0).
+2. Condition: Runs the loop while the condition is true (e.g., i < 100).
+3. Increment/Decrement: Updates the loop counter after each iteration (e.g., i++).*/
+
+for (var i = 0; i < 100; i++) {
+    console.log(i);
+}
+
+// Real-World Example
+// Display a list of product IDs on an e-commerce website:
+var productIds = [ 101, 102, 103, 104 ];
+for ( var i = 0; i < productIds.length; i++ ) {
+    //console.log(productIds[i]);
+    console.log("Product ID: " + productIds[i]);
+}
