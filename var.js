@@ -4927,3 +4927,45 @@ var menuItems = ['Home', 'About', 'Services', 'Contact'];
 for (var i = 0; i < menuItems.length; i++) {
     console.log("Menu Item: " + menuItems[i]);
 }
+
+
+// 3. Changing the Increment
+// Description
+/*You can customize the increment by changing the step size.
+Instead of increasing by 1 (i++), you can increment by 2 (i += 2), or any other value.
+For example, you can increase by 2 (i += 2) or any other value.*/
+
+for (var i = 0; i < 100; i += 2) {
+    console.log(i);
+} 
+for (var i = 0; i < 100; i += 3) {
+    console.log(i);
+}
+
+for (var i = 0; i < 100; i += 4) {
+    console.log(i);
+}
+for (var i = 0; i < 100; i += 5) {
+    console.log(i);
+}
+for (var i = 0; i < 100; i += 6) {
+    console.log(i);
+}
+
+//Real-World Example
+// Log every second entry in a leaderboard:
+var leaderboard = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank"];
+for (var i = 0; i < leaderboard.length; i += 2) {
+    console.log("Leaderboard: " + leaderboard[i]);
+}
+// Log every third entry in a leaderboard:
+var leaderboard = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank"];
+for (var i = 0; i < leaderboard.length; i += 3) {
+    console.log("Leaderboard: " + leaderboard[i]);
+}
+// Log my girlfriends  in a leaderboard:
+var leaderboard = ["Shantel", "Bob", "Charlie", "David", "Daisy", "Frank"];
+for (var i = 0; i < leaderboard.length; i += 4) {
+    console.log("Leaderboard: " + leaderboard[i]);
+}
+// 
