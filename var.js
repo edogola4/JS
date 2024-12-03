@@ -5103,3 +5103,18 @@ const username = "JaTech";
 for ( let char of username ) {
     console.log("Character: " + char)
 }
+
+
+// 3. Sets
+// The for...of loop works seamlessly with Set objects, automatically handling duplicate values.
+const names1 = ['bob', 'alejandro', 'zandra', 'anna', 'bob'];
+const uniqueNames = new Set(names1);
+for ( let name of uniqueNames ){
+    console.log("Name: " + name);
+}
+// Real-World Example:
+// Iterate over unique tags in a blog post:
+const tags = new Set(['javascript', 'webdev', 'programming']);
+for ( let tag of tags ) {
+    console.log("Tags:", tags)
+}
