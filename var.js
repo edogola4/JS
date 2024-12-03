@@ -4852,20 +4852,19 @@ let x2 = 5;
 let y2 = 3;
 x2 += y2;
 console.log(x2);
-let x3 = 5;
 
+let x3 = 5;
 let y3 = 3;
 x3 -= y3;
 console.log(x3);
+
 let x4 = 5;
 let y4 = 3;
 x4 *= y4;
-
 console.log(x4);
+
 let x5 = 5;
 let y5 = 3;
-
 x5 /= y5;
-
 console.log(x5);
 
