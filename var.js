@@ -5193,3 +5193,18 @@ const userProfile1 = { username: 'johnDoe', email: 'john@example.com' };
 for (let key of Object.keys(userProfile1)) {
   console.log(`${key}: ${userProfile1[key]}`);
 }
+
+
+// Summary of for...of Support
+/**
+ *   Iterable	                 Behavior
+    Array	                     Iterates through each element directly.
+
+    string	                     Treats the string as a sequence of characters.
+
+    Set	                         Iterates over unique values, ignoring duplicates.
+
+    Map                          Iterates over key-value pairs (with optional destructuring).
+
+    Object	                      Not supported directly; use Object.keys() or Object.entries() instead.
+ */
