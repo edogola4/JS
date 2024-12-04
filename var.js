@@ -5377,3 +5377,94 @@ while (seconds > 0) {
     seconds--;
 }
 console.log("Go!");
+
+
+
+// continue in Loops
+// The continue statement skips the remaining code in the current iteration and jumps to the next iteration.
+
+// Example 1: continue in for Loop
+for (let i = 0; i < 5; i++) {
+    if (i === 2) {
+        continue;
+    }
+    console.log(i);
+}
+// Example 2: continue in while Loop
+var i = 0;
+while (i < 5) {
+    i++;
+    if (i === 3) {
+        continue;
+    }
+    console.log(i);
+}
+// Example 3: continue in do-while Loop
+var i = 0;
+do {
+    i++;
+    if (i === 3) {
+        continue;
+    }
+    console.log(i);
+} while (i < 5);
+// Example 4: continue in for...of Loop
+var numbers = [1, 2, 3, 4, 5];
+for (let number of numbers) {
+    if (number === 3) {
+        continue;
+    }
+    console.log(number);
+}
+// Example 5: continue in for...in Loop
+var object = { a: 1, b: 2, c: 3 };
+for (let key in object) {
+    if (key === 'b') {
+        continue;
+    }
+    console.log(`${key}: ${object[key]}`);
+}
+// Example 6: continue in while Loop
+var i = 0;
+
+while (i < 5) {
+    i++;
+    if (i === 3) {
+        continue;
+    }
+    console.log(i);
+}
+// Example 7: continue in do-while Loop
+var i = 0;
+do {
+    i++;
+    if (i === 3) {
+        continue;
+    }
+    console.log(i);
+} while (i < 5);
+// Example 8: continue in for...of Loop
+var numbers = [1, 2, 3, 4, 5];
+for (let number of numbers) {
+    if (number === 3) {
+        continue;
+    }
+    console.log(number);
+}
+// Example 9: continue in for...in Loop
+var object = { a: 1, b: 2, c: 3 };
+for (let key in object) {
+    if (key === 'b') {
+        continue;
+    }
+    console.log(`${key}: ${object[key]}`);
+}
+// Example 10: continue in while Loop
+var i = 0;
+while (i < 5) {
+    i++;
+    if (i === 3) {
+        continue;
+    }
+    console.log(i);
+}
