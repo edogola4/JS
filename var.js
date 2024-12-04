@@ -5242,7 +5242,7 @@ var girlfriends = {
     d: "Daisy",
     s: "Shantel",
 };
-Object.defineProperty(girlfriends, 'a', {enumerable: false});
+Object.defineProperty(girlfriends, 'a', { enumerable: false });
 
 for (let key in girlfriends) {
     if (girlfriends.hasOwnProperty(key)) {
@@ -5261,7 +5261,7 @@ const preferences = {
 
 };
 
-for ( let key in preferences){
+for (let key in preferences) {
     console.log(`preferences.${key}, ${preferences[key]}`);
 }
 
@@ -5294,80 +5294,80 @@ while (i < 10) {
 // Standard While Loop
 var i = 0;
 while (i < 5) {
-  console.log(i);
-  i++;
+    console.log(i);
+    i++;
 }
 // While Loop with a Break
 var i = 0;
 while (i < 10) {
-  if (i === 5) break;
-  console.log(i);
-  i++;
+    if (i === 5) break;
+    console.log(i);
+    i++;
 }
 // While Loop with a Continue
 var i = 0;
 while (i < 10) {
-  i++;
-  if (i === 5) continue;
-  console.log(i);
+    i++;
+    if (i === 5) continue;
+    console.log(i);
 }
 // While Loop with a Nested Loop
 var i = 0;
 while (i < 5) {
-  let j = 0;
-  while (j < 5) {
-    console.log(`(${i}, ${j})`);
-    j++;
-  }
-  i++;
+    let j = 0;
+    while (j < 5) {
+        console.log(`(${i}, ${j})`);
+        j++;
+    }
+    i++;
 }
 // While Loop with a Do-While Loop
 var i = 0;
 do {
-  console.log(i);
-  i++;
+    console.log(i);
+    i++;
 } while (i < 5);
 // While Loop with a Switch Statement
 var i = 0;
 while (i < 5) {
-  switch (i) {
-    case 0:
-      console.log("Zero");
-      break;
-    case 1:
-      console.log("One");
-      break;
-    case 2:
-      console.log("Two");
-      break;
-    default:
-      console.log("Other");
-  }
-  i++;
+    switch (i) {
+        case 0:
+            console.log("Zero");
+            break;
+        case 1:
+            console.log("One");
+            break;
+        case 2:
+            console.log("Two");
+            break;
+        default:
+            console.log("Other");
+    }
+    i++;
 }
 // Decremented Loop
 var i = 5;
 while (i > 0) {
-  console.log(i);
-  i--; // Equivalent to i = i - 1
+    console.log(i);
+    i--; // Equivalent to i = i - 1
 }
 // While Loop with a Function Call
 function decrement(x) {
-  return x - 1;
+    return x - 1;
 }
 var i = 5;
 while (i > 0) {
-  console.log(i);
-  i = decrement(i);
+    console.log(i);
+    i = decrement(i);
 }
 // While Loop with a Function Call
 function decrement(x) {
-  return x - 1;
+    return x - 1;
 }
 var i = 5;
 while (i > 0) {
-  console.log(i);
-  i = decrement(i);
+    console.log(i);
+    i = decrement(i);
 }
 // Real-World Example:
 // Countdown timer for a game:
@@ -5467,4 +5467,124 @@ while (i < 5) {
         continue;
     }
     console.log(i);
+}
+
+
+/// Break Specific Nested Loops
+// The break statement can be used to exit nested loops.
+// Example 1: Break in Nested for Loop
+for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+        if (i === 1 && j === 1) {
+            break;
+        }
+        console.log(`i = ${i}, j = ${j}`);
+    }
+}
+// Example 2: Break in Nested while Loop
+var i = 0;
+while (i < 3) {
+    var j = 0;
+    while (j < 3) {
+        if (i === 1 && j === 1) {
+            break;
+        }
+        console.log(`i = ${i}, j = ${j}`);
+        j++;
+    }
+    i++;
+}
+// Example 3: Break in Nested do-while Loop
+var i = 0;
+do {
+    var j = 0;
+    do {
+        if (i === 1 && j === 1) {
+            break;
+        }
+        console.log(`i = ${i}, j = ${j}`);
+        j++;
+    } while (j < 3);
+    i++;
+} while (i < 3);
+
+// Example 4: Break in Nested for...of Loop
+var numbers = [[1, 2], [3, 4], [5, 6]];
+for (let pair of numbers) {
+    for (let number of pair) {
+        if (number === 4) {
+            break;
+        }
+        console.log(number);
+    }
+}
+// Example 5: Break in Nested for...in Loop
+var object = { a: [1, 2], b: [3, 4], c: [5, 6] };
+for (let key in object) {
+    for (let value of object[key]) {
+        if (value === 4) {
+            break;
+        }
+        console.log(`${key}: ${value}`);
+    }
+}
+
+// Example 6: Break in Nested while Loop
+var i = 0;
+while (i < 3) {
+    var j = 0;
+    while (j < 3) {
+        if (i === 1 && j === 1) {
+            break;
+        }
+        console.log(`i = ${i}, j = ${j}`);
+        j++;
+    }
+    i++;
+}
+// Example 7: Break in Nested do-while Loop
+var i = 0;
+do {
+    var j = 0;
+    do {
+        if (i === 1 && j === 1) {
+            break;
+        }
+        console.log(`i = ${i}, j = ${j}`);
+        j++;
+    } while (j < 3);
+    i++;
+} while (i < 3);
+// Example 8: Break in Nested for...of Loop
+var numbers = [[1, 2], [3, 4], [5, 6]];
+for (let pair of numbers) {
+    for (let number of pair) {
+        if (number === 4) {
+            break;
+        }
+        console.log(number);
+    }
+}
+// Example 9: Break in Nested for...in Loop
+var object = { a: [1, 2], b: [3, 4], c: [5, 6] };
+for (let key in object) {
+    for (let value of object[key]) {
+        if (value === 4) {
+            break;
+        }
+        console.log(`${key}: ${value}`);
+    }
+}
+// Example 10: Break in Nested while Loop
+var i = 0;
+while (i < 3) {
+    var j = 0;
+    while (j < 3) {
+        if (i === 1 && j === 1) {
+            break;
+        }
+        console.log(`i = ${i}, j = ${j}`);
+        j++;
+    }
+    i++;
 }
