@@ -4937,7 +4937,7 @@ For example, you can increase by 2 (i += 2) or any other value.*/
 
 for (var i = 0; i < 100; i += 2) {
     console.log(i);
-} 
+}
 for (var i = 0; i < 100; i += 3) {
     console.log(i);
 }
@@ -5006,7 +5006,7 @@ console.log("Game over!");
 
 console.log("Countdown:");
 for (var seconds = 10; seconds >= 0; seconds--) {
-  console.log(seconds);
+    console.log(seconds);
 }
 console.log("Go!");
 
@@ -5061,10 +5061,10 @@ for (let value of iterable) {
 // Iterating over an array of colors for a color picker:
 const colors = ["red", "green", "blue"];
 for (let color of colors) {
-    console.log("Color: " + color); 
+    console.log("Color: " + color);
 }
 // Iterating over an array of my girlfriends:
-const mygirlfriend = ["Shantel", "Daisy", "Atieno"]; 
+const mygirlfriend = ["Shantel", "Daisy", "Atieno"];
 for (let mygirlfriends of mygirlfriend) {
     console.log("Mygirlfriend: " + mygirlfriend);
 
@@ -5077,7 +5077,7 @@ for (let number of numbers) {
 // Iterating over an array of objects:
 var objects = [{ name: "Shantel" }, { name: "Daisy" }, { name: "Atieno" }];
 for (let object of objects) {
-    console.log("Girlfriend: " + object.name); 
+    console.log("Girlfriend: " + object.name);
 }
 // Iterating over an array of strings:
 var strings = ["Shantel", "Daisy", "Atieno"];
@@ -5089,18 +5089,18 @@ for (let string of strings) {
 // 2. Strings
 // Strings are treated as sequences of Unicode characters in for...of loops.
 var string = "abcdef";
-for ( let chr of string ){
+for (let chr of string) {
     console.log(chr);
 }
 var strings = "abc";
 for (let chr of string) {
-  console.log(chr);
+    console.log(chr);
 }
 
 // Real-World Example:
 // Display each character in a username:
 const username = "JaTech";
-for ( let char of username ) {
+for (let char of username) {
     console.log("Character: " + char)
 }
 
@@ -5109,13 +5109,13 @@ for ( let char of username ) {
 // The for...of loop works seamlessly with Set objects, automatically handling duplicate values.
 const names1 = ['bob', 'alejandro', 'zandra', 'anna', 'bob'];
 const uniqueNames = new Set(names1);
-for ( let name of uniqueNames ){
+for (let name of uniqueNames) {
     console.log("Name: " + name);
 }
 // Real-World Example:
 // Iterate over unique tags in a blog post:
 const tags = new Set(['javascript', 'webdev', 'programming']);
-for ( let tag of tags ) {
+for (let tag of tags) {
     console.log("Tags:", tags)
 }
 
@@ -5124,28 +5124,28 @@ for ( let tag of tags ) {
 // The for...of loop iterates over key-value pairs in Map objects. 
 // You can use destructuring to extract keys and values.
 const map = new Map([['a', 1], ['b', 2], ['c', 3]]);
-for ( let [key, value] of map ) {
+for (let [key, value] of map) {
     console.log("Key:", key, "Value:", value);
 }
 const map1 = new Map()
-  .set('abc', 1)
-  .set('def', 2);
+    .set('abc', 1)
+    .set('def', 2);
 
 for (const iteration of map1) {
-  console.log(iteration); // Logs ['abc', 1] and then ['def', 2]
+    console.log(iteration); // Logs ['abc', 1] and then ['def', 2]
 }
 for (const [key, value] of map1) {
-  console.log(key, value); // Logs 'abc' and then 'def'
+    console.log(key, value); // Logs 'abc' and then 'def'
 }
 for (const key of map1.keys()) {
-  console.log(key); // Logs 'abc' and then 'def'
+    console.log(key); // Logs 'abc' and then 'def'
 }
 const map2 = new Map()
-  .set('abc', 1)
-  .set('def', 2);
+    .set('abc', 1)
+    .set('def', 2);
 
 for (const [key, value] of map2) {
-  console.log(`${key} is mapped to ${value}`);
+    console.log(`${key} is mapped to ${value}`);
 }
 
 // Real-World Example:
@@ -5160,11 +5160,11 @@ for (let [product, price] of catalog) {
 }
 // Iterate over user settings stored in a map:
 const userSettings = new Map()
-  .set('theme', 'dark')
-  .set('fontSize', '16px');
+    .set('theme', 'dark')
+    .set('fontSize', '16px');
 
 for (const [key, value] of userSettings) {
-  console.log(`${key}: ${value}`);
+    console.log(`${key}: ${value}`);
 }
 
 
@@ -5177,7 +5177,7 @@ for (let key of Object.keys(obj100)) {
 }
 const someObject = { name: 'Shantel', age: 25 };
 for (let key of Object.keys(someObject)) {
-  console.log(`${key}: ${someObject[key]}`);
+    console.log(`${key}: ${someObject[key]}`);
 }
 // Real-World Example:
 // Display a user's profile details:
@@ -5191,7 +5191,7 @@ for (let key of Object.keys(userProfile)) {
 }
 const userProfile1 = { username: 'johnDoe', email: 'john@example.com' };
 for (let key of Object.keys(userProfile1)) {
-  console.log(`${key}: ${userProfile1[key]}`);
+    console.log(`${key}: ${userProfile1[key]}`);
 }
 
 
@@ -5208,3 +5208,70 @@ for (let key of Object.keys(userProfile1)) {
 
     Object	                      Not supported directly; use Object.keys() or Object.entries() instead.
  */
+
+
+
+// for...in Loop
+/**
+ * 
+ * The for...in loop iterates over enumerable properties of an object.
+ *  It is primarily intended for objects rather than arrays, as it can include properties from the prototype chain.
+
+Cautions:
+1. Prototype Properties: Includes properties from the prototype chain unless filtered with hasOwnProperty().
+2. Not for Arrays: May behave unexpectedly with arrays, as it iterates over keys (indexes), not values.
+
+ */
+var object = {
+    a: "foo",
+    b: "bar",
+    c: "baz",
+};
+
+// Define a non-enumerable property
+Object.defineProperty(object, 'a', { enumerable: false });
+
+for (let key in object) {
+    if (object.hasOwnProperty(key)) {
+        console.log(`object.${key}, ${object[key]}`);
+    }
+}
+
+var girlfriends = {
+    a: "Atieno",
+    d: "Daisy",
+    s: "Shantel",
+};
+Object.defineProperty(girlfriends, 'a', {enumerable: false});
+
+for (let key in girlfriends) {
+    if (girlfriends.hasOwnProperty(key)) {
+        console.log(`girlfriends.${key}, ${girlfriends[key]}`);
+    }
+}
+
+// Real-World Example: Filtering Object Properties
+// Iterating over an object of user preferences:
+const preferences = {
+    theme: "dark",
+    fontsize: "16px",
+    notification: "true",
+    privateMode: false,
+    language: "English"
+
+};
+
+for ( let key in preferences){
+    console.log(`preferences.${key}, ${preferences[key]}`);
+}
+
+for (let key in preferences) {
+    if (preferences.hasOwnProperty(key)) {
+        console.log(`preferences.${key}, ${preferences[key]}`);
+    }
+}
+for (let key in preferences) {
+    if (preferences.hasOwnProperty(key)) {
+        console.log(`preferences.${key}, ${preferences[key]}`);
+    }
+}
