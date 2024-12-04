@@ -5588,3 +5588,19 @@ while (i < 3) {
     }
     i++;
 }
+
+// Summary
+
+/**
+ * 
+Loop Type	                                 Use Case	                   Key Notes
+for...in	                        Iterating object keys	               Avoid using on arrays. Check with hasOwnProperty() to avoid prototype.
+
+while	                            Execute until condition is false	   Can run zero or more times. 
+
+do...while	                        Execute block at least once	           Runs block before condition check.
+
+continue	                        Skip current iteration	               Useful in both for and while loops.
+
+break with Labels	                Exit specific nested loops	           Labels improve control over nested flow.
+ */
