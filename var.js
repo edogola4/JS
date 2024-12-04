@@ -5275,3 +5275,105 @@ for (let key in preferences) {
         console.log(`preferences.${key}, ${preferences[key]}`);
     }
 }
+
+
+// while Loops
+// Overview of while Loops
+// The while loop executes a block of code as long as a specified condition is true.
+// It is useful when the number of iterations is not known in advance.
+// Syntax:
+/*while (condition) {
+    // code block to be executed
+}*/
+// Example:
+var i = 0;
+while (i < 10) {
+    console.log(i);
+    i++;
+}
+// Standard While Loop
+var i = 0;
+while (i < 5) {
+  console.log(i);
+  i++;
+}
+// While Loop with a Break
+var i = 0;
+while (i < 10) {
+  if (i === 5) break;
+  console.log(i);
+  i++;
+}
+// While Loop with a Continue
+var i = 0;
+while (i < 10) {
+  i++;
+  if (i === 5) continue;
+  console.log(i);
+}
+// While Loop with a Nested Loop
+var i = 0;
+while (i < 5) {
+  let j = 0;
+  while (j < 5) {
+    console.log(`(${i}, ${j})`);
+    j++;
+  }
+  i++;
+}
+// While Loop with a Do-While Loop
+var i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 5);
+// While Loop with a Switch Statement
+var i = 0;
+while (i < 5) {
+  switch (i) {
+    case 0:
+      console.log("Zero");
+      break;
+    case 1:
+      console.log("One");
+      break;
+    case 2:
+      console.log("Two");
+      break;
+    default:
+      console.log("Other");
+  }
+  i++;
+}
+// Decremented Loop
+var i = 5;
+while (i > 0) {
+  console.log(i);
+  i--; // Equivalent to i = i - 1
+}
+// While Loop with a Function Call
+function decrement(x) {
+  return x - 1;
+}
+var i = 5;
+while (i > 0) {
+  console.log(i);
+  i = decrement(i);
+}
+// While Loop with a Function Call
+function decrement(x) {
+  return x - 1;
+}
+var i = 5;
+while (i > 0) {
+  console.log(i);
+  i = decrement(i);
+}
+// Real-World Example:
+// Countdown timer for a game:
+var seconds = 10;
+while (seconds > 0) {
+    console.log(seconds);
+    seconds--;
+}
+console.log("Go!");
