@@ -5656,9 +5656,9 @@ function exampleScope() {
     console.log(innerVar); // Accessible here
 }
 
- // console.log(innerVar); // Error: innerVar is not defined
+// console.log(innerVar); // Error: innerVar is not defined
 
- function firstFunction() {
+function firstFunction() {
     var message = "Hello from the first function!";
     console.log(message);
 }
@@ -5840,7 +5840,7 @@ function handleEvent(element) {
 
 // 3. API Request Configuration
 // Currying helps in creating pre-configured API request functions:
-const fetchApi = baseUrl => endpoint => params => 
+const fetchApi = baseUrl => endpoint => params =>
     fetch(`${baseUrl}/${endpoint}?${new URLSearchParams(params)}`)
         .then(response => response.json());
 
@@ -5870,3 +5870,58 @@ setWidth("width")("100%");
 setWidth("height")("100vh");
 setWidth("background-color")("black");
 setWidth("color")("white");*/
+
+
+// Benefits of Currying
+/**
+ * Benefits of Currying
+Reusability: Create specialized functions from generalized ones.
+Functional Composition: Easier to compose functions and build pipelines.
+Partial Application: Fix some arguments while leaving others dynamic.
+Improved Readability: Break down complex functions into smaller, simpler ones.
+Improved Debugging: Easier to trace errors in nested function calls.
+
+
+// Limitations of Currying
+Performance: Currying may lead to performance overhead for deeply nested calls.
+Readability: Excessive currying can make code less readable for developers unfamiliar with the concept.
+Error Handling: Debugging nested functions can sometimes be more complex.
+
+
+ */
+
+// Currying vs Partial Application
+// Currying and partial application are related but not identical:
+/**
+ *     Aspect	            Currying	                                              Partial Application
+ *
+     Definition	           Converts a function into a sequence of unary functions.	  Creates a new function by fixing some arguments of the original function.
+
+     Arguments	           Takes one argument at a time.	                          Takes multiple arguments at once.
+
+     Return Value	       Returns a new function for each argument.	              Returns a new function that is already applied some arguments.
+
+     Example	           f(a)(b)(c)	                                               f(a, b)(c)
+ */
+
+// Practical Currying Exercise
+// Create a function that filters an array based on a condition using currying:
+function filterArray(arr, condition) {
+    return arr.filter(condition);
+}
+const isEven2 = num => num % 2 === 0;
+
+const isOdd2 = num => num % 2 !== 0;
+
+const numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(filterArray(numbers2, isEven2));
+console.log(filterArray(numbers2, isOdd2));
+
+
+const filterBy = condition => array => array.filter(condition);
+
+// Usage
+const isEven3 = num => num % 2 === 0;
+const filterEvens = filterBy(isEven3);
+
+console.log(filterEvens([1, 2, 3, 4, 5])); // Output: [2, 4]
