@@ -6085,3 +6085,11 @@ myModule.publicFunction();
         console.log("Async code executed.");
     }, 1000);
 })();
+// 6. Event Listeners
+// IIFE can be used to attach event listeners to elements:
+(function () {
+    const button = document.getElementById("myButton");
+    button.addEventListener("click", function () {
+        console.log("Button clicked!");
+    });
+})();
