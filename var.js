@@ -6049,3 +6049,19 @@ var myModule = (function () {
     };
 })();
 myModule.publicFunction();
+
+
+// 3. Polyfill or Shim
+// IIFE can be used to provide polyfills for older browsers:
+(function () {
+    if (!Array.prototype.forEach) {
+        Array.prototype.forEach = function (callback) {
+            for (var i = 0; i < this.length; i++) {
+                callback(this[i], i, this);
+            }
+        };
+    }
+})();
+[1, 2, 3].forEach(function (item) {
+    console.log(item);
+});
