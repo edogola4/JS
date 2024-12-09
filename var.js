@@ -5608,9 +5608,9 @@ break with Labels	                Exit specific nested loops	           Labels i
 
 
 
- // FUNCTIONS
- // fUNCTIONS in JavaScript provide organized and reusable code blocks for performing specific tasks. 
- // They are essential for breaking down complex problems into smaller, manageable pieces, and for improving code readability and maintainability.
+// FUNCTIONS
+// fUNCTIONS in JavaScript provide organized and reusable code blocks for performing specific tasks. 
+// They are essential for breaking down complex problems into smaller, manageable pieces, and for improving code readability and maintainability.
 
 // Function Declaration
 // A function declaration defines a named function that can be called later in the code.
@@ -5632,3 +5632,118 @@ console.log(add(8, 9));
 
 
 // Function Scoping
+// Variables declared inside a function are only accessible within that function.
+function greet() {
+    var message = "Hello, Daisy!";
+    console.log(message);
+}
+greet();
+
+function foo2() {
+    var message = "Hello, Shantel!";
+    console.log(message);
+}
+foo2()
+
+function greet() {
+    var message = "hello, Brandon";
+    console.log(message);
+}
+greet()
+
+function exampleScope() {
+    var innerVar = "I am scoped to this function.";
+    console.log(innerVar); // Accessible here
+}
+
+ // console.log(innerVar); // Error: innerVar is not defined
+
+ function firstFunction() {
+    var message = "Hello from the first function!";
+    console.log(message);
+}
+
+function secondFunction() {
+    var message = "Hello from the second function!";
+    console.log(message);
+}
+
+firstFunction();  // Output: Hello from the first function!
+secondFunction(); // Output: Hello from the second function!
+
+// Nested Functions
+// A function inside another function has access to variables from the outer function (closure).
+function outerFunction() {
+    var outerMessage = "I am in the outer function.";
+
+    function innerFunction() {
+        console.log(outerMessage); // Accessible here
+    }
+
+    innerFunction();
+}
+
+outerFunction(); // Output: I am in the outer function.
+
+// Real-World Example: 
+// 1. Password Validation
+function validatePassword(password) {
+    var minLength = 8; // Scoped to this function
+    if (password.length >= minLength) {
+        console.log("Password is valid.");
+    } else {
+        console.log("Password must be at least " + minLength + " characters long.");
+    }
+}
+
+// minLength is not accessible here
+validatePassword("mypassword123"); // Output: Password is valid.
+validatePassword("short");         // Output: Password must be at least 8 characters long.
+validatePassword("password123");
+validatePassword("pass");
+validatePassword("password123456789");
+
+// Real-World Application Scenarios
+// 1. Private Variables in Functions
+// For example, in a shopping cart system, you might want to keep the total cost private.
+function shoppingCart() {
+    var total = 0; // Scoped to this function
+
+    function addItem(price) {
+        total += price;
+        console.log("Item added. Total is now $" + total);
+    }
+
+    function checkout() {
+        console.log("Final total: $" + total);
+        total = 0; // Reset total after checkout
+    }
+
+    return { addItem, checkout };
+}
+
+const cart = shoppingCart();
+cart.addItem(10); // Item added. Total is now $10
+cart.addItem(20); // Item added. Total is now $30
+cart.checkout();  // Final total: $30
+
+// 2. Encapsulation in Libraries
+// Libraries often use function scoping to prevent exposing variables to the global scope.
+
+/*(function() {
+    var privateVar = "I am private.";
+
+    function privateFunction() {
+        console.log(privateVar);
+    }
+
+    // Expose only what is necessary
+    window.myLibrary = {
+        publicFunction: function() {
+            privateFunction();
+        }
+    };
+})();
+
+myLibrary.publicFunction(); // Output: I am private.
+// console.log(privateVar); // Error: privateVar is not defined*/
