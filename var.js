@@ -5793,3 +5793,16 @@ const add1 = a => b => c => a + b + c;
 
 // Usage
 console.log(add1(1)(2)(3)); // Output: 6
+
+// Currying with Modern JavaScript Libraries
+// Many modern JavaScript libraries like Lodash provide built-in utilities for currying. 
+// For example, Lodash's _.curry:
+const _1 = require('lodash');
+
+const add9 = (a, b, c) => a + b + c;
+
+const curriedAdd = _1.curry(add9);
+
+console.log(curriedAdd(1)(2)(3)); // Output: 6
+console.log(curriedAdd(1, 2)(3)); // Output: 6
+console.log(curriedAdd(1)(2, 3)); // Output: 6
