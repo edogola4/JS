@@ -5838,3 +5838,13 @@ function handleEvent(element) {
 //const button = document.querySelector("button");
 //handleEvent(button)("click")(() => console.log("Button clicked!"));
 
+// 3. API Request Configuration
+// Currying helps in creating pre-configured API request functions:
+const fetchApi = baseUrl => endpoint => params => 
+    fetch(`${baseUrl}/${endpoint}?${new URLSearchParams(params)}`)
+        .then(response => response.json());
+
+// Usage
+//const fetchGitHub = fetchApi("https://api.github.com");
+//const fetchUsers = fetchGitHub("users");
+//fetchUsers({ since: 100 }).then(data => console.log(data));
