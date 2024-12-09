@@ -5962,3 +5962,29 @@ Function Expression: The function is wrapped in () to indicate it's an expressio
 Invocation: The () at the end invokes the function immediately.
 
  */
+
+
+//  Why Use IIFE?
+/**
+ *
+1. Avoid Polluting the Global Scope: Variables inside the IIFE are not accessible outside of it, reducing the risk of name collisions.
+2. Private Variables: Create private variables that cannot be accessed by other scripts.
+3. Encapsulation: Group related code together in its own scope.
+4. Initialization Code: Often used to run setup or initialization code when a script is loaded.
+ */
+
+(function () {
+    console.log("Hello from an IIFE!");
+})();
+
+//  IIFE with Parameters
+(function (name) {
+    console.log(`Hello, ${name}!`);
+})("Shantel");
+
+//  IIFE with Return Value
+const result2 = (function (a, b) {
+    return a + b;
+})(3, 4);
+console.log(result2);
+
