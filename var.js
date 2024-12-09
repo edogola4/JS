@@ -6023,3 +6023,13 @@ const result3 = (function (a, b) {
 (function () {
     console.log("IIFE with IIFE");
 })();
+
+
+// Real-World Applications of IIFE
+// 1. Prevent Global Variable Pollution
+// IIFE can be used to create a private scope for variables, preventing them from polluting the global scope.
+(function () {
+    var privateVar = "I am private.";
+    console.log(privateVar);
+})();
+
