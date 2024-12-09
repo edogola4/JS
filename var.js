@@ -6294,3 +6294,12 @@ Readability: Can be confusing for beginners due to the syntax.
 Debugging: Debugging IIFE code can be slightly harder as variables are not accessible in the global scope.
 
  */
+
+// Alternative: Block Scope with {}
+// In modern JavaScript, let and const combined with block scope {} provide similar functionality to IIFE:
+{
+    let privateVar = "I am private";
+    console.log(privateVar);
+}
+
+// console.log(privateVar); // Error: privateVar is not defined
