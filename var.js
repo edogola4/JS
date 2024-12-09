@@ -5925,3 +5925,11 @@ const isEven3 = num => num % 2 === 0;
 const filterEvens = filterBy(isEven3);
 
 console.log(filterEvens([1, 2, 3, 4, 5])); // Output: [2, 4]
+
+
+/**
+ * Conclusion
+Currying is a powerful technique in functional programming that promotes reusability, composability, and clarity in code. 
+While it may take some practice to fully understand and leverage currying, it can significantly improve your ability to write modular, maintainable, and elegant JavaScript code.
+ */
+
