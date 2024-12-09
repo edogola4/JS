@@ -6065,3 +6065,15 @@ myModule.publicFunction();
 [1, 2, 3].forEach(function (item) {
     console.log(item);
 });
+
+
+// 4. Initializing Code
+// Run setup code immediately when a script is loaded:
+(function () {
+    const appConfig = {
+        apiUrl: "https://api.example.com",
+        theme: "dark"
+    };
+
+    console.log("App initialized with config:", appConfig);
+})();
