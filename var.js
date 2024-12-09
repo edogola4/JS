@@ -6087,9 +6087,25 @@ myModule.publicFunction();
 })();
 // 6. Event Listeners
 // IIFE can be used to attach event listeners to elements:
-(function () {
-    const button = document.getElementById("myButton");
-    button.addEventListener("click", function () {
-        console.log("Button clicked!");
-    });
+
+
+// Combining IIFE with Other Concepts
+// 1. IIFE and Closures
+// IIFE can capture a state or create closures:
+const counter = (function () {
+    let count = 0;
+    return {
+        increment: function () {
+            count++;
+            console.log(count);
+        },
+        decrement: function () {
+            count--;
+            console.log(count);
+        }
+    };
 })();
+
+counter.increment(); // Output: 1
+counter.increment(); // Output: 2
+counter.decrement(); // Output: 1
