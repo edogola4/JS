@@ -6109,3 +6109,21 @@ const counter = (function () {
 counter.increment(); // Output: 1
 counter.increment(); // Output: 2
 counter.decrement(); // Output: 1
+
+
+// 2. IIFE in Event Handling
+// IIFE can be used to handle events in a private scope:
+/*(function () {
+    const button = document.getElementById("myButton");
+    button.addEventListener("click", function () {
+        console.log("Button clicked!");
+    });
+})();*/
+
+// 3. IIFE in Asynchronous Code
+// IIFE can be used to encapsulate asynchronous code:
+(function () {
+    setTimeout(function () {
+        console.log("Async code executed.");
+    }, 1000);
+})();
