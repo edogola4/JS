@@ -6127,3 +6127,170 @@ counter.decrement(); // Output: 1
         console.log("Async code executed.");
     }, 1000);
 })();
+
+/**
+ * 
+Immediately Invoked Function Expressions (IIFE)
+Definition:
+An Immediately Invoked Function Expression (IIFE) is a JavaScript function that is executed immediately after it is defined. It allows developers to create private scopes and avoid polluting the global scope.
+
+Syntax of IIFE
+The IIFE syntax involves wrapping a function in parentheses and immediately invoking it:
+
+javascript
+Copy code
+(function () {
+    console.log("This is an IIFE!");
+})();
+Key Parts:
+
+Function Expression: The function is wrapped in () to indicate it's an expression, not a declaration.
+Invocation: The () at the end invokes the function immediately.
+Why Use IIFE?
+Avoid Polluting the Global Scope: Variables inside the IIFE are not accessible outside of it, reducing the risk of name collisions.
+Private Variables: Create private variables that cannot be accessed by other scripts.
+Encapsulation: Group related code together in its own scope.
+Initialization Code: Often used to run setup or initialization code when a script is loaded.
+Examples of IIFE
+1. Basic Example
+javascript
+Copy code
+(function () {
+    console.log("Hello from an IIFE!");
+})();
+Output:
+
+csharp
+Copy code
+Hello from an IIFE!
+2. IIFE with Parameters
+IIFE can accept arguments:
+
+javascript
+Copy code
+(function (name) {
+    console.log(`Hello, ${name}!`);
+})("Shantel");
+Output:
+
+Copy code
+Hello, Shantel!
+IIFE with Different Syntax Styles
+Arrow Function IIFE
+javascript
+Copy code
+(() => {
+    console.log("IIFE with an arrow function!");
+})();
+Named Function IIFE
+You can give the function a name, though the name is only accessible within the IIFE:
+
+javascript
+Copy code
+(function myIIFE() {
+    console.log("Named IIFE");
+})();
+Real-World Applications of IIFE
+1. Prevent Global Variable Pollution
+javascript
+Copy code
+(function () {
+    var privateVar = "I am private";
+    console.log(privateVar);
+})();
+
+// console.log(privateVar); // Error: privateVar is not defined
+2. Module Pattern
+IIFE is often used to implement the Module Pattern, which helps organize code into reusable modules:
+
+javascript
+Copy code
+const myModule = (function () {
+    let privateCounter = 0;
+
+    function increment() {
+        privateCounter++;
+        console.log(privateCounter);
+    }
+
+    function reset() {
+        privateCounter = 0;
+        console.log("Counter reset.");
+    }
+
+    return {
+        increment,
+        reset
+    };
+})();
+
+myModule.increment(); // Output: 1
+myModule.increment(); // Output: 2
+myModule.reset();     // Output: Counter reset.
+3. Polyfill or Shim
+IIFE can be used to provide polyfills for older browsers:
+
+javascript
+Copy code
+(function () {
+    if (!Array.prototype.customMethod) {
+        Array.prototype.customMethod = function () {
+            console.log("Custom method added to Array prototype.");
+        };
+    }
+})();
+4. Initializing Code
+Run setup code immediately when a script is loaded:
+
+javascript
+Copy code
+(function () {
+    const appConfig = {
+        apiUrl: "https://api.example.com",
+        theme: "dark"
+    };
+
+    console.log("App initialized with config:", appConfig);
+})();
+Combining IIFE with Other Concepts
+1. IIFE and Closures
+IIFE can capture a state or create closures:
+
+javascript
+Copy code
+const counter = (function () {
+    let count = 0;
+    return {
+        increment: function () {
+            count++;
+            console.log(count);
+        },
+        decrement: function () {
+            count--;
+            console.log(count);
+        }
+    };
+})();
+
+counter.increment(); // Output: 1
+counter.increment(); // Output: 2
+counter.decrement(); // Output: 1
+2. IIFE in Event Handling
+javascript
+Copy code
+(function () {
+    document.getElementById("myButton").addEventListener("click", function () {
+        console.log("Button clicked!");
+    });
+})();
+Advantages of IIFE
+
+Encapsulation: Keeps code isolated from the global scope.
+Immediate Execution: Useful for initialization tasks.
+Avoid Conflicts: Reduces the risk of variable or function name conflicts.
+
+Disadvantages of IIFE
+Readability: Can be confusing for beginners due to the syntax.
+Debugging: Debugging IIFE code can be slightly harder as variables are not accessible in the global scope.
+
+ */
