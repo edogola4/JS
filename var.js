@@ -5988,3 +5988,38 @@ const result2 = (function (a, b) {
 })(3, 4);
 console.log(result2);
 
+// IIFE with Different Syntax Styles
+// 1. Arrow Function IIFE
+(() => {
+    console.log("Arrow function IIFE");
+})();
+// 2. Function Declaration IIFE
+(function () {
+    console.log("Function declaration IIFE");
+})();
+// 3. Function Expression IIFE
+(function () {
+    console.log("Function expression IIFE");
+})();
+// 4. Async IIFE
+(async function () {
+    console.log("Async IIFE");
+})();
+
+// 5. IIFE with Parameters and Return Value
+const result3 = (function (a, b) {
+    return a + b;
+})(3, 4);
+//6. Named Function IIFE
+// You can give the function a name, though the name is only accessible within the IIFE:
+(function namedIIFE() {
+    console.log("Named IIFE");
+})();
+// 7. IIFE with Immediately Invoked Function Expression (IIFE)
+(function () {
+    console.log("IIFE with IIFE");
+})();
+// 8. IIFE with Immediately Invoked Function Expression (IIFE)
+(function () {
+    console.log("IIFE with IIFE");
+})();
