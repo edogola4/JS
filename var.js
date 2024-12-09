@@ -6033,3 +6033,19 @@ const result3 = (function (a, b) {
     console.log(privateVar);
 })();
 
+// 2. Module Pattern
+// IIFE is often used to implement the Module Pattern, which helps organize code into reusable modules:
+var myModule = (function () {
+    var privateVar = "I am private.";
+
+    function privateFunction() {
+        console.log(privateVar);
+    }
+
+    return {
+        publicFunction: function () {
+            privateFunction();
+        }
+    };
+})();
+myModule.publicFunction();
