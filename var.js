@@ -5848,3 +5848,20 @@ const fetchApi = baseUrl => endpoint => params =>
 //const fetchGitHub = fetchApi("https://api.github.com");
 //const fetchUsers = fetchGitHub("users");
 //fetchUsers({ since: 100 }).then(data => console.log(data));
+
+
+// 4. Logging Utilities
+//Currying simplifies logging utilities where different log levels are pre-configured:
+const log = level => message => console.log(`[${level}] ${message}`);
+const errorLog = log("ERROR");
+const infoLog = log("INFO");
+const debugLog = log("DEBUG");
+errorLog("This is an error message");
+infoLog("This is an info message");
+debugLog("This is a debug message");
+
+// 5. DOM Manipulation
+// Currying can be used to create reusable DOM manipulation functions:
+const setStyle = element => property => value => {
+    element.style[property] = value;
+};
