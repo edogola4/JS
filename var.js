@@ -5806,3 +5806,35 @@ const curriedAdd = _1.curry(add9);
 console.log(curriedAdd(1)(2)(3)); // Output: 6
 console.log(curriedAdd(1, 2)(3)); // Output: 6
 console.log(curriedAdd(1)(2, 3)); // Output: 6
+
+
+// Real-World Examples
+// 1. Math Operations
+// Currying is useful when creating reusable math functions:
+function add(a, b, c) {
+    return a + b + c;
+}
+const curriedAdd1 = a => b => c => a + b + c;
+console.log(curriedAdd1(1)(2)(3));
+console.log(curriedAdd1(1, 2)(3));
+
+const divide = a => b => a / b;
+
+const divideBy2 = divide(2);
+console.log(divideBy2(10)); // Output: 0.2
+console.log(divide(10)(2)); // Output: 5
+
+// 2. Event Handlers in Web Development
+// Currying can simplify event handling in React or vanilla JavaScript:
+function handleEvent(element) {
+    return function (eventType) {
+        return function (callback) {
+            element.addEventListener(eventType, callback);
+        };
+    };
+}
+
+// Usage
+//const button = document.querySelector("button");
+//handleEvent(button)("click")(() => console.log("Button clicked!"));
+
