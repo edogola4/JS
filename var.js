@@ -5604,3 +5604,25 @@ continue	                        Skip current iteration	               Useful in
 
 break with Labels	                Exit specific nested loops	           Labels improve control over nested flow.
  */
+
+
+
+
+ // FUNCTIONS
+ // fUNCTIONS in JavaScript provide organized and reusable code blocks for performing specific tasks. 
+ // They are essential for breaking down complex problems into smaller, manageable pieces, and for improving code readability and maintainability.
+
+// Function Declaration
+// A function declaration defines a named function that can be called later in the code.
+function greet(name) {
+    console.log("Hello, " + name + "!");
+}
+greet("Daisy");
+greet("brandon");
+greet("Shantel");
+
+// Function Expression
+// A function expression defines an anonymous function and assigns it to a variable.
+var add = function (a, b) {
+    return a + b;
+};
