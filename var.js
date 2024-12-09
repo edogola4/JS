@@ -5933,3 +5933,32 @@ Currying is a powerful technique in functional programming that promotes reusabi
 While it may take some practice to fully understand and leverage currying, it can significantly improve your ability to write modular, maintainable, and elegant JavaScript code.
  */
 
+
+
+// Immediately Invoked Function Expressions (IIFE)
+// An Immediately Invoked Function Expression (IIFE) is a JavaScript function that is executed immediately after it is defined. 
+// It allows developers to create private scopes and avoid polluting the global scope.
+
+// Syntax of IIFE
+// The IIFE syntax involves wrapping a function in parentheses and immediately invoking it:
+(function () {
+    // Code inside the IIFE
+})();
+// The parentheses at the end cause the function to be executed immediately.
+
+// Example
+(function () {
+    var message = "Hello, IIFE!";
+    console.log(message);
+})();
+
+(function () {
+    console.log("This is an IIFE!");
+})();
+/**
+ * Key Parts:
+
+Function Expression: The function is wrapped in () to indicate it's an expression, not a declaration.
+Invocation: The () at the end invokes the function immediately.
+
+ */
