@@ -6077,3 +6077,11 @@ myModule.publicFunction();
 
     console.log("App initialized with config:", appConfig);
 })();
+
+// 5. Asynchronous Code
+// IIFE can be used to encapsulate asynchronous code:
+(function () {
+    setTimeout(function () {
+        console.log("Async code executed.");
+    }, 1000);
+})();
