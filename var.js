@@ -5865,3 +5865,8 @@ debugLog("This is a debug message");
 const setStyle = element => property => value => {
     element.style[property] = value;
 };
+/*const setWidth = setStyle(document.body);
+setWidth("width")("100%");
+setWidth("height")("100vh");
+setWidth("background-color")("black");
+setWidth("color")("white");*/
