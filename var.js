@@ -6303,3 +6303,9 @@ Debugging: Debugging IIFE code can be slightly harder as variables are not acces
 }
 
 // console.log(privateVar); // Error: privateVar is not defined
+
+// When to Use IIFE
+// 1. When you need to run initialization code immediately.
+// 2. To create private variables or encapsulate logic.
+// 3. To implement the module pattern in JavaScript.
+// 4. In older JavaScript projects where let and const are not available.
