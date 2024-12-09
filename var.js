@@ -5747,3 +5747,49 @@ cart.checkout();  // Final total: $30
 
 myLibrary.publicFunction(); // Output: I am private.
 // console.log(privateVar); // Error: privateVar is not defined*/
+
+
+// Currying
+// Currying is a technique in functional programming where a function is transformed into a sequence of functions, each taking a single argument.
+/**
+ * Currying is a functional programming technique where a function with multiple arguments is transformed into a sequence of functions, each taking a single argument. 
+ * Instead of accepting all arguments at once, the function takes the first argument and returns another function that takes the next argument, and so on, until all arguments have been provided.
+ */
+
+/**
+ * Why Currying?
+1. Code Reusability: Currying allows functions to be reused by partially applying them with some arguments.
+2. Improved Readability: It helps break down complex functions into smaller, simpler functions.
+3. Functional Programming: Currying aligns with the principles of functional programming, encouraging immutability and pure functions.
+4. Custom Function Creation: Allows developers to create specific versions of functions by fixing certain arguments.
+ */
+
+// Syntax of Currying
+function multiply(a) {
+    return function (b) {
+        return a * b;
+    };
+}
+
+// Usage
+const multiplyBy2 = multiply(2); // Returns a function
+console.log(multiplyBy2(5)); // Output: 10
+console.log(multiply(3)(4)); // Output: 12
+
+// Manual Currying Implementation
+function add(a) {
+    return function (b) {
+        return function (c) {
+            return a + b + c;
+        };
+    };
+}
+
+// Usage
+//console.log(add(1)(2)(3)); // Output: 6
+
+// Using Arrow Functions for Currying
+const add1 = a => b => c => a + b + c;
+
+// Usage
+console.log(add1(1)(2)(3)); // Output: 6
