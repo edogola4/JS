@@ -6559,3 +6559,14 @@ const person2 = {
     }
 };
 person2.greet(); 
+
+
+// d) Arrow Functions
+// Arrow functions do not have their own this. Instead, they inherit this from their surrounding (lexical) scope.
+const person3 = {
+    name: "Bran don",
+    greet: () => {
+        console.log("Hello, " + this.name);
+    }
+};
+person3.greet();
