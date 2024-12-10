@@ -6447,3 +6447,18 @@ console.log(evenNumber);
 (function (name) {
     console.log(`Hello beautiful, ${name}!`);
 })("Don");
+
+// Anonymous function assigned to a variable to calculate the area of a circle
+let calculateArea1 = function (radius) {
+    return Math.PI * radius * radius;
+};
+let area2 = calculateArea1(5);
+console.log(area2);
+
+
+const calculateCircleArea = function(radius) {
+    return Math.PI * radius * radius;
+};
+let area3 = calculateCircleArea(7);
+console.log(area3);
+
