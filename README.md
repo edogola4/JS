@@ -8,3 +8,11 @@ Welcome to my JavaScript Learning and Skill Development Repository! This reposit
 - Experiment with and apply modern JavaScript features (ES6+).
 - Build small projects to reinforce theoretical knowledge with practical application.
 - Explore advanced topics like closures, asynchronous programming, and design patterns.
+
+
+## Concepts Covered:
+### 1. Core JavaScript
+- Variables and Scoping **(let, const, var)**
+- Functions: Named, Anonymous, Arrow Functions
+- Object Manipulation and Prototypes
+- Array Methods **(map, filter, reduce, etc.)**
