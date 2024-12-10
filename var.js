@@ -6682,3 +6682,15 @@ const person6 = {
 
 person6.greet(); // Output: Alice
 
+
+// Real-World Examples
+// 1. Event Handling with this:
+/* 
+document.getElementById("myButton").addEventListener("click", function () {
+    console.log(this);
+});
+
+document.getElementById("myButton").addEventListener("click", function () {
+    console.log("Button text is: " + this.textContent);
+});
+*/
