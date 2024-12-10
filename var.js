@@ -6635,3 +6635,21 @@ class Person {
  */
 
 // Example of arguments:
+function greet() {
+    let total = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        total += arguments[i];
+    }
+    return total;
+}
+console.log(greet(1, 2, 3, 4, 5));
+
+function greet3() {
+    let total = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        total += arguments[i];
+    }
+    return total;
+}
+
+console.log(greet3(1, 2, 3, 4)); // Output: 10
