@@ -6312,3 +6312,25 @@ Debugging: Debugging IIFE code can be slightly harder as variables are not acces
 
 // Conclusion
 // IIFEs are a powerful and versatile tool in JavaScript, enabling encapsulation, initialization, and better management of the global scope. Although modern JavaScript provides alternatives like block scoping and modules, IIFEs remain valuable in legacy codebases and scenarios where immediate execution is required. Understanding IIFEs allows developers to write safer, more modular, and efficient code.
+
+
+// Named Function 
+// Functions that can either be named or unnamed(anonymous function)
+
+var namedSum = function sum(a, b) {
+    return a + b;
+};
+
+var anonymousSum = function (a, b) {
+    return a + b;
+};
+console.log(namedSum(3, 4));
+console.log(anonymousSum(3, 4));
+
+
+// Named functions are hoisted
+function namedFunction() {
+    console.log("I am a named function.");
+}
+
+namedFunction();
