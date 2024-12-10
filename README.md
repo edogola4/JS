@@ -21,3 +21,10 @@ Welcome to my JavaScript Learning and Skill Development Repository! This dynamic
 - Event Handling and DOM Manipulation
 - Asynchronous JavaScript: Promises, async/await
 - Error Handling and Debugging Techniques
+
+### 3. Advanced Topics
+- Closures and Higher-Order Functions
+- Design Patterns in JavaScript
+- Working with APIs and AJAX
+- Module Bundling **(ES Modules)**
+
