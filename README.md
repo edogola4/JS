@@ -28,3 +28,5 @@ Welcome to my JavaScript Learning and Skill Development Repository! This dynamic
 - Working with APIs and AJAX
 - Module Bundling **(ES Modules)**
 
+## Technologies Used
+- **JavaScript (ES6+):** Primary programming language.
