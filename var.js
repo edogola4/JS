@@ -6548,3 +6548,14 @@ function showThis() {
     console.log(this);
 }
 showThis(); // Outputs `window` in non-strict mode or `undefined` in strict mode.
+
+
+// c) Inside an Object Method
+// When a method is called on an object, this refers to the object that owns the method.
+const person2 = {
+    name: "Bran don",
+    greet: function () {
+        console.log("Hello, " + this.name);
+    }
+};
+person2.greet(); 
