@@ -6710,3 +6710,23 @@ function multiplyAll() {
 }
 
 console.log(multiplyAll(1, 2, 3, 4)); // Output: 24
+
+
+// 3. Using Arrow Functions to Avoid Losing this:
+class Counter {
+    constructor() {
+        this.count = 0;
+    }
+
+    increment() {
+        setTimeout(() => {
+            this.count++;
+            console.log(this.count); // `this` refers to the Counter instance
+        }, 1000);
+    }
+}
+
+const myCounter = new Counter();
+myCounter.increment(); // Output after 1 second: 1
+
+
