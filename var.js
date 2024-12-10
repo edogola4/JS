@@ -6653,3 +6653,32 @@ function greet3() {
 }
 
 console.log(greet3(1, 2, 3, 4)); // Output: 10
+
+
+// Binding this and arguments in Arrow Functions
+// Arrow functions behave differently from regular functions:
+
+// this Binding: Arrow functions do not have their own this; they inherit it from their enclosing scope.
+// No arguments Object: Arrow functions do not have the arguments object. You must use the rest parameter (...args) instead.
+
+// Example of this and arguments in Arrow Functions
+const person5 = {
+    name: "Bran don",
+    greet: function()  {
+        console.log( this.name);
+    }
+};
+person5.greet();
+
+const person6 = {
+    name: "Alice",
+    greet: function () {
+        const arrowGreet = () => {
+            console.log(this.name); // Inherits `this` from the enclosing function
+        };
+        arrowGreet();
+    }
+};
+
+person6.greet(); // Output: Alice
+
