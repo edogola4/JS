@@ -6477,3 +6477,49 @@ console.log(area3);
 
 
 
+// Named Function vs Anonymous Function
+/**
+ *        Aspect	          Named Function	                                           Anonymous Function
+ * 
+          Name	              Has a name that can be used to refer to it in the code	    Does not have a name
+
+          Usability	          Can be called using its name from anywhere in the code	    Typically used inline, often as arguments or for one-time use
+
+          Hoisting	          Is hoisted, meaning it can be called before its definition	Is not hoisted, meaning it must be defined before it is called
+
+          Debugging	          Easier to debug, as the function name appears in error logs	Harder to debug since the function has no name
+
+          Common Usage	      Used when the function needs to be called multiple times	    Used in event handling, or as an argument to higher-order functions
+                                                                                              (functions that take other functions as arguments)
+                                                                                              or when the function is only needed once
+                                                                                              (for example, in a callback function).
+ */
+
+
+/**
+ * 
+ * When to Use Named or Anonymous Functions
+ * 
+Named Functions:
+Use when the function needs to be reused multiple times.
+When you need clarity in the code (debugging and maintenance).
+For recursive functions where the function needs to call itself.
+
+
+Anonymous Functions:
+Use when the function is used only once or passed as an argument.
+When writing short, concise code that doesn’t require a name for the function.
+For inline event handling or as callback functions.
+
+
+
+In conclusion, named functions are ideal when you want to reuse code or need clear identification in the debugger, 
+while anonymous functions are perfect for situations where the function is used just once or passed as an argument.
+
+
+
+
+
+
+
+ *  */                                                                                             
