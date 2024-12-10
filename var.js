@@ -6344,3 +6344,31 @@ function factorial(n) {
     }
 }
 console.log(factorial(5));
+
+
+// Example of Named Function:
+//1.  Named function to calculate the area of a rectangle
+function calculateArea(length, width) {
+    return length * width;
+}
+
+// Calling the function with arguments
+let area = calculateArea(5, 3);
+console.log(area);  // Output: 15
+
+//2. Named function to greet a beatiful girl by the road side
+function greet(name) {
+    console.log(`Hello beautiful, ${name}!`);
+}
+greet("Daisy");
+greet("Rose");
+greet("Lily");
+greet("Jasmine");
+greet("Alisha");
+
+// 3. Named function to add two numbers
+function add23(a, b) {
+    return a + b;
+}
+let results = add23(3, 4);
+console.log(results);
