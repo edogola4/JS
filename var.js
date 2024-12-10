@@ -6397,7 +6397,7 @@ function formatName(firstName, lastName) {
 }
 
 let fullName = formatName('Bran', 'don');
-console.log(fullName);  
+console.log(fullName);
 
 // 2. A function that calculates the area of a rectangle:
 function calculateArea(length, width) {
@@ -6456,9 +6456,24 @@ let area2 = calculateArea1(5);
 console.log(area2);
 
 
-const calculateCircleArea = function(radius) {
+const calculateCircleArea = function (radius) {
     return Math.PI * radius * radius;
 };
 let area3 = calculateCircleArea(7);
 console.log(area3);
+
+
+// Real-World Example:
+// Anonymous functions are commonly used for event handling in web development.
+// For example, consider an anonymous function that handles a click event on a button:
+
+/**
+ * 
+ document.getElementById("myButton").addEventListener("click", function () {
+    console.log("Button clicked!");
+});
+
+ */
+
+
 
