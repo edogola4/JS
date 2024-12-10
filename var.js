@@ -6380,3 +6380,11 @@ function square(x) {
 let resultz = square(5);
 console.log(resultz);
 
+// 5. Named function on how to flirt with a lady
+function flirt(name) {
+    console.log(`Hello beautiful, ${name}! I like you`);
+
+}
+flirt("Daisy");
+flirt("Rose");
+flirt("Lily");
