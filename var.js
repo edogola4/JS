@@ -6372,3 +6372,11 @@ function add23(a, b) {
 }
 let results = add23(3, 4);
 console.log(results);
+
+// 4. Named function to calculate the square of a number
+function square(x) {
+    return x * x;
+}
+let resultz = square(5);
+console.log(resultz);
+
