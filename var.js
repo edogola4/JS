@@ -6582,3 +6582,42 @@ document.getElementById("myButton").addEventListener("click", () => {
 */
 
 
+// f) Using bind, call, and apply
+// You can explicitly set the value of this using these methods:
+
+// bind: Returns a new function with this bound to the specified object
+// call: Calls the function immediately with this set to the specified object.
+// apply: Similar to call, but arguments are passed as an array.
+const person4 = {
+    name: "Bran don"
+};
+function greet() {
+    console.log("Hello, " + this.name);
+}
+greet.call(person4);
+greet.apply(person4);
+const boundGreet = greet.bind(person4);
+boundGreet();
+
+function sayHello() {
+    console.log(this.name);
+}
+
+const user2 = { name: "Alice" };
+
+const boundFunction = sayHello.bind(user);
+boundFunction(); // Output: Alice
+
+sayHello.call(user2); // Output: Alice
+sayHello.apply(user2); // Output: Alice
+
+// g) In Classes
+// In class methods, this refers to the instance of the class.
+class Person {
+    constructor(name) {
+        this.name = name;
+    }
+    greet() {
+        console.log("Hello, " + this.name);
+    }
+}
