@@ -6411,3 +6411,21 @@ function isEven(number) {
 }
 let evenNumber = isEven(4);
 console.log(evenNumber);
+
+
+//  Anonymous (Unnamed) Functions
+// An anonymous function is a function that does not have a name. 
+// These functions are typically used when the function is not going to be called again, or when passing the function as a parameter to another function.
+// Anonymous functions are often used as arguments to other functions or as callback functions.
+
+// Key Characteristics of Anonymous Functions:
+// 1. No Function Name: Anonymous functions are not named and are not hoisted.
+// 2. Function Expression: Anonymous functions are often defined using a function expression.
+// 3. Callbacks: Anonymous functions are commonly used as callbacks in asynchronous operations or event handlers.
+// 4. Immediately Invoked Function Expressions (IIFEs): Anonymous functions can be immediately invoked as IIFEs.
+
+// Example of Anonymous Function:
+// 1. Anonymous function to greet a person by the road side
+(function (name) {
+    console.log(`Hello beautiful, ${name}!`);
+})("Daisy");
