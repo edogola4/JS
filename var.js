@@ -6388,3 +6388,26 @@ function flirt(name) {
 flirt("Daisy");
 flirt("Rose");
 flirt("Lily");
+
+
+// Real-World Example:
+//1. consider a function that formats a user's name:
+function formatName(firstName, lastName) {
+    return firstName.charAt(0).toUpperCase() + firstName.slice(1) + ' ' + lastName.toUpperCase();
+}
+
+let fullName = formatName('Bran', 'don');
+console.log(fullName);  
+
+// 2. A function that calculates the area of a rectangle:
+function calculateArea(length, width) {
+    return length * width;
+}
+let area1 = calculateArea(5, 3);
+console.log(area1);
+// 3. A function that checks if a number is even:
+function isEven(number) {
+    return number % 2 === 0;
+}
+let evenNumber = isEven(4);
+console.log(evenNumber);
