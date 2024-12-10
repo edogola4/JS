@@ -1,1 +1,1 @@
-## JavaScript Learning and Skill Development Repository
+# JavaScript Learning and Skill Development Repository
