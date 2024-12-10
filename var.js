@@ -6621,3 +6621,17 @@ class Person {
         console.log("Hello, " + this.name);
     }
 }
+
+
+// 2. arguments Object
+// The arguments object is an array-like object accessible inside regular functions.
+// It contains all the arguments passed to the function.
+
+// Key Characteristics of arguments
+/**
+ * Array-like: It has a length property but does not inherit array methods like map, forEach, etc.
+   Contains all arguments passed to the function, even if they are not explicitly named in the function parameters.
+   Not available in arrow functions
+ */
+
+// Example of arguments:
