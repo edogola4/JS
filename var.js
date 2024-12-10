@@ -6694,3 +6694,19 @@ document.getElementById("myButton").addEventListener("click", function () {
     console.log("Button text is: " + this.textContent);
 });
 */
+
+// 2. Using arguments for Flexible Functions:
+function greet() {
+    let total = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        total += arguments[i];
+    }
+    return total;
+}
+console.log(greet(1, 2, 3, 4, 5));
+
+function multiplyAll() {
+    return Array.from(arguments).reduce((product, num) => product * num, 1);
+}
+
+console.log(multiplyAll(1, 2, 3, 4)); // Output: 24
