@@ -6429,3 +6429,21 @@ console.log(evenNumber);
 (function (name) {
     console.log(`Hello beautiful, ${name}!`);
 })("Daisy");
+(function (name) {
+    console.log(`Hello beautiful, ${name}!`);
+})("Rose");
+(function (name) {
+    console.log(`Hello beautiful, ${name}!`);
+})("Lily");
+(function (name) {
+    console.log(`Hello beautiful, ${name}!`);
+})("Jasmine");
+(function (name) {
+    console.log(`Hello beautiful, ${name}!`);
+})("Alisha");
+(function (name) {
+    console.log(`Hello beautiful, ${name}!`);
+})("Bran");
+(function (name) {
+    console.log(`Hello beautiful, ${name}!`);
+})("Don");
