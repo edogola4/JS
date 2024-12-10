@@ -6570,3 +6570,15 @@ const person3 = {
     }
 };
 person3.greet();
+
+// e) Event Handlers
+// In event listeners, this refers to the DOM element that triggered the event.
+/* document.getElementById("myButton").addEventListener("click", function () {
+    console.log(this);
+});
+document.getElementById("myButton").addEventListener("click", () => {
+    console.log(this);
+});
+*/
+
+
