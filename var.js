@@ -6764,9 +6764,14 @@ function personLogsSomeThings(person, ...messages) {
     });
 }
 personLogsSomeThings('Bran', 'hello', 'world');
-// Output:
-// John says hello
-// John says world
+
+
+// Mixing Regular and Rest Parameters
+function createTeam (leader, ...members) {
+    console.log(`Team leader: ${leader}`);
+    console.log(`Team members: ${members.join(', ')}`);
+}
+createTeam('Bran', 'don', )
 
 
 // 2. 
