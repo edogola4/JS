@@ -6799,6 +6799,17 @@ function logMessages(...messages) {
 }
 logMessages('Server started', 'Database connected', 'Listening on port 3000');
 
+// 2. Event Listeners Dynamically attaching multiple event listeners:
+/*
+function addEventListeners(element, ...events) {
+    events.forEach(event => {
+        element.addEventListener(event, () => console.log(`Event: ${event}`));
+    });
+}
+const button = document.querySelector('button');
+addEventListeners(button, 'click', 'mouseover', 'mouseout');
+*/
+
 
 
 
