@@ -6773,6 +6773,17 @@ function createTeam (leader, ...members) {
 }
 createTeam('Bran', 'don', )
 
+// Calling Functions with the Spread Syntax (...)
+// The spread syntax allows you to expand iterable objects (like arrays, strings, or generators) into individual arguments. 
+// This complements variadic functions by dynamically passing arguments.
+
+// Example 1: Combining Rest and Spread
+const logArgumentz = (...args) => console.log(args);
+const numbers21 = [1, 2, 3];
+logArgumentz('a', 'b', 'c', ...numbers21);
+
+
+
 
 // 2. Version ≤ ES5: Using the arguments Object
 // In ES5 and earlier, every function has access to the arguments object, which is an Array-like object containing all the arguments passed to the function.
