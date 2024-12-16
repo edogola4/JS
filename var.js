@@ -6814,6 +6814,9 @@ addEventListeners(button, 'click', 'mouseover', 'mouseout');
 const multiplyAllz = (...nums) => nums.reduce((product, num) => product * num, 1);
 console.log(multiplyAllz(2, 3, 4)); 
 
+// 4. Dynamic Data Merging Merging arrays or objects:
+const mergeArrays = (...arrays) => [].concat(...arrays);
+console.log(mergeArrays([1, 2], [3, 4], [5])); 
 
 
 
