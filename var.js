@@ -6753,3 +6753,8 @@ function sumt(...numbers) {
     return numbers.reduce((total, num) => total + num, 0);
 }
 console.log(sumt(1, 2, 3, 4, 5));
+console.log(sumt(10, 20));
+console.log(sumt());
+console.log(sumt(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+// 2. 
