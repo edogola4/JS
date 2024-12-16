@@ -6784,6 +6784,7 @@ createTeam('Bran', 'don', )
 2. To use Array methods like .map() or .forEach(), it needs to be converted into a proper Array.
 
  */
+// Example 1: Iterating Over arguments
 function sumt() {
     let total = 0;
     for (let i = 0; i < arguments.length; i++) {
@@ -6792,4 +6793,12 @@ function sumt() {
     return total;
 }
 console.log(sumt(1, 2, 3, 4, 5));
+// Example 2: Iterating Over arguments
+function logSomeThings() {
+    for (var i = 0; i < arguments.length; ++i) {
+        console.log(arguments[i]);
+    }
+}
+logSomeThings('hello', 'world'); 
+
 
