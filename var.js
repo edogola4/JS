@@ -6801,4 +6801,12 @@ function logSomeThings() {
 }
 logSomeThings('hello', 'world'); 
 
+// Example 3: Converting arguments to an Array
+// To use Array methods, convert arguments into an actual Array using Array.prototype.slice():
+function logArguments() {
+    const args = Array.prototype.slice.call(arguments);
+    args.forEach(arg => console.log(arg));
+}
+logArguments('foo', 'bar', 'baz');
+
 
