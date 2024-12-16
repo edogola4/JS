@@ -6737,3 +6737,19 @@ Use bind, call, and apply to explicitly control the value of this.
 The arguments object is a useful way to access all arguments passed to a function but is unavailable in arrow functions.
 For modern JavaScript, prefer using arrow functions for consistent this binding and the rest parameter for handling arguments.
  */
+
+
+
+// Functions with an unknown Number of Arguments (variadic functions)
+
+// Variadic functions allow us to write flexible and reusable code by enabling functions to accept an indefinite number of arguments. 
+//  In JavaScript, there are two primary ways to handle variadic functions based on the version of JavaScript in use:
+// 1. Rest Parameters:
+// The rest parameter syntax allows a function to accept an indefinite number of arguments as an array.
+// It is denoted by three dots (...) followed by a parameter name.
+// The rest parameter must be the last parameter in the function definition.
+
+function sumt(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+console.log(sumt(1, 2, 3, 4, 5));
