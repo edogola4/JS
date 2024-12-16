@@ -6810,6 +6810,10 @@ const button = document.querySelector('button');
 addEventListeners(button, 'click', 'mouseover', 'mouseout');
 */
 
+// 3. Math Functions Calculating product of numbers:
+const multiplyAllz = (...nums) => nums.reduce((product, num) => product * num, 1);
+console.log(multiplyAllz(2, 3, 4)); 
+
 
 
 
