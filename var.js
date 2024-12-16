@@ -6744,7 +6744,7 @@ For modern JavaScript, prefer using arrow functions for consistent this binding 
 
 // Variadic functions allow us to write flexible and reusable code by enabling functions to accept an indefinite number of arguments. 
 //  In JavaScript, there are two primary ways to handle variadic functions based on the version of JavaScript in use:
-// 1. Rest Parameters:
+// 1. Rest Parameters:  OR Version ≥ ES6: Using the Rest Operator (...)
 // The rest parameter syntax allows a function to accept an indefinite number of arguments as an array.
 // It is denoted by three dots (...) followed by a parameter name.
 // The rest parameter must be the last parameter in the function definition.
