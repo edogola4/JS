@@ -6782,6 +6782,15 @@ const logArgumentz = (...args) => console.log(args);
 const numbers21 = [1, 2, 3];
 logArgumentz('a', 'b', 'c', ...numbers21);
 
+// Example 2: Using Spread with Generators
+// Generators can yield values dynamically, and the spread syntax makes it easy to pass them to a function:
+function* generateNumbers() {
+    yield 6;
+    yield 5;
+    yield 4;
+}
+const logArgumentz1 = (...args) => console.log(args);
+logArgumentz1('a', ...generateNumbers(), ...'xyz', 'b');
 
 
 
