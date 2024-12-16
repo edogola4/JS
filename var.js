@@ -6792,6 +6792,15 @@ function* generateNumbers() {
 const logArgumentz1 = (...args) => console.log(args);
 logArgumentz1('a', ...generateNumbers(), ...'xyz', 'b');
 
+// Real-World Use Cases
+// 1. Logging Utilities Combining multiple log inputs:
+function logMessages(...messages) {
+    console.log(`[Log]: ${messages.join(' | ')}`);
+}
+logMessages('Server started', 'Database connected', 'Listening on port 3000');
+
+
+
 
 
 // 2. Version ≤ ES5: Using the arguments Object
