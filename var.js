@@ -6774,4 +6774,22 @@ function createTeam (leader, ...members) {
 createTeam('Bran', 'don', )
 
 
-// 2. 
+// 2. Version ≤ ES5: Using the arguments Object
+// In ES5 and earlier, every function has access to the arguments object, which is an Array-like object containing all the arguments passed to the function.
+// It is not available in arrow functions.
+// Key Characteristics of arguments:
+/**
+ * 
+1. It is not a real array but has indexed elements and a length property.
+2. To use Array methods like .map() or .forEach(), it needs to be converted into a proper Array.
+
+ */
+function sumt() {
+    let total = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        total += arguments[i];
+    }
+    return total;
+}
+console.log(sumt(1, 2, 3, 4, 5));
+
