@@ -6863,3 +6863,21 @@ function sumAll() {
     return Array.prototype.reduce.call(arguments, (sum, num) => sum + num, 0);
 }
 console.log(sumAll(1, 2, 3, 4)); 
+
+
+// Comparison: arguments vs Rest Operator
+/**
+ *     Feature	         arguments (ES5 and earlier)	    Rest Operator (...) (ES6+)
+ * 
+        Type	          Array-like object	                 Actual Array
+
+        Syntax	          Implicit	                         Explicit
+
+        Array Methods	  Needs conversion	                 Directly usable
+
+        Performance	      Slightly slower	                 Optimized in modern engines
+
+        Compatibility	  Available in all functions	         Available in modern JavaScript
+        
+        Use Cases	      Legacy systems	                 Modern JavaScript
+ */
