@@ -6810,3 +6810,9 @@ function logArguments() {
 logArguments('foo', 'bar', 'baz');
 
 
+// Real-World Example: Mathematical Utility
+// A function that calculates the sum of all its arguments:
+function sumAll() {
+    return Array.prototype.reduce.call(arguments, (sum, num) => sum + num, 0);
+}
+console.log(sumAll(1, 2, 3, 4)); 
