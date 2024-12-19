@@ -7102,3 +7102,14 @@ foo11(); // Output: "default"
 function greet(name = "Guest") {
     console.log("Hello, " + name);
 }
+
+// The arguments Object
+// Default parameters do not affect the arguments object. Only explicitly provided parameters are stored in arguments.
+function test(a = 1, b = 2) {
+    console.log(arguments.length); // Reflects number of explicitly passed arguments
+  }
+  
+  test(); // Output: 0
+  test(3); // Output: 1
+  test(3, 4); // Output: 2
+  
