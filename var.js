@@ -6906,7 +6906,7 @@ console.log("This is an anonymous function");
 
 // Assigning an Anonymous Function to a Variable
 // Anonymous functions are often stored in variables for later use. This is a common pattern in functional programming:
-var greet = function() {
+var greet = function () {
     console.log("Hello, World!");
 };
 greet(); // Outputs: Hello, World!
@@ -6923,19 +6923,19 @@ greet(); // Outputs: Hello, World!
 function executeFunction(func) {
     func();
 }
-executeFunction(function() {
+executeFunction(function () {
     console.log("Anonymous function executed!");
 });
 // Outputs: Anonymous function executed!
 
 var numz3 = [1, 2, 3, 4];
-var squared = numz3.map(function(num) {
+var squared = numz3.map(function (num) {
     return num * num;
 });
 console.log(squared); // Outputs: [1, 4, 9, 16]
 
 // Real-World Example: In asynchronous code, anonymous functions are often used as callbacks:
-setTimeout(function() {
+setTimeout(function () {
     console.log("This message is delayed");
 }, 2000); // Outputs: This message is delayed (after 2 seconds)
 
@@ -6944,14 +6944,14 @@ setTimeout(function() {
 // Returning an Anonymous Function
 // Anonymous functions can be returned from other functions, allowing for dynamic function creation:
 function createGreeter(name) {
-    return function() {
+    return function () {
         console.log("Hello, " + name + "!");
     };
 }
 var greetBrandon = createGreeter("Brandon");
 
 function multiplier(factor) {
-    return function(num) {
+    return function (num) {
         return num * factor;
     };
 }
@@ -6977,7 +6977,7 @@ document.addEventListener("click", clickHandler);
  */
 
 // Example 1: Basic IIFE
-(function() {
+(function () {
     console.log("This is an IIFE");
 })();
 
@@ -7051,9 +7051,26 @@ function greet(name = "Guest") {
 function printMsg(msg) {
     msg = typeof msg !== 'undefined' ? msg : 'Default value for msg.';
     console.log(msg);
+}
+
+printMsg(); // Output: "Default value for msg."
+printMsg(undefined); // Output: "Default value for msg."
+printMsg('Hello!'); // Output: "Hello!"
+/**
+ * In this approach:
+
+typeof msg !== 'undefined' checks if the parameter msg has been provided.
+If msg is undefined, it assigns a default value.
+
+ */
+
+// With ECMAScript 2015 (ES6)
+// ES6 introduced a more concise syntax for default parameters directly in the function signature.
+function printMsg(msg = 'Default value for msg.') {
+    console.log(msg);
   }
   
   printMsg(); // Output: "Default value for msg."
   printMsg(undefined); // Output: "Default value for msg."
-  printMsg('Hello!'); // Output: "Hello!"
+  printMsg('Now my msg is different!'); // Output: "Now my msg is different!"
   
