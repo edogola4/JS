@@ -7128,3 +7128,12 @@ function fetchUsers(page = 1, limit = 10) {
   fetchData('/api/data'); // Output: "Fetching /api/data with method GET"
   fetchData('/api/data', 'POST'); // Output: "Fetching /api/data with method POST"
   
+
+  // 2. Dynamic UI Elements: Default parameters can dynamically adjust component properties in UI libraries.
+  function createButton(label = 'Click Me', size = 'medium') {
+    console.log(`Button: ${label}, Size: ${size}`);
+  }
+  
+  createButton(); // Output: "Button: Click Me, Size: medium"
+  createButton('Submit', 'large'); // Output: "Button: Submit, Size: large"
+  
