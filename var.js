@@ -7120,3 +7120,11 @@ function fetchUsers(page = 1, limit = 10) {
   }
   fetchUsers();
   fetchUsers(2, 20);
+
+  function fetchData(url, method = 'GET', headers = {}) {
+    console.log(`Fetching ${url} with method ${method}`);
+  }
+  
+  fetchData('/api/data'); // Output: "Fetching /api/data with method GET"
+  fetchData('/api/data', 'POST'); // Output: "Fetching /api/data with method POST"
+  
