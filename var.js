@@ -6968,3 +6968,15 @@ var clickHandler = createEventHandler("click");
 document.addEventListener("click", clickHandler);
 */
 
+
+// Section 19.8:  Immediately Invoked Anonymous Functions (IIFE)
+// An IIFE is a function that is defined and executed immediately after its creation. It's often used to create a private scope and avoid polluting the global namespace.
+/**
+ * An IIFE is a function that is defined and executed immediately after its creation. It's often used to create a private scope and avoid polluting the global namespace.
+ *
+ */
+
+// Example 1: Basic IIFE
+(function() {
+    console.log("This is an IIFE");
+})();
