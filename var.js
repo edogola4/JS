@@ -6950,3 +6950,10 @@ function createGreeter(name) {
 }
 var greetBrandon = createGreeter("Brandon");
 
+function multiplier(factor) {
+    return function(num) {
+        return num * factor;
+    };
+}
+var double = multiplier(2);
+console.log(double(5)); // Outputs: 10
