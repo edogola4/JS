@@ -7021,3 +7021,15 @@ var fib = [1, 2, 3, 4, 5].map(function fib(n) {
     return n <= 2 ? 1 : fib(n - 1) + fib(n - 2);
 });
 console.log(fib); // Outputs: [1, 1, 2, 3, 5]
+
+
+/**
+ * 
+ Summary
+Anonymous functions are unnamed and are commonly used as function expressions or callbacks.
+They are useful for creating concise, one-time-use functions.
+IIFE provides a way to create isolated scopes.
+Default parameters in ES6 simplify handling optional arguments.
+Self-referential anonymous functions allow recursion and dynamic behavior.
+Anonymous functions streamline code, reduce clutter, and provide flexibility, making them a cornerstone of JavaScript programming.
+ */
