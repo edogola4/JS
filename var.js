@@ -6957,3 +6957,14 @@ function multiplier(factor) {
 }
 var double = multiplier(2);
 console.log(double(5)); // Outputs: 10
+
+// Real-World Example: Dynamic creation of event handlers:
+/*function createEventHandler(eventName) {
+    return function(event) {
+        console.log(`Event ${eventName} triggered:`, event);
+    };
+}
+var clickHandler = createEventHandler("click");
+document.addEventListener("click", clickHandler);
+*/
+
