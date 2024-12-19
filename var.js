@@ -7074,3 +7074,10 @@ function printMsg(msg = 'Default value for msg.') {
   printMsg(undefined); // Output: "Default value for msg."
   printMsg('Now my msg is different!'); // Output: "Now my msg is different!"
   
+  // Default Values with Arrow Functions
+  // Default parameters work seamlessly with arrow functions.
+  let paramCheck = (p = 'str') => console.log(`${p} is of type: ${typeof p}`);
+
+paramCheck(); // Output: "str is of type: string"
+paramCheck(undefined); // Output: "str is of type: string"
+paramCheck(42); // Output: "42 is of type: number"
