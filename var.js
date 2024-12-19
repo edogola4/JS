@@ -6881,3 +6881,16 @@ console.log(sumAll(1, 2, 3, 4));
         
         Use Cases	      Legacy systems	                 Modern JavaScript
  */
+
+
+        // Section 19.7: Anonymous Function
+        // Anonymous functions are functions without a name. They are often used as arguments to other functions or assigned to variables.
+        /**
+         * Unlike named functions, they don't have an identifier to refer to them in the global or local scope. Instead, they are typically used as expressions or passed directly into other functions. Despite their lack of a name, anonymous functions are extremely versatile and widely used in JavaScript.
+         * 
+         */
+
+        // Example 1: Passing an Anonymous Function
+        setTimeout(function () {
+            console.log('Hello after 2 seconds');
+        }, 2000);
