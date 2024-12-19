@@ -6934,6 +6934,11 @@ var squared = numz3.map(function(num) {
 });
 console.log(squared); // Outputs: [1, 4, 9, 16]
 
+// Real-World Example: In asynchronous code, anonymous functions are often used as callbacks:
+setTimeout(function() {
+    console.log("This message is delayed");
+}, 2000); // Outputs: This message is delayed (after 2 seconds)
+
 
 
 // Returning an Anonymous Function
