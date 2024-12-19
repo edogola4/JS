@@ -6926,3 +6926,22 @@ function executeFunction(func) {
 executeFunction(function() {
     console.log("Anonymous function executed!");
 });
+// Outputs: Anonymous function executed!
+
+var numz3 = [1, 2, 3, 4];
+var squared = numz3.map(function(num) {
+    return num * num;
+});
+console.log(squared); // Outputs: [1, 4, 9, 16]
+
+
+
+// Returning an Anonymous Function
+// Anonymous functions can be returned from other functions, allowing for dynamic function creation:
+function createGreeter(name) {
+    return function() {
+        console.log("Hello, " + name + "!");
+    };
+}
+var greetJohn = createGreeter("John");
+
