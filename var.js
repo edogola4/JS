@@ -6948,5 +6948,5 @@ function createGreeter(name) {
         console.log("Hello, " + name + "!");
     };
 }
-var greetJohn = createGreeter("John");
+var greetBrandon = createGreeter("Brandon");
 
