@@ -6916,3 +6916,13 @@ greet(); // Outputs: Hello, World!
 /*document.getElementById("myButton").addEventListener("click", function() {
     console.log("Button clicked!");
 });*/
+
+
+// Supplying an Anonymous Function as a Parameter
+// Anonymous functions can be passed as arguments to other functions, allowing for more flexible and reusable code:
+function executeFunction(func) {
+    func();
+}
+executeFunction(function() {
+    console.log("Anonymous function executed!");
+});
