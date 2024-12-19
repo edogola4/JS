@@ -7012,3 +7012,12 @@ function greet(name = "Guest") {
 }
 greet(); // Outputs: Hello, Guest
 greet("Alice"); // Outputs: Hello, Alice
+
+
+// Anonymous Functions in Recursive Scenarios
+// Anonymous functions can be used recursively, especially when dealing with array operations or algorithms.
+// Example: Calculating Fibonacci numbers:
+var fib = [1, 2, 3, 4, 5].map(function fib(n) {
+    return n <= 2 ? 1 : fib(n - 1) + fib(n - 2);
+});
+console.log(fib); // Outputs: [1, 1, 2, 3, 5]
