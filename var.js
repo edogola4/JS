@@ -7004,3 +7004,11 @@ function greet(name) {
 }
 greet(); // Outputs: Hello, Guest
 greet("Alice"); // Outputs: Hello, Alice
+
+
+//  With ES6, you can directly define default values:
+function greet(name = "Guest") {
+    console.log("Hello, " + name);
+}
+greet(); // Outputs: Hello, Guest
+greet("Alice"); // Outputs: Hello, Alice
