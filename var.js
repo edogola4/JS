@@ -6910,3 +6910,9 @@ var greet = function() {
     console.log("Hello, World!");
 };
 greet(); // Outputs: Hello, World!
+
+
+// Real-World Example: Assigning anonymous functions to variables is often used in event handlers:
+/*document.getElementById("myButton").addEventListener("click", function() {
+    console.log("Button clicked!");
+});*/
