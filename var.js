@@ -7068,15 +7068,15 @@ If msg is undefined, it assigns a default value.
 // ES6 introduced a more concise syntax for default parameters directly in the function signature.
 function printMsg(msg = 'Default value for msg.') {
     console.log(msg);
-  }
-  
-  printMsg(); // Output: "Default value for msg."
-  printMsg(undefined); // Output: "Default value for msg."
-  printMsg('Now my msg is different!'); // Output: "Now my msg is different!"
-  
-  // Default Values with Arrow Functions
-  // Default parameters work seamlessly with arrow functions.
-  let paramCheck = (p = 'str') => console.log(`${p} is of type: ${typeof p}`);
+}
+
+printMsg(); // Output: "Default value for msg."
+printMsg(undefined); // Output: "Default value for msg."
+printMsg('Now my msg is different!'); // Output: "Now my msg is different!"
+
+// Default Values with Arrow Functions
+// Default parameters work seamlessly with arrow functions.
+let paramCheck = (p = 'str') => console.log(`${p} is of type: ${typeof p}`);
 
 paramCheck(); // Output: "str is of type: string"
 paramCheck(undefined); // Output: "str is of type: string"
@@ -7086,8 +7086,19 @@ paramCheck(42); // Output: "42 is of type: number"
 // Default values are not limited to primitives. Functions, variables, or expressions can also be used.
 function foo11(callback = () => console.log('default')) {
     callback();
-  }
-  
-  foo11(() => console.log('custom')); // Output: "custom"
-  foo11(); // Output: "default"
-  
+}
+
+foo11(() => console.log('custom')); // Output: "custom"
+foo11(); // Output: "default"
+
+
+// Characteristics of Default Parameters
+// Default parameters are a feature in JavaScript that allows you to specify default values for function parameters.
+// They are particularly useful when you want to handle cases where arguments are not provided or are undefined.
+// Before ES6, default parameters had to be implemented manually, which can be cumbersome and error-prone.
+// ES6 introduces a concise syntax for defining default parameters, making the code more readable and less error-prone.
+
+// Example 1: Basic Default Parameter
+function greet(name = "Guest") {
+    console.log("Hello, " + name);
+}
