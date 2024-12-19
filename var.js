@@ -6980,3 +6980,11 @@ document.addEventListener("click", clickHandler);
 (function() {
     console.log("This is an IIFE");
 })();
+
+// Self-Referential Anonymous Functions
+// Anonymous functions can refer to themselves by assigning a name within their scope. 
+// This is useful for recursion or adding properties to the function itself.
+var factorial = function fact(n) {
+    return n <= 1 ? 1 : n * fact(n - 1);
+};
+console.log(factorial(5)); // Outputs: 120
