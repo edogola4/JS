@@ -7081,3 +7081,13 @@ function printMsg(msg = 'Default value for msg.') {
 paramCheck(); // Output: "str is of type: string"
 paramCheck(undefined); // Output: "str is of type: string"
 paramCheck(42); // Output: "42 is of type: number"
+
+// Functions or Variables as Default Values
+// Default values are not limited to primitives. Functions, variables, or expressions can also be used.
+function foo11(callback = () => console.log('default')) {
+    callback();
+  }
+  
+  foo11(() => console.log('custom')); // Output: "custom"
+  foo11(); // Output: "default"
+  
