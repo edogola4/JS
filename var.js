@@ -7033,3 +7033,27 @@ Default parameters in ES6 simplify handling optional arguments.
 Self-referential anonymous functions allow recursion and dynamic behavior.
 Anonymous functions streamline code, reduce clutter, and provide flexibility, making them a cornerstone of JavaScript programming.
  */
+
+
+
+/// Default Parameters in JavaScript
+// Default parameters in JavaScript are a feature introduced in ECMAScript 6 (ES6) that allow you to specify default values for function parameters.
+// They are particularly useful when you want to handle cases where arguments are not provided or are undefined.
+// Before ES6, default parameters had to be implemented manually, which can be cumbersome and error-prone.
+// ES6 introduces a concise syntax for defining default parameters, making the code more readable and less error-prone.
+
+// Example 1: Basic Default Parameter
+function greet(name = "Guest") {
+    console.log("Hello, " + name);
+}
+// Before ECMAScript 2015 (ES6)
+// Prior to ES6, default values for parameters were assigned using conditional checks within the function:
+function printMsg(msg) {
+    msg = typeof msg !== 'undefined' ? msg : 'Default value for msg.';
+    console.log(msg);
+  }
+  
+  printMsg(); // Output: "Default value for msg."
+  printMsg(undefined); // Output: "Default value for msg."
+  printMsg('Hello!'); // Output: "Hello!"
+  
