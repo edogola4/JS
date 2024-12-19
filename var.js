@@ -6516,7 +6516,7 @@ For inline event handling or as callback functions.
 In conclusion, named functions are ideal when you want to reuse code or need clear identification in the debugger, 
 while anonymous functions are perfect for situations where the function is used just once or passed as an argument.
 
- *  */                                                                                             
+ *  */
 
 
 
@@ -6558,7 +6558,7 @@ const person2 = {
         console.log("Hello, " + this.name);
     }
 };
-person2.greet(); 
+person2.greet();
 
 
 // d) Arrow Functions
@@ -6664,8 +6664,8 @@ console.log(greet3(1, 2, 3, 4)); // Output: 10
 // Example of this and arguments in Arrow Functions
 const person5 = {
     name: "Bran don",
-    greet: function()  {
-        console.log( this.name);
+    greet: function () {
+        console.log(this.name);
     }
 };
 person5.greet();
@@ -6767,11 +6767,11 @@ personLogsSomeThings('Bran', 'hello', 'world');
 
 
 // Mixing Regular and Rest Parameters
-function createTeam (leader, ...members) {
+function createTeam(leader, ...members) {
     console.log(`Team leader: ${leader}`);
     console.log(`Team members: ${members.join(', ')}`);
 }
-createTeam('Bran', 'don', )
+createTeam('Bran', 'don',)
 
 // Calling Functions with the Spread Syntax (...)
 // The spread syntax allows you to expand iterable objects (like arrays, strings, or generators) into individual arguments. 
@@ -6812,11 +6812,11 @@ addEventListeners(button, 'click', 'mouseover', 'mouseout');
 
 // 3. Math Functions Calculating product of numbers:
 const multiplyAllz = (...nums) => nums.reduce((product, num) => product * num, 1);
-console.log(multiplyAllz(2, 3, 4)); 
+console.log(multiplyAllz(2, 3, 4));
 
 // 4. Dynamic Data Merging Merging arrays or objects:
 const mergeArrays = (...arrays) => [].concat(...arrays);
-console.log(mergeArrays([1, 2], [3, 4], [5])); 
+console.log(mergeArrays([1, 2], [3, 4], [5]));
 
 
 
@@ -6846,7 +6846,7 @@ function logSomeThings() {
         console.log(arguments[i]);
     }
 }
-logSomeThings('hello', 'world'); 
+logSomeThings('hello', 'world');
 
 // Example 3: Converting arguments to an Array
 // To use Array methods, convert arguments into an actual Array using Array.prototype.slice():
@@ -6862,7 +6862,7 @@ logArguments('foo', 'bar', 'baz');
 function sumAll() {
     return Array.prototype.reduce.call(arguments, (sum, num) => sum + num, 0);
 }
-console.log(sumAll(1, 2, 3, 4)); 
+console.log(sumAll(1, 2, 3, 4));
 
 
 // Comparison: arguments vs Rest Operator
@@ -6883,14 +6883,30 @@ console.log(sumAll(1, 2, 3, 4));
  */
 
 
-        // Section 19.7: Anonymous Function
-        // Anonymous functions are functions without a name. They are often used as arguments to other functions or assigned to variables.
-        /**
-         * Unlike named functions, they don't have an identifier to refer to them in the global or local scope. Instead, they are typically used as expressions or passed directly into other functions. Despite their lack of a name, anonymous functions are extremely versatile and widely used in JavaScript.
-         * 
-         */
+// Section 19.7: Anonymous Function
+// Anonymous functions are functions without a name. They are often used as arguments to other functions or assigned to variables.
+/**
+ * Unlike named functions, they don't have an identifier to refer to them in the global or local scope. Instead, they are typically used as expressions or passed directly into other functions. Despite their lack of a name, anonymous functions are extremely versatile and widely used in JavaScript.
+ * 
+ */
 
-        // Example 1: Passing an Anonymous Function
-        setTimeout(function () {
-            console.log('Hello after 2 seconds');
-        }, 2000);
+// Example 1: Passing an Anonymous Function
+setTimeout(function () {
+    console.log('Hello after 2 seconds');
+}, 2000);
+
+// Defining an Anonymous Function
+/**
+ * function () {
+console.log("This is an anonymous function");
+}
+// SyntaxError: Function statements require a name
+
+ */
+
+// Assigning an Anonymous Function to a Variable
+// Anonymous functions are often stored in variables for later use. This is a common pattern in functional programming:
+var greet = function() {
+    console.log("Hello, World!");
+};
+greet(); // Outputs: Hello, World!
