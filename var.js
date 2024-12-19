@@ -6988,3 +6988,9 @@ var factorial = function fact(n) {
     return n <= 1 ? 1 : n * fact(n - 1);
 };
 console.log(factorial(5)); // Outputs: 120
+
+var numsz = [1, 2, 3, 4, 5];
+var sum = numsz.reduce(function sum(acc, curr) {
+    return acc + curr;
+}, 0);
+console.log(sum); // Outputs: 15
