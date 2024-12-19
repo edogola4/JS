@@ -6994,3 +6994,13 @@ var sum = numsz.reduce(function sum(acc, curr) {
     return acc + curr;
 }, 0);
 console.log(sum); // Outputs: 15
+
+
+// Default Parameters
+// Before ES6, default parameters had to be implemented manually:
+function greet(name) {
+    name = name || "Guest";
+    console.log("Hello, " + name);
+}
+greet(); // Outputs: Hello, Guest
+greet("Alice"); // Outputs: Hello, Alice
