@@ -7113,3 +7113,10 @@ function test(a = 1, b = 2) {
   test(3); // Output: 1
   test(3, 4); // Output: 2
   
+// Real-World Applications
+// 1. API Calls with Default Options: Default parameters simplify creating configurable API functions
+function fetchUsers(page = 1, limit = 10) {
+    // Fetch users from an API with the specified page and limit
+  }
+  fetchUsers();
+  fetchUsers(2, 20);
